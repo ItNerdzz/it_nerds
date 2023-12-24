@@ -1,0 +1,26 @@
+:root {
+  --basic: #ede9fe;
+  --primary: #7c3aed;
+  --background: #171717;
+  --default-font-size: 16px;
+  --default-line-height: 150%;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-weight: 400;
+  background-color: var(--background);
+  color: var(--basic);
+  font-size: var(--default-font-size);
+  line-height: var(--default-line-height);
+}
+
+body div#root {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: min-content 1fr min-content;
+}

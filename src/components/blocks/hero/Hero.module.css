@@ -1,0 +1,6 @@
+.hero {
+}
+
+.hero__titleColoredText {
+  color: var(--primary);
+}
