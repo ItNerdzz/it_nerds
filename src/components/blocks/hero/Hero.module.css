@@ -1,6 +1,10 @@
 .hero {
 }
 
-.hero__titleColoredText {
+.titleColoredText {
   color: var(--primary);
+}
+
+.canvas {
+  height: 1000px !important;
 }

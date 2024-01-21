@@ -12,11 +12,10 @@ const Hero: FC = () => {
     <section className={styles.hero}>
       <Wrapper>
         <Title size={TitleSizes.BIG}>
-          Разработка{' '}
-          <span className={styles.hero__titleColoredText}>сайтов</span> любого
-          уровня сложности
+          Разработка <span className={styles.titleColoredText}>сайтов</span>{' '}
+          любого уровня сложности
         </Title>
-        <Canvas shadows={true}>
+        <Canvas className={styles.canvas} shadows={true}>
           <PerspectiveCamera
             makeDefault={true}
             fov={100}
