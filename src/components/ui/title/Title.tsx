@@ -7,9 +7,9 @@ interface ITitleProps {
 }
 
 const TitleSizes = {
-  BIG: 'big',
-  MEDIUM: 'medium',
-  SMALL: 'small',
+  BIG: 'Big',
+  MEDIUM: 'Medium',
+  SMALL: 'Small',
 };
 
 const Title: FC<ITitleProps> = ({ children, size }) => {

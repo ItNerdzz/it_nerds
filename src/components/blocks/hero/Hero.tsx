@@ -9,7 +9,7 @@ import { Title, TitleSizes } from '../../ui/title/Title';
 
 const Hero: FC = () => {
   return (
-    <section className={styles.hero}>
+    <section>
       <Wrapper>
         <Title size={TitleSizes.BIG}>
           Разработка <span className={styles.titleColoredText}>сайтов</span>{' '}

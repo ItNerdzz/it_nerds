@@ -3,15 +3,15 @@
   font-weight: 700;
 }
 
-.title--big {
+.titleBig {
   font-size: 60px;
   line-height: 130%;
 }
 
-.title--medium {
+.titleMedium {
   font-size: 40px;
 }
 
-.title--small {
+.titleSmall {
   font-size: 24px;
 }
