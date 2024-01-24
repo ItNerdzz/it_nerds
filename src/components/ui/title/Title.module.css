@@ -1,17 +1,24 @@
 .Title {
   line-height: 150%;
   font-weight: 700;
+  margin: 0;
 }
 
 .Title_big {
-  font-size: 60px;
+  font-size: 36px;
   line-height: 130%;
 }
 
 .Title_medium {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .Title_small {
-  font-size: 24px;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .Title_big {
+    font-size: 60px;
+  }
 }
