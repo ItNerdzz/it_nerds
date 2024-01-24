@@ -4,8 +4,8 @@ import { Canvas } from '@react-three/fiber';
 import { PerspectiveCamera } from '@react-three/drei';
 import AnimatedSphere from '../../ui/animated-sphere/animated-sphere';
 import styles from './hero.module.css';
-import Wrapper from '../../layout/wrapper/Warpper';
-import { Title, TitleSizes } from '../../ui/title/Title';
+import Wrapper from '../../layout/wrapper/wrapper';
+import { Title, TitleSizes } from '../../ui/title/title';
 
 const Hero: FC = () => {
   return (
