@@ -1,17 +1,17 @@
-.title {
+.Title {
   line-height: 150%;
   font-weight: 700;
 }
 
-.titleBig {
+.Title_big {
   font-size: 60px;
   line-height: 130%;
 }
 
-.titleMedium {
+.Title_medium {
   font-size: 40px;
 }
 
-.titleSmall {
+.Title_small {
   font-size: 24px;
 }
