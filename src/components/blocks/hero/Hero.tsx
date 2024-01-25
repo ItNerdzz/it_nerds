@@ -9,9 +9,9 @@ import { Title, TitleSizes } from '../../ui/title/title';
 
 const Hero: FC = () => {
   return (
-    <section>
+    <section className={styles.Hero}>
       <Wrapper>
-        <Title size={TitleSizes.BIG}>
+        <Title className={styles.Hero_Title} size={TitleSizes.BIG}>
           Разработка <span className={styles.Title_coloredText}>сайтов</span>{' '}
           любого уровня сложности
         </Title>

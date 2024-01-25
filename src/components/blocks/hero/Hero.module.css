@@ -1,7 +1,23 @@
+.Hero {
+  padding: var(--indent-vertical-top-mobile) 0
+    var(--indent-vertical-bottom-mobile);
+}
+
+.Hero_Title {
+  text-align: center;
+}
+
 .Title_coloredText {
   color: var(--primary);
 }
 
 .Canvas {
   height: 1000px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .Hero {
+    padding: var(--indent-vertical-top-desktop) 0
+      var(--indent-vertical-bottom-desktop);
+  }
 }

@@ -4,6 +4,7 @@ import styles from './title.module.css';
 interface ITitleProps {
   children: React.ReactNode;
   size: string;
+  className: string;
 }
 
 const TitleSizes = {
@@ -12,9 +13,15 @@ const TitleSizes = {
   SMALL: 'small',
 };
 
-const Title: FC<ITitleProps> = ({ children, size }) => {
+const Title: FC<ITitleProps> = ({ children, size, className }) => {
   return (
-    <h1 className={`${styles.Title} ${styles[`Title_${size}`]}`}>{children}</h1>
+    <h1
+      className={`${styles.Title} ${styles[`Title_${size}`]} ${
+        className ? className : null
+      }`}
+    >
+      {children}
+    </h1>
   );
 };
 
