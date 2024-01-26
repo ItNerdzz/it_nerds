@@ -1,6 +1,5 @@
 .Hero {
   padding: 80px 0 0;
-  overflow-x: hidden;
 }
 
 .Hero_Inner {
@@ -35,14 +34,16 @@
 .Hero_AnimationContainer:before {
   position: absolute;
   content: '';
-  aspect-ratio: 1 / 1.1;
+  aspect-ratio: 1 / 1;
   top: 15px;
-  left: calc(
+  left: calc(var(--indent-horizontal-mobile) * -1);
+  right: calc(var(--indent-horizontal-mobile) * -1);
+  /* left: calc(
     var(--indent-horizontal-mobile) * -1 - var(--indent-horizontal-mobile) / 2
   );
   right: calc(
     var(--indent-horizontal-mobile) * -1 - var(--indent-horizontal-mobile) / 2
-  );
+  ); */
   background-color: #c4b5fd;
   border-radius: 50%;
 }
