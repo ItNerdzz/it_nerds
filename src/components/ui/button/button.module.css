@@ -1,0 +1,54 @@
+.Button {
+  color: var(--basic);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 140%;
+  padding: 10px 16px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: var(--border-radius-small);
+  transition: all 0.2s ease-in-out;
+}
+
+.Button__alt {
+  color: var(--primary);
+  background-color: var(--basic);
+}
+
+.Button:hover,
+.Button:focus {
+  background-color: var(--basic);
+  color: var(--primary);
+}
+
+.Button:active {
+  opacity: 0.8;
+}
+
+.Button__alt:hover,
+.Button__alt:focus {
+  color: var(--basic);
+  background-color: var(--primary);
+}
+
+.Button__big {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 143%;
+  padding: 10px 16px;
+}
+
+.Button__small {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 143%;
+  padding: 10px 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .Button__big {
+    font-size: 16px;
+    line-height: 150%;
+    padding: 12px 20px;
+  }
+}

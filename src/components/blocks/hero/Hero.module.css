@@ -1,6 +1,18 @@
 .Hero {
-  padding: var(--indent-vertical-top-mobile) 0
-    var(--indent-vertical-bottom-mobile);
+  padding: 80px 0 0;
+  overflow-x: hidden;
+}
+
+.Hero_Inner {
+  position: relative;
+}
+
+.Hero_TextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .Hero_Title {
@@ -11,13 +23,87 @@
   color: var(--primary);
 }
 
+.Hero_Subtitle {
+  text-align: center;
+}
+
+.Hero_AnimationContainer {
+  position: relative;
+  aspect-ratio: 1 / 1.1;
+}
+
+.Hero_AnimationContainer:before {
+  position: absolute;
+  content: '';
+  aspect-ratio: 1 / 1.1;
+  top: 15px;
+  left: calc(
+    var(--indent-horizontal-mobile) * -1 - var(--indent-horizontal-mobile) / 2
+  );
+  right: calc(
+    var(--indent-horizontal-mobile) * -1 - var(--indent-horizontal-mobile) / 2
+  );
+  background-color: #c4b5fd;
+  border-radius: 50%;
+}
+
 .Canvas {
-  height: 1000px !important;
+  position: absolute !important;
+  width: auto !important;
+  height: auto !important;
+  top: -15px;
+  left: calc(var(--indent-horizontal-mobile) * -1);
+  right: calc(var(--indent-horizontal-mobile) * -1);
+  bottom: 15px;
 }
 
 @media screen and (min-width: 768px) {
   .Hero {
-    padding: var(--indent-vertical-top-desktop) 0
-      var(--indent-vertical-bottom-desktop);
+    padding: 140px 0 0;
+  }
+
+  .Hero_TextContainer {
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Hero {
+    padding: 314px 0 187px;
+    overflow-x: visible;
+  }
+
+  .Hero_TextContainer {
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0;
+  }
+
+  .Hero_Title {
+    text-align: start;
+  }
+
+  .Hero_AnimationContainer {
+    position: absolute;
+    top: -177px;
+    left: 770px;
+    width: 858px;
+    height: 858px;
+  }
+
+  .Hero_AnimationContainer:before {
+    left: 0;
+    right: 0;
+    top: 0;
+    aspect-ratio: 1 / 1;
+  }
+
+  .Canvas {
+    width: 800px !important;
+    height: 800px !important;
+    top: -90px;
+    left: -90px;
+    bottom: auto;
+    right: auto;
   }
 }

@@ -48,7 +48,7 @@ const AnimatedSphere: FC = () => {
 
   useFrame(() => {
     const gum = gumRef.current;
-    const currentDistort = gum ? gum.material.distort : null;
+    const currentDistort = gum ? distortValue : 0;
     if (isMoving) {
       setDistortValue(Math.min(currentDistort + 0.01, 0.45));
       if (!gum) return;
@@ -67,7 +67,7 @@ const AnimatedSphere: FC = () => {
   return (
     <Sphere
       ref={gumRef}
-      args={[2.5, 100, 200]}
+      args={[3.3, 200, 200]}
       castShadow={true}
       receiveShadow={false}
     >

@@ -10,6 +10,7 @@
   --indent-vertical-bottom-mobile: 40px;
   --indent-vertical-top-desktop: 80px;
   --indent-vertical-bottom-desktop: 80px;
+  --border-radius-small: 8px;
 }
 
 html,
@@ -23,9 +24,10 @@ body {
   color: var(--basic);
   font-size: var(--default-font-size);
   line-height: var(--default-line-height);
+  overflow-x: hidden;
 }
 
-body div#root {
+body {
   display: grid;
   min-height: 100vh;
   grid-template-rows: min-content 1fr min-content;

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import clsx from 'clsx';
 import styles from './title.module.css';
 
 interface ITitleProps {
@@ -14,15 +15,13 @@ const TitleSizes = {
 };
 
 const Title: FC<ITitleProps> = ({ children, size, className }) => {
-  return (
-    <h1
-      className={`${styles.Title} ${styles[`Title_${size}`]} ${
-        className ? className : null
-      }`}
-    >
-      {children}
-    </h1>
+  const titleClassNames = clsx(
+    styles.Title,
+    styles[`Title__${size}`],
+    className
   );
+
+  return <h1 className={titleClassNames}>{children}</h1>;
 };
 
 export { Title, TitleSizes };
