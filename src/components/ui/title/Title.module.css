@@ -22,4 +22,12 @@
   .Title__big {
     font-size: 60px;
   }
+
+  .Title__medium {
+    font-size: 40px;
+  }
+
+  .Title__small {
+    font-size: 24px;
+  }
 }

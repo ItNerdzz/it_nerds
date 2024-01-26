@@ -94,7 +94,7 @@
   .Hero_AnimationContainer:before {
     left: 0;
     right: 0;
-    top: 0;
+    top: -100px;
     aspect-ratio: 1 / 1;
   }
 

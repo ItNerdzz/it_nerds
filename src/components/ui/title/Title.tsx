@@ -5,7 +5,7 @@ import styles from './title.module.css';
 interface ITitleProps {
   children: React.ReactNode;
   size: string;
-  className: string;
+  className?: string;
 }
 
 const TitleSizes = {
