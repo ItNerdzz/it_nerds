@@ -69,14 +69,17 @@ const Header: FC = () => {
           ) : (
             <>
               <MainNav menuItems={menuItems} />
-              <Button
-                size={ButtonSizes.SMALL}
-                onClick={() => {
-                  console.log('popup callback');
-                }}
-              >
-                Свзяаться
-              </Button>
+              <div className={styles.Header_ButtonsContainer}>
+                <Socials />
+                <Button
+                  size={ButtonSizes.SMALL}
+                  onClick={() => {
+                    console.log('popup callback');
+                  }}
+                >
+                  Свзяаться
+                </Button>
+              </div>
             </>
           )}
         </div>

@@ -16,6 +16,12 @@
   background-color: rgb(40, 40, 40);
 }
 
+.Header_ButtonsContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 .Header_MobileMenu {
   z-index: 1;
   position: absolute;
