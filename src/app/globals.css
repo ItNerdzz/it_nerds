@@ -2,6 +2,7 @@
   --basic: #ede9fe;
   --primary: #7c3aed;
   --background: #171717;
+  --background-light: #282828;
   --default-font-size: 16px;
   --default-line-height: 150%;
   --indent-horizontal-mobile: 15px;
@@ -11,6 +12,10 @@
   --indent-vertical-top-desktop: 80px;
   --indent-vertical-bottom-desktop: 80px;
   --border-radius-small: 8px;
+}
+
+html {
+  scroll-behavior: smooth !important;
 }
 
 html,

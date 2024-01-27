@@ -1,0 +1,36 @@
+.MainNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.MainNav_MenuItem {
+  display: flex;
+  justify-content: center;
+}
+
+.MainNav_Link {
+  color: var(--base);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.MainNav_Link:hover,
+.MainNav_Link:focus {
+  color: var(--primary);
+}
+
+.MainNav_Link:active {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 1440px) {
+  .MainNav {
+    flex-direction: row;
+    gap: 20px;
+  }
+}

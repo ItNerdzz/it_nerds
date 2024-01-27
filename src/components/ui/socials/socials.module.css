@@ -1,0 +1,43 @@
+.Socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Socials_Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--basic);
+  transition: all 0.2s;
+}
+
+.Socials_Link:hover,
+.Socials_Link:focus {
+  background-color: var(--primary);
+}
+
+.Socials_Link:active {
+  background-color: var(--primary);
+}
+
+.Socials_Link:hover svg path[fill],
+.Socials_Link:focus svg path[fill] {
+  fill: var(--basic);
+}
+
+.Socials_Link:active svg path[fill] {
+  fill: var(--basic);
+}
+
+.Socials_Link:hover svg path[stroke],
+.Socials_Link:focus svg path[stroke] {
+  stroke: var(--basic);
+}
+
+.Socials_Link:active svg path[stroke] {
+  stroke: var(--basic);
+}

@@ -1,10 +1,13 @@
-import { FC } from 'react';
+import { FC, ButtonHTMLAttributes } from 'react';
 import clsx from 'clsx';
 import styles from './button.module.css';
 
-interface IButtonProps {
-  children?: React.ReactNode;
+interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
+  href?: string;
+  onClick?: () => void;
+  children?: React.ReactNode;
+  target?: string;
   size: string;
   isAlt?: boolean;
 }
@@ -14,7 +17,16 @@ const ButtonSizes = {
   SMALL: 'small',
 };
 
-const Button: FC<IButtonProps> = ({ children, className, size, isAlt }) => {
+const Button: FC<IButtonProps> = ({
+  className,
+  href,
+  onClick,
+  type,
+  children,
+  target,
+  size,
+  isAlt,
+}) => {
   const buttonClassNames = clsx(
     styles.Button,
     className,
@@ -22,7 +34,17 @@ const Button: FC<IButtonProps> = ({ children, className, size, isAlt }) => {
     isAlt && styles.Button__alt
   );
 
-  return <button className={buttonClassNames}>{children}</button>;
+  return (
+    <button
+      className={buttonClassNames}
+      onClick={onClick}
+      {...(href && { href })}
+      {...(target && { target })}
+      {...(type && { type })}
+    >
+      {children}
+    </button>
+  );
 };
 
 export { Button, ButtonSizes };

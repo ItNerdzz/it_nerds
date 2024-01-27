@@ -1,0 +1,20 @@
+.Logo {
+  display: flex;
+}
+
+.Logo svg {
+  width: 113px;
+  height: 40px;
+}
+
+.Logo:hover svg path {
+  transition: all 0.2s;
+}
+
+.Logo:hover svg path:first-child {
+  stroke: var(--primary);
+}
+
+.Logo:hover svg path:not(:first-child) {
+  fill: var(--primary);
+}

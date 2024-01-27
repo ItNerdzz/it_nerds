@@ -1,0 +1,46 @@
+.Header {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  background-color: var(--background-light);
+}
+
+.Header_Inner {
+  z-index: 2;
+  padding: 10px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-light);
+  background-color: rgb(40, 40, 40);
+}
+
+.Header_MobileMenu {
+  z-index: 1;
+  position: absolute;
+  top: -400px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 100px var(--indent-horizontal-mobile) 20px;
+  background-color: var(--background);
+  transition: all 0.4s ease-in-out;
+}
+
+.Header_MobileMenu__opened {
+  top: 100%;
+}
+
+.Hedaer_MobileMenuBottomContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .Header_Inner {
+    padding: 15px 0;
+  }
+}
