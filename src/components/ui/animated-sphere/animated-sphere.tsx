@@ -1,5 +1,3 @@
-'use client';
-
 import { FC } from 'react';
 import { useState, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
