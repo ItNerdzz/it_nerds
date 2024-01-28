@@ -6,6 +6,7 @@ interface ITitleProps {
   children: React.ReactNode;
   size: string;
   className?: string;
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
 const TitleSizes = {
@@ -14,14 +15,19 @@ const TitleSizes = {
   SMALL: 'small',
 };
 
-const Title: FC<ITitleProps> = ({ children, size, className }) => {
+const Title: FC<ITitleProps> = ({
+  children,
+  size,
+  className,
+  as: Tag = 'h1',
+}) => {
   const titleClassNames = clsx(
     styles.Title,
     styles[`Title__${size}`],
     className
   );
 
-  return <h1 className={titleClassNames}>{children}</h1>;
+  return <Tag className={titleClassNames}>{children}</Tag>;
 };
 
 export { Title, TitleSizes };

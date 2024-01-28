@@ -38,7 +38,9 @@ const AboutUs: FC = () => {
     <section className={styles.AboutUs}>
       <Wrapper>
         <div className={styles.AboutUs_TextContainer}>
-          <Title size={TitleSizes.MEDIUM}>Коротко о нас</Title>
+          <Title size={TitleSizes.MEDIUM} as={'h2'}>
+            Коротко о нас
+          </Title>
           <Subtitle className={styles.AboutUs_Subtitle}>
             IT Nerds — команда веб-разработки. Создаем эффективные цифровые
             решения для оффлайн и онлайн бизнеса. Помогаем нашим клиентам
