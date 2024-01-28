@@ -22,11 +22,15 @@
   align-items: center;
 }
 
-.AboutUs_FeaturesNumber {
+.AboutUs_FeaturesItemNumber {
   color: var(--primary);
   font-size: 30px;
   font-weight: 700;
   line-height: 45px;
+}
+
+.AboutUs_FeaturesItemText {
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -49,7 +53,7 @@
     justify-content: space-between;
   }
 
-  .AboutUs_FeaturesNumber {
+  .AboutUs_FeaturesItemNumber {
     font-size: 40px;
   }
 }

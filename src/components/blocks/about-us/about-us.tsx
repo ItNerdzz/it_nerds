@@ -54,11 +54,13 @@ const AboutUs: FC = () => {
             aboutUsFeatures.length &&
             aboutUsFeatures.map((feature, index) => (
               <li className={styles.AboutUs_FeaturesItem} key={index}>
-                <span className={styles.AboutUs_FeaturesNumber}>
+                <span className={styles.AboutUs_FeaturesItemNumber}>
                   {feature.numbers}
                   {feature.symbol}
                 </span>
-                <Text>{feature.text}</Text>
+                <Text className={styles.AboutUs_FeaturesItemText}>
+                  {feature.text}
+                </Text>
               </li>
             ))}
         </Ul>
