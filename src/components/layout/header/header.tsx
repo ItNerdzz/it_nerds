@@ -32,7 +32,7 @@ const Header: FC = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isMobile, setIsMobile] = useState<boolean>(
     typeof window !== 'undefined'
-      ? window.matchMedia('(max-width: 768px)').matches
+      ? window.matchMedia('(max-width: 767px)').matches
       : false
   );
 
@@ -42,7 +42,7 @@ const Header: FC = () => {
   );
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
 
     const handleMediaChange = (evt: MediaQueryListEvent) => {
       setIsMobile(evt.matches);

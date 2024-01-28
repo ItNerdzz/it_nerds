@@ -27,8 +27,7 @@
 .MainNav_Link:active {
   opacity: 0.8;
 }
-
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .MainNav {
     flex-direction: row;
     gap: 20px;
