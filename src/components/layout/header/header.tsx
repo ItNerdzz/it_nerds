@@ -22,10 +22,6 @@ const menuItems = [
     text: 'Проекты',
     link: '/#cases',
   },
-  {
-    text: 'Контакты',
-    link: '/#contacts',
-  },
 ];
 
 const Header: FC = () => {

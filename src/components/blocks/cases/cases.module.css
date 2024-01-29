@@ -1,0 +1,19 @@
+.Cases_Inner {
+  padding: var(--indent-vertical-top-mobile) 0
+    var(--indent-vertical-bottom-mobile);
+}
+
+.Cases_Title {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .Cases_Inner {
+    padding: var(--indent-vertical-top-desktop) 0
+      var(--indent-vertical-bottom-desktop);
+  }
+
+  .Cases_Title {
+    margin-bottom: 50px;
+  }
+}
