@@ -1,0 +1,29 @@
+.Services_Inner {
+  padding: var(--indent-vertical-top-mobile) 0
+    var(--indent-vertical-bottom-mobile);
+}
+
+.Services_Title {
+  margin-bottom: 20px;
+}
+
+.Services_ItemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .Services_Inner {
+    padding: var(--indent-vertical-top-desktop) 0
+      var(--indent-vertical-bottom-desktop);
+  }
+
+  .Services_Title {
+    margin: 0 0 50px;
+  }
+
+  .Services_ItemsList {
+    gap: 50px;
+  }
+}

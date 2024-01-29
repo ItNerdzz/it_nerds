@@ -1,4 +1,5 @@
 .Button {
+  cursor: pointer;
   color: var(--basic);
   font-size: 14px;
   font-weight: 600;
@@ -15,20 +16,10 @@
   background-color: var(--basic);
 }
 
-.Button:hover,
-.Button:focus {
+.Button:active {
   background-color: var(--basic);
   color: var(--primary);
-}
-
-.Button:active {
   opacity: 0.8;
-}
-
-.Button__alt:hover,
-.Button__alt:focus {
-  color: var(--basic);
-  background-color: var(--primary);
 }
 
 .Button__big {
@@ -50,5 +41,17 @@
     font-size: 16px;
     line-height: 150%;
     padding: 12px 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Button:hover {
+    background-color: var(--basic);
+    color: var(--primary);
+  }
+
+  .Button__alt:hover {
+    color: var(--basic);
+    background-color: var(--primary);
   }
 }

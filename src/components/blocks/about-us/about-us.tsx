@@ -35,7 +35,7 @@ const aboutUsFeatures: IAboutUsFeaturesItem[] = [
 
 const AboutUs: FC = () => {
   return (
-    <section className={styles.AboutUs}>
+    <section className={styles.AboutUs} id='about-us'>
       <Wrapper>
         <div className={styles.AboutUs_TextContainer}>
           <Title size={TitleSizes.MEDIUM} as={'h2'}>

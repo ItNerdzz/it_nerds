@@ -22,9 +22,9 @@ const Title: FC<ITitleProps> = ({
   as: Tag = 'h1',
 }) => {
   const titleClassNames = clsx(
+    className,
     styles.Title,
-    styles[`Title__${size}`],
-    className
+    styles[`Title__${size}`]
   );
 
   return <Tag className={titleClassNames}>{children}</Tag>;

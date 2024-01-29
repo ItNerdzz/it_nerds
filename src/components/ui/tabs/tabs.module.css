@@ -1,0 +1,32 @@
+.Tabs_ButtonsList {
+  display: flex;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.Tabs_ButtonsItem {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Tabs_Button {
+  flex-grow: 1;
+  padding: 12px 5px;
+  border-radius: 0;
+}
+
+.Tabs_ButtonsItem:first-child .Tabs_Button {
+  border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+}
+
+.Tabs_ButtonsItem:last-child .Tabs_Button {
+  border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
+}
+
+@media screen and (min-width: 768px) {
+  .Tabs_ButtonsList {
+    margin-bottom: 50px;
+  }
+}
