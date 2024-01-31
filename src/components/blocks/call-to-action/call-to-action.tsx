@@ -11,8 +11,13 @@ const CallToAction: FC = () => {
       <Wrapper>
         <div className={styles.CallToAction_Inner}>
           <div className={styles.CallToAction_TextContainer}>
-            <Title size={TitleSizes.MEDIUM}>Обсудим ваш проект?</Title>
-            <Subtitle>
+            <Title
+              className={styles.CallToAction_Title}
+              size={TitleSizes.MEDIUM}
+            >
+              Обсудим ваш проект?
+            </Title>
+            <Subtitle className={styles.CallToAction_Subtitle}>
               Поделитесь своей идей, а мы предложим оптимальное решение
             </Subtitle>
           </div>

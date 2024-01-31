@@ -27,6 +27,7 @@
 
 .HowWeWorks_Technologies {
   position: relative;
+  pointer-events: none;
 }
 
 .HowWeWorks_Technologies::before {
@@ -67,6 +68,7 @@
   }
 
   .HowWeWorks_Technologies {
+    pointer-events: auto;
     position: sticky;
     top: 0;
     right: 0;
