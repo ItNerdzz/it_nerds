@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import clsx from 'clsx';
-import styles from './subtitle.module.css';
 import P from '../../elements/P';
+import styles from './subtitle.module.css';
 
 interface ISubtitleProps {
   children: React.ReactNode;

@@ -1,7 +1,8 @@
 import { FC } from 'react';
-import styles from './main-nav.module.css';
 import Ul from '@/components/elements/Ul';
 import Link from 'next/link';
+import styles from './main-nav.module.css';
+
 interface IMainNavItem {
   text: string;
   link: string;

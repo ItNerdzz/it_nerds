@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import styles from './socials.module.css';
 import Ul from '@/components/elements/Ul';
 import WhatsappIcon from '/public/assets/images/icons/whatsapp.svg';
 import TelegramIcon from '/public/assets/images/icons/telegram.svg';
+import styles from './socials.module.css';
 
 const socialItems = [
   {

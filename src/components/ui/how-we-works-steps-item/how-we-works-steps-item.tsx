@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import styles from './how-we-works-steps-item.module.css';
 import { Title, TitleSizes } from '../title/title';
 import Text from '../text/text';
+import styles from './how-we-works-steps-item.module.css';
 
 interface IHowItWorksStepsItemProps {
   number: number;

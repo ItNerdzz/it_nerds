@@ -1,10 +1,10 @@
 import type { FC } from 'react';
-import styles from './hero.module.css';
 import Wrapper from '../../layout/wrapper/wrapper';
 import { Title, TitleSizes } from '../../ui/title/title';
 import Subtitle from '../../ui/subtitle/subtitle';
 import { Button, ButtonSizes } from '../../ui/button/button';
 import SphereCanvas from '@/components/ui/animated-sphere/sphere-canvas';
+import styles from './hero.module.css';
 
 const Hero: FC = () => {
   return (

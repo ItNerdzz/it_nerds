@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import styles from './about-us.module.css';
 import Wrapper from '@/components/layout/wrapper/wrapper';
 import { Title, TitleSizes } from '@/components/ui/title/title';
 import Subtitle from '@/components/ui/subtitle/subtitle';
 import Ul from '@/components/elements/Ul';
 import Text from '@/components/ui/text/text';
+import styles from './about-us.module.css';
 
 interface IAboutUsFeaturesItem {
   numbers: string;

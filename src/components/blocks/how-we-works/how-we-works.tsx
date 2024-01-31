@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import styles from './how-we-works.module.css';
 import Wrapper from '@/components/layout/wrapper/wrapper';
 import { Title, TitleSizes } from '@/components/ui/title/title';
 import Ul from '@/components/elements/Ul';
 import HowItWorksStepsItem from '@/components/ui/how-we-works-steps-item/how-we-works-steps-item';
 import IconCloud from '@/components/ui/icon-cloud/icon-cloud';
+import styles from './how-we-works.module.css';
 
 const steps = [
   {
@@ -35,7 +35,7 @@ const steps = [
 
 const HowWeWorks: FC = () => {
   return (
-    <section>
+    <section className={styles.HowWeWorks}>
       <Wrapper>
         <div className={styles.HowWeWorks_Inner}>
           <Title

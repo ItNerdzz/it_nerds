@@ -3,7 +3,7 @@
     var(--indent-vertical-bottom-mobile);
 }
 
-.Cases_Title {
+.Cases .Cases_Title {
   margin-bottom: 20px;
 }
 
@@ -13,7 +13,7 @@
       var(--indent-vertical-bottom-desktop);
   }
 
-  .Cases_Title {
+  .Cases .Cases_Title {
     margin-bottom: 50px;
   }
 }

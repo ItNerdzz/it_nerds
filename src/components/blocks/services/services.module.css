@@ -3,7 +3,7 @@
     var(--indent-vertical-bottom-mobile);
 }
 
-.Services_Title {
+.Services .Services_Title {
   margin-bottom: 20px;
 }
 
@@ -19,7 +19,7 @@
       var(--indent-vertical-bottom-desktop);
   }
 
-  .Services_Title {
+  .Services .Services_Title {
     margin: 0 0 50px;
   }
 

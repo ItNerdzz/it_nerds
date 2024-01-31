@@ -1,9 +1,9 @@
 import { useState, useRef } from 'react';
-import styles from './burger-button.module.css';
 import clsx from 'clsx';
 import { Button, ButtonSizes } from '../button/button';
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
 import BurgerData from './burger.json';
+import styles from './burger-button.module.css';
 
 interface IBurgerButtonProps {
   onClick: () => void;

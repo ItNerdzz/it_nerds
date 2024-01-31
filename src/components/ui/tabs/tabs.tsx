@@ -1,9 +1,9 @@
 'use client';
 import { FC, useState } from 'react';
-import styles from './tabs.module.css';
 import { ITabsProps } from './interface';
 import Ul from '@/components/elements/Ul';
 import { Button, ButtonSizes } from '../button/button';
+import styles from './tabs.module.css';
 
 const Tabs: FC<ITabsProps> = ({ tabItems }) => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);

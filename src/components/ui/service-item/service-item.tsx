@@ -1,9 +1,9 @@
 'use client';
 import { FC, useState, useEffect } from 'react';
-import styles from './service-item.module.css';
 import { Title, TitleSizes } from '../title/title';
 import Text from '../text/text';
 import { Button, ButtonSizes } from '../button/button';
+import styles from './service-item.module.css';
 
 interface IServiceItemProps {
   serviceItem: {
