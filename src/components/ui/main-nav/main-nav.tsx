@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import clsx from 'clsx';
 import Ul from '@/components/elements/Ul';
 import Link from 'next/link';
 import styles from './main-nav.module.css';
@@ -10,11 +11,13 @@ interface IMainNavItem {
 
 interface IMainNavProps {
   menuItems: IMainNavItem[];
+  className?: string;
 }
 
-const MainNav: FC<IMainNavProps> = ({ menuItems }) => {
+const MainNav: FC<IMainNavProps> = ({ menuItems, className }) => {
+  const mainNavClassName = clsx(className, styles.MainNav);
   return (
-    <Ul className={styles.MainNav}>
+    <Ul className={mainNavClassName}>
       {menuItems &&
         menuItems.length &&
         menuItems.map((item, index) => (

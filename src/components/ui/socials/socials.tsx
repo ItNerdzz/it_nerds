@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import clsx from 'clsx';
 import Ul from '@/components/elements/Ul';
 import WhatsappIcon from '/public/assets/images/icons/whatsapp.svg';
 import TelegramIcon from '/public/assets/images/icons/telegram.svg';
@@ -15,9 +16,15 @@ const socialItems = [
   },
 ];
 
-const Socials: FC = () => {
+interface ISocialsProps {
+  className?: string;
+}
+
+const Socials: FC<ISocialsProps> = ({ className }) => {
+  const socialsClassName = clsx(className, styles.Socials);
+
   return (
-    <Ul className={styles.Socials}>
+    <Ul className={socialsClassName}>
       {socialItems &&
         socialItems.length &&
         socialItems.map((item, index) => (

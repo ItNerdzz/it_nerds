@@ -45,6 +45,20 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 767px) {
+  .Header_Nav {
+    display: none;
+  }
+
+  .Header_Socials {
+    display: none;
+  }
+
+  .Header_CallbackButton {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .Header_Inner {
     padding: 15px 0;

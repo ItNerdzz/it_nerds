@@ -64,10 +64,11 @@ const Header: FC = () => {
             />
           ) : (
             <>
-              <MainNav menuItems={menuItems} />
+              <MainNav className={styles.Header_Nav} menuItems={menuItems} />
               <div className={styles.Header_ButtonsContainer}>
-                <Socials />
+                <Socials className={styles.Header_Socials} />
                 <Button
+                  className={styles.Header_CallbackButton}
                   size={ButtonSizes.SMALL}
                   onClick={() => {
                     console.log('popup callback');
@@ -81,7 +82,7 @@ const Header: FC = () => {
         </div>
         {isMobile ? (
           <div className={mobileMenuClassNames}>
-            <MainNav menuItems={menuItems} />
+            <MainNav className={styles.Header_MainNav} menuItems={menuItems} />
             <div className={styles.Hedaer_MobileMenuBottomContainer}>
               <Socials />
               <Button
