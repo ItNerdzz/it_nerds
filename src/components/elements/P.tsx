@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import clsx from 'clsx';
-import styles from './elements.module.css';
+import styles from './Elements.module.css';
 
 interface IPProps {
   className?: string;
@@ -8,7 +8,7 @@ interface IPProps {
 }
 
 const P: FC<IPProps> = ({ children, className }) => {
-  const pClassNames = clsx(styles.P, className);
+  const pClassNames = clsx(styles.p, className);
 
   return <p className={pClassNames}>{children}</p>;
 };

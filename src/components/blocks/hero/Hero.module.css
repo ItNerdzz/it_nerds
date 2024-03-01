@@ -1,12 +1,12 @@
-.Hero {
+.hero {
   padding: 80px 0 0;
 }
 
-.Hero_Inner {
+.inner {
   position: relative;
 }
 
-.Hero_TextContainer {
+.textContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -14,19 +14,19 @@
   margin-bottom: 20px;
 }
 
-.Hero_Title {
+.title {
   text-align: center;
 }
 
-.Title_coloredText {
+.coloredText {
   color: var(--primary);
 }
 
-.Hero_Subtitle {
+.subtitle {
   text-align: center;
 }
 
-.Hero_AnimationContainer {
+.animationContainer {
   position: relative;
   aspect-ratio: 1 / 1.1;
 }
@@ -43,7 +43,7 @@
   filter: blur(100px);
 }
 
-.Canvas {
+.canvas {
   position: absolute !important;
   width: auto !important;
   height: auto !important;
@@ -54,32 +54,32 @@
 }
 
 @media screen and (min-width: 768px) {
-  .Hero {
+  .hero {
     padding: 140px 0 0;
   }
 
-  .Hero_TextContainer {
+  .textContainer {
     gap: 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .Hero {
+  .hero {
     padding: 314px 0 187px;
     overflow-x: visible;
   }
 
-  .Hero_TextContainer {
+  .textContainer {
     align-items: flex-start;
     max-width: 800px;
     margin: 0;
   }
 
-  .Hero_Title {
+  .title {
     text-align: start;
   }
 
-  .Hero_AnimationContainer {
+  .animationContainer {
     position: absolute;
     top: -177px;
     left: 770px;
@@ -87,14 +87,14 @@
     height: 858px;
   }
 
-  .Hero_AnimationContainer:before {
+  .animationContainer:before {
     left: 0;
     right: 0;
     top: -100px;
     aspect-ratio: 1 / 1;
   }
 
-  .Canvas {
+  .canvas {
     width: 800px !important;
     height: 800px !important;
     top: -90px;

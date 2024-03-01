@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import clsx from 'clsx';
-import styles from './elements.module.css';
+import styles from './Elements.module.css';
 
 interface IUlProps {
   className?: string;
@@ -8,7 +8,7 @@ interface IUlProps {
 }
 
 const Ul: FC<IUlProps> = ({ children, className }) => {
-  const UlClassNames = clsx(styles.Ul, className);
+  const UlClassNames = clsx(styles.ul, className);
 
   return <ul className={UlClassNames}>{children}</ul>;
 };

@@ -1,0 +1,35 @@
+.mainNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  color: var(--base);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--primary);
+}
+
+.link:active {
+  opacity: 0.8;
+}
+@media screen and (min-width: 768px) {
+  .mainNav {
+    flex-direction: row;
+    gap: 20px;
+  }
+}

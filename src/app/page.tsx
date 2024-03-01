@@ -1,11 +1,11 @@
-import Header from '@/components/layout/header/header';
-import Hero from '@/components/blocks/hero/hero';
-import AboutUs from '@/components/blocks/about-us/about-us';
-import HowWeWorks from '@/components/blocks/how-we-works/how-we-works';
-import Footer from '@/components/layout/footer/footer';
-import Services from '@/components/blocks/services/services';
-import Cases from '@/components/blocks/cases/cases';
-import CallToAction from '@/components/blocks/call-to-action/call-to-action';
+import Header from '@/components/layout/Header';
+import Hero from '@/components/blocks/Hero';
+import AboutUs from '@/components/blocks/AboutUs';
+import HowWeWorks from '@/components/blocks/HowWeWorks';
+import Footer from '@/components/layout/Footer';
+import Services from '@/components/blocks/Services';
+import Cases from '@/components/blocks/Cases';
+import CallToAction from '@/components/blocks/CallToAction';
 
 const servicesData = [
   {

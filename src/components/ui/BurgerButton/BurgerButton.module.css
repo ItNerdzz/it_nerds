@@ -1,0 +1,17 @@
+.burgerButton {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.burgerButton svg path {
+  fill: var(--basic);
+  stroke: var(--basic);
+}
+
+.burgerButton:hover,
+.burgerButton:focus,
+.burgerButton:active {
+  background-color: transparent;
+}

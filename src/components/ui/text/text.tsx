@@ -1,7 +1,9 @@
 import { FC } from 'react';
-import P from '@/components/elements/P';
 import clsx from 'clsx';
-import styles from './text.module.css';
+
+import { P } from '@/components/elements';
+
+import styles from './Text.module.css';
 
 interface ITextProps {
   children: React.ReactNode;
@@ -9,7 +11,7 @@ interface ITextProps {
 }
 
 const Text: FC<ITextProps> = ({ children, className }) => {
-  const textClassNames = clsx(styles.Text, className);
+  const textClassNames = clsx(styles.text, className);
 
   return <P className={textClassNames}>{children}</P>;
 };

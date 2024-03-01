@@ -1,33 +1,33 @@
-.Title {
+.title {
   color: var(--basic);
   line-height: 150%;
   font-weight: 700;
   margin: 0;
 }
 
-.Title__big {
+.big {
   font-size: 36px;
   line-height: 130%;
 }
 
-.Title__medium {
+.medium {
   font-size: 30px;
 }
 
-.Title__small {
+.small {
   font-size: 22px;
 }
 
 @media screen and (min-width: 768px) {
-  .Title__big {
+  .big {
     font-size: 60px;
   }
 
-  .Title__medium {
+  .medium {
     font-size: 40px;
   }
 
-  .Title__small {
+  .small {
     font-size: 24px;
   }
 }

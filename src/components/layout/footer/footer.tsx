@@ -1,16 +1,18 @@
 import { FC } from 'react';
-import styles from './footer.module.css';
-import Wrapper from '../wrapper/wrapper';
-import Logo from '@/components/ui/logo/logo';
-import Socials from '@/components/ui/socials/socials';
+
+import Wrapper from '@/components/layout/Wrapper';
+import Logo from '@/components/ui/Logo';
+import Socials from '@/components/ui/Socials';
+
+import styles from './Footer.module.css';
 
 const Footer: FC = () => {
   return (
-    <footer className={styles.Footer}>
+    <footer className={styles.footer}>
       <Wrapper>
-        <div className={styles.Footer_Inner}>
+        <div className={styles.inner}>
           <Logo />
-          <span className={styles.Copyright}>2023 ©</span>
+          <span>2023 ©</span>
           <Socials />
         </div>
       </Wrapper>

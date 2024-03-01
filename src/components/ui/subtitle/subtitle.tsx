@@ -1,7 +1,9 @@
 import { FC } from 'react';
 import clsx from 'clsx';
-import P from '../../elements/P';
-import styles from './subtitle.module.css';
+
+import { P } from '@/components/elements';
+
+import styles from './Subtitle.module.css';
 
 interface ISubtitleProps {
   children: React.ReactNode;
@@ -9,7 +11,7 @@ interface ISubtitleProps {
 }
 
 const Subtitle: FC<ISubtitleProps> = ({ children, className }) => {
-  const subtitleClassNames = clsx(styles.Subtitle, className);
+  const subtitleClassNames = clsx(styles.subtitle, className);
 
   return <P className={subtitleClassNames}>{children}</P>;
 };

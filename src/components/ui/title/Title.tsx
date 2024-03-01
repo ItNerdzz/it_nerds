@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import clsx from 'clsx';
-import styles from './title.module.css';
+
+import styles from './Title.module.css';
 
 interface ITitleProps {
   children: React.ReactNode;
@@ -21,13 +22,10 @@ const Title: FC<ITitleProps> = ({
   className,
   as: Tag = 'h1',
 }) => {
-  const titleClassNames = clsx(
-    className,
-    styles.Title,
-    styles[`Title__${size}`]
-  );
+  const titleClassNames = clsx(className, styles.title, styles[size]);
 
   return <Tag className={titleClassNames}>{children}</Tag>;
 };
 
-export { Title, TitleSizes };
+export { TitleSizes };
+export default Title;

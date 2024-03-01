@@ -1,30 +1,31 @@
 import type { FC } from 'react';
-import Wrapper from '../../layout/wrapper/wrapper';
-import { Title, TitleSizes } from '../../ui/title/title';
-import Subtitle from '../../ui/subtitle/subtitle';
-import { Button, ButtonSizes } from '../../ui/button/button';
-import SphereCanvas from '@/components/ui/animated-sphere/sphere-canvas';
-import styles from './hero.module.css';
+
+import Wrapper from '@/components/layout/Wrapper';
+import Title, { TitleSizes } from '@/components/ui/Title';
+import Subtitle from '@/components/ui/Subtitle';
+import Button, { ButtonSizes } from '@/components/ui/Button';
+import SphereCanvas from '@/components/ui/AnimatedSphere';
+
+import styles from './Hero.module.css';
 
 const Hero: FC = () => {
   return (
-    <section className={styles.Hero}>
+    <section className={styles.hero}>
       <Wrapper>
-        <div className={styles.Hero_Inner}>
-          <div className={styles.Hero_TextContainer}>
-            <Title className={styles.Hero_Title} size={TitleSizes.BIG}>
-              Разработка{' '}
-              <span className={styles.Title_coloredText}>сайтов</span>
+        <div className={styles.inner}>
+          <div className={styles.textContainer}>
+            <Title className={styles.title} size={TitleSizes.BIG}>
+              Разработка <span className={styles.coloredText}>сайтов</span>
               <br />
               любого уровня сложности
             </Title>
-            <Subtitle className={styles.Hero_Subtitle}>
+            <Subtitle className={styles.subtitle}>
               Исследуем рынок, дизайним, разрабатываем продукт
             </Subtitle>
             <Button size={ButtonSizes.BIG}>Получить консультацию</Button>
           </div>
-          <div className={styles.Hero_AnimationContainer}>
-            <SphereCanvas className={styles.Canvas} />
+          <div className={styles.animationContainer}>
+            <SphereCanvas className={styles.canvas} />
           </div>
         </div>
       </Wrapper>

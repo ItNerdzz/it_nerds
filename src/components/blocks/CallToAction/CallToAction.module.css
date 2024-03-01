@@ -1,0 +1,38 @@
+.callToAction {
+  background-image: url('/assets/images/cta-bg.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.inner {
+  padding: var(--indent-vertical-top-mobile) 0
+    var(--indent-vertical-bottom-mobile);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .inner {
+    padding: var(--indent-vertical-top-desktop) 0
+      var(--indent-vertical-bottom-desktop);
+    gap: 50px;
+  }
+}

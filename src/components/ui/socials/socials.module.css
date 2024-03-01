@@ -1,10 +1,10 @@
-.Socials {
+.socials {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.Socials_Link {
+.link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,29 +15,29 @@
   transition: all 0.2s;
 }
 
-.Socials_Link:hover,
-.Socials_Link:focus {
+.link:hover,
+.link:focus {
   background-color: var(--primary);
 }
 
-.Socials_Link:active {
+.link:active {
   background-color: var(--primary);
 }
 
-.Socials_Link:hover svg path[fill],
-.Socials_Link:focus svg path[fill] {
+.link:hover svg path[fill],
+.link:focus svg path[fill] {
   fill: var(--basic);
 }
 
-.Socials_Link:active svg path[fill] {
+.link:active svg path[fill] {
   fill: var(--basic);
 }
 
-.Socials_Link:hover svg path[stroke],
-.Socials_Link:focus svg path[stroke] {
+.link:hover svg path[stroke],
+.link:focus svg path[stroke] {
   stroke: var(--basic);
 }
 
-.Socials_Link:active svg path[stroke] {
+.link:active svg path[stroke] {
   stroke: var(--basic);
 }

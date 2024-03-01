@@ -1,11 +1,11 @@
-.Header {
+.header {
   z-index: 1;
   position: fixed;
   width: 100%;
   background-color: var(--background-light);
 }
 
-.Header_Inner {
+.inner {
   z-index: 2;
   padding: 10px 0;
   position: relative;
@@ -16,13 +16,13 @@
   background-color: rgb(40, 40, 40);
 }
 
-.Header_ButtonsContainer {
+.buttonsContainer {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.Header_MobileMenu {
+.mobileMenu {
   z-index: 1;
   position: absolute;
   top: -400px;
@@ -36,25 +36,25 @@
   transition: all 0.4s ease-in-out;
 }
 
-.Header_MobileMenu__opened {
+.mobileMenuOpened {
   top: 100%;
 }
 
-.Hedaer_MobileMenuBottomContainer {
+.mobileMenuBottomContainer {
   display: flex;
   justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
-  .Header_Nav {
+  .nav {
     display: none;
   }
 
-  .Header_Socials {
+  .socials {
     display: none;
   }
 
-  .Header_CallbackButton {
+  .callbackButton {
     display: none;
   }
 }

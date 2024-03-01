@@ -1,13 +1,15 @@
 'use client';
 import { FC, useState, useEffect } from 'react';
-import styles from './header.module.css';
 import clsx from 'clsx';
-import BurgerButton from '@/components/ui/burger-button/burger-button';
-import Wrapper from '../wrapper/wrapper';
-import Logo from '@/components/ui/logo/logo';
-import { Button, ButtonSizes } from '@/components/ui/button/button';
-import MainNav from '@/components/ui/main-nav/main-nav';
-import Socials from '@/components/ui/socials/socials';
+
+import Wrapper from '@/components/layout/Wrapper';
+import Logo from '@/components/ui/Logo';
+import BurgerButton from '@/components/ui/BurgerButton';
+import Button, { ButtonSizes } from '@/components/ui/Button';
+import MainNav from '@/components/ui/MainNav';
+import Socials from '@/components/ui/Socials';
+
+import styles from './Header.module.css';
 
 const menuItems = [
   {
@@ -33,8 +35,8 @@ const Header: FC = () => {
   );
 
   const mobileMenuClassNames = clsx(
-    styles.Header_MobileMenu,
-    isMenuOpened && styles.Header_MobileMenu__opened
+    styles.mobileMenu,
+    isMenuOpened && styles.mobileMenuOpened
   );
 
   useEffect(() => {
@@ -52,9 +54,9 @@ const Header: FC = () => {
   }, []);
 
   return (
-    <header className={styles.Header}>
+    <header className={styles.header}>
       <Wrapper>
-        <div className={styles.Header_Inner}>
+        <div className={styles.inner}>
           <Logo />
           {isMobile ? (
             <BurgerButton
@@ -64,11 +66,11 @@ const Header: FC = () => {
             />
           ) : (
             <>
-              <MainNav className={styles.Header_Nav} menuItems={menuItems} />
-              <div className={styles.Header_ButtonsContainer}>
-                <Socials className={styles.Header_Socials} />
+              <MainNav className={styles.nav} menuItems={menuItems} />
+              <div className={styles.buttonsContainer}>
+                <Socials className={styles.socials} />
                 <Button
-                  className={styles.Header_CallbackButton}
+                  className={styles.callbackButton}
                   size={ButtonSizes.SMALL}
                   onClick={() => {
                     console.log('popup callback');
@@ -82,8 +84,8 @@ const Header: FC = () => {
         </div>
         {isMobile ? (
           <div className={mobileMenuClassNames}>
-            <MainNav className={styles.Header_MainNav} menuItems={menuItems} />
-            <div className={styles.Hedaer_MobileMenuBottomContainer}>
+            <MainNav className={styles.nav} menuItems={menuItems} />
+            <div className={styles.mobileMenuBottomContainer}>
               <Socials />
               <Button
                 size={ButtonSizes.SMALL}

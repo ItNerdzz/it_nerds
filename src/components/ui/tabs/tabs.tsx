@@ -1,23 +1,25 @@
 'use client';
 import { FC, useState } from 'react';
+
+import { Ul } from '@/components/elements';
+import Button, { ButtonSizes } from '@/components/ui/Button';
+
 import { ITabsProps } from './interface';
-import Ul from '@/components/elements/Ul';
-import { Button, ButtonSizes } from '../button/button';
-import styles from './tabs.module.css';
+import styles from './Tabs.module.css';
 
 const Tabs: FC<ITabsProps> = ({ tabItems }) => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   return (
     <div>
-      <Ul className={styles.Tabs_ButtonsList}>
+      <Ul className={styles.buttonsList}>
         {tabItems &&
           tabItems.length &&
           tabItems.map((tabItem, index) => (
-            <li className={styles.Tabs_ButtonsItem} key={tabItem.tabTitle}>
+            <li className={styles.buttonsItem} key={tabItem.tabTitle}>
               <Button
                 isAlt={activeTabIndex === index ? false : true}
-                className={styles.Tabs_Button}
+                className={styles.tabsButton}
                 size={ButtonSizes.SMALL}
                 onClick={() => setActiveTabIndex(index)}
               >

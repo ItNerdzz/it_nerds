@@ -1,6 +1,7 @@
 import { FC, ButtonHTMLAttributes } from 'react';
 import clsx from 'clsx';
-import styles from './button.module.css';
+
+import styles from './Button.module.css';
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
@@ -28,10 +29,10 @@ const Button: FC<IButtonProps> = ({
   isAlt,
 }) => {
   const buttonClassNames = clsx(
-    styles.Button,
+    styles.button,
     className,
-    styles[`Button__${size}`],
-    isAlt && styles.Button__alt
+    styles[size],
+    isAlt && styles.alt
   );
 
   return (
@@ -47,4 +48,5 @@ const Button: FC<IButtonProps> = ({
   );
 };
 
-export { Button, ButtonSizes };
+export { ButtonSizes };
+export default Button;

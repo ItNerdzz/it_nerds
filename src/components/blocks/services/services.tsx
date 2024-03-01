@@ -1,11 +1,13 @@
 import { FC } from 'react';
+
+import Wrapper from '@/components/layout/Wrapper';
+import Title, { TitleSizes } from '@/components/ui/Title';
+import Tabs from '@/components/ui/Tabs';
+import ServiceItem from '@/components/ui/ServiceItem';
+import { Ul } from '@/components/elements';
+
 import { IServicesData, IServicesProps, IGeneratedTabItems } from './interface';
-import Wrapper from '@/components/layout/wrapper/wrapper';
-import { Title, TitleSizes } from '@/components/ui/title/title';
-import Tabs from '@/components/ui/tabs/tabs';
-import ServiceItem from '@/components/ui/service-item/service-item';
-import Ul from '@/components/elements/Ul';
-import styles from './services.module.css';
+import styles from './Services.module.css';
 
 const generateTabItems = (data: IServicesData[]) => {
   const newData: IGeneratedTabItems[] = [];
@@ -14,7 +16,7 @@ const generateTabItems = (data: IServicesData[]) => {
     newData.push({
       tabTitle: item.category,
       content: (
-        <Ul className={styles.Services_ItemsList}>
+        <Ul className={styles.list}>
           {item.items.map((item) => (
             <ServiceItem
               key={item.id}
@@ -35,14 +37,10 @@ const generateTabItems = (data: IServicesData[]) => {
 
 const Services: FC<IServicesProps> = ({ servicesData }) => {
   return (
-    <section className={styles.Services} id={'services'}>
+    <section id={'services'}>
       <Wrapper>
-        <div className={styles.Services_Inner}>
-          <Title
-            className={styles.Services_Title}
-            size={TitleSizes.MEDIUM}
-            as={'h2'}
-          >
+        <div className={styles.inner}>
+          <Title className={styles.title} size={TitleSizes.MEDIUM} as={'h2'}>
             Наши услуги
           </Title>
           <Tabs tabItems={generateTabItems(servicesData)} />
