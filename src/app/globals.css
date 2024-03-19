@@ -23,18 +23,6 @@ body {
   margin: 0;
 }
 
-body {
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: min-content 1fr min-content;
-  font-weight: 400;
-  background-color: var(--background);
-  color: var(--basic);
-  font-size: var(--default-font-size);
-  line-height: var(--default-line-height);
-  overflow-x: hidden;
-}
-
 ::selection {
   background-color: rgb(188, 240, 133);
   color: rgb(22, 22, 22);

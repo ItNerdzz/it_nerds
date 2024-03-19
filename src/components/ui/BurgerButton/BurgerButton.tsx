@@ -2,8 +2,7 @@ import { useState, useRef } from 'react';
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
 import clsx from 'clsx';
 
-import Button, { ButtonSizes } from '@/components/ui/Button';
-
+import Button, { ButtonSizes } from '../Button';
 import BurgerData from './burger.json';
 import styles from './BurgerButton.module.css';
 
@@ -34,12 +33,12 @@ const BurgerButton: React.FC<IBurgerButtonProps> = ({ onClick, className }) => {
   return (
     <Button
       className={burgerButtonClassNames}
-      size={ButtonSizes.SMALL}
       onClick={() => {
         setDirection(direction * -1);
         toggleAnimation();
         onClick();
       }}
+      size={ButtonSizes.SMALL}
     >
       <Lottie
         lottieRef={lottieRef}

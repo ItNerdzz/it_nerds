@@ -1,8 +1,7 @@
-import Header from '@/components/layout/Header';
+import PageLayout from '@/components/layout/PageLayout/PageLayout';
 import Hero from '@/components/blocks/Hero';
 import AboutUs from '@/components/blocks/AboutUs';
 import HowWeWorks from '@/components/blocks/HowWeWorks';
-import Footer from '@/components/layout/Footer';
 import Services from '@/components/blocks/Services';
 import Cases from '@/components/blocks/Cases';
 import CallToAction from '@/components/blocks/CallToAction';
@@ -81,17 +80,13 @@ const servicesData = [
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <AboutUs />
-        <HowWeWorks />
-        <Services servicesData={servicesData} />
-        <Cases />
-        <CallToAction />
-      </main>
-      <Footer />
-    </>
+    <PageLayout>
+      <Hero />
+      <AboutUs />
+      <HowWeWorks />
+      <Services servicesData={servicesData} />
+      <Cases />
+      <CallToAction />
+    </PageLayout>
   );
 }
