@@ -1,7 +1,7 @@
 'use client';
 import React, { FC, useState, useEffect, useRef } from 'react';
-//@ts-ignore
 import HALO from 'vanta/dist/vanta.halo.min';
+import * as THREE from 'three';
 
 import styles from './Halo.module.css';
 
@@ -24,13 +24,14 @@ const Halo: FC = () => {
 
     const options = {
       el: myRef.current,
+      THREE,
       mouseControls: true,
       touchControls: true,
-      gyroControls: false,
+      gyroControls: true,
       minHeight: 200.0,
       minWidth: 200.0,
       baseColor: 0x7c3aed,
-      backgroundColor: 0x171717,
+      backgroundColor: 0x555555,
       amplitudeFactor: 3.0,
       size: size,
       xOffset: xOffset,
@@ -45,7 +46,7 @@ const Halo: FC = () => {
       setVantaEffect(HALO(getVantaOptions()));
     }
     return () => {
-      //@ts-ignore
+      // @ts-ignore
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
