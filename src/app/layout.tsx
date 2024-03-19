@@ -21,6 +21,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={roboto.className}>{children}</body>
+      <script
+        async
+        src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.min.js"
+      ></script>
     </html>
   );
 }

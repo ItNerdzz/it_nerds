@@ -1,16 +1,18 @@
-import type { FC } from 'react';
+'use client';
+import { FC } from 'react';
 
 import Wrapper from '@/components/layout/Wrapper';
 import Title, { TitleSizes } from '@/components/ui/Title';
 import Subtitle from '@/components/ui/Subtitle';
 import Button, { ButtonSizes } from '@/components/ui/Button';
-import SphereCanvas from '@/components/ui/AnimatedSphere';
+// import SphereCanvas from '@/components/ui/AnimatedSphere';
 
+import Halo from '@/components/ui/Halo';
 import styles from './Hero.module.css';
 
 const Hero: FC = () => {
   return (
-    <section className={styles.hero}>
+    <section className={styles.root}>
       <Wrapper>
         <div className={styles.inner}>
           <div className={styles.textContainer}>
@@ -24,11 +26,12 @@ const Hero: FC = () => {
             </Subtitle>
             <Button size={ButtonSizes.BIG}>Получить консультацию</Button>
           </div>
-          <div className={styles.animationContainer}>
-            <SphereCanvas className={styles.canvas} />
-          </div>
         </div>
       </Wrapper>
+      <div className={styles.animationContainer}>
+        {/* <SphereCanvas className={styles.canvas} /> */}
+        <Halo />
+      </div>
     </section>
   );
 };
