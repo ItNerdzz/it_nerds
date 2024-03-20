@@ -22,4 +22,4 @@ jobs:
         run: |
           npm ci
           npm run build
-          rsync -avz build/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_REMOTE_PATH }}
+          rsync -avz out/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_REMOTE_PATH }}
