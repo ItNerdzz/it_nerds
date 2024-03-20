@@ -1,41 +1,31 @@
 'use client';
 import React, { FC, useState, useEffect, useRef } from 'react';
-import HALO from 'vanta/dist/vanta.halo.min';
+import p5 from 'p5';
 import * as THREE from 'three';
+import TRUNK from 'vanta/dist/vanta.trunk.min';
 
-import styles from './Halo.module.css';
+import styles from './Trunk.module.css';
 
-const Halo: FC = () => {
+const Trunk: FC = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
   const myRef = useRef(null);
 
   const getVantaOptions = () => {
-    const windowWidth = window.innerWidth;
-
-    let size = 0.8;
-    let xOffset = 0;
-    let yOffset = 0.15;
-
-    if (windowWidth >= 1024) {
-      size = 1;
-      xOffset = 0.2;
-      yOffset = 0.1;
-    }
-
     const options = {
       el: myRef.current,
       THREE,
+      p5,
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
       minHeight: 200.0,
       minWidth: 200.0,
-      baseColor: 0x7c3aed,
-      backgroundColor: 0x555555,
-      amplitudeFactor: 3.0,
-      size: size,
-      xOffset: xOffset,
-      yOffset: yOffset,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x727272,
+      backgroundColor: 0x171717,
+      chaos: 1.0,
+      yOffset: 10.0,
     };
 
     return options;
@@ -43,14 +33,15 @@ const Halo: FC = () => {
 
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(HALO(getVantaOptions()));
+      setVantaEffect(TRUNK(getVantaOptions()));
     }
     return () => {
       // @ts-ignore
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
+
   return <div className={styles.root} ref={myRef} />;
 };
 
-export default Halo;
+export default Trunk;

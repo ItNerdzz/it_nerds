@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import dynamic from 'next/dynamic';
 
 import Wrapper from '@/components/layout/Wrapper';
 import Title, { TitleSizes } from '@/components/ui/Title';
@@ -7,9 +8,16 @@ import Button, { ButtonSizes } from '@/components/ui/Button';
 
 import styles from './CallToAction.module.css';
 
+const Trunk = dynamic(
+  () => {
+    return import('@/components/ui/Trunk');
+  },
+  { ssr: false }
+);
+
 const CallToAction: FC = () => {
   return (
-    <section className={styles.callToAction}>
+    <section className={styles.root}>
       <Wrapper>
         <div className={styles.inner}>
           <div className={styles.textContainer}>
@@ -23,6 +31,9 @@ const CallToAction: FC = () => {
           <Button size={ButtonSizes.BIG}>Связаться</Button>
         </div>
       </Wrapper>
+      <div className={styles.animationWrapper}>
+        <Trunk />
+      </div>
     </section>
   );
 };
