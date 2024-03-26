@@ -9,6 +9,8 @@ import Button, { ButtonSizes } from '@/components/ui/Button';
 import MainNav from '@/components/ui/MainNav';
 import Socials from '@/components/ui/Socials';
 
+import Config from '@/config.json';
+
 import styles from './Header.module.css';
 
 const menuItems = [
@@ -28,11 +30,7 @@ const menuItems = [
 
 const Header: FC = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const [isMobile, setIsMobile] = useState<boolean>(
-    typeof window !== 'undefined'
-      ? window.matchMedia('(max-width: 767px)').matches
-      : false
-  );
+  const [isMobile, setIsMobile] = useState(false);
 
   const mobileMenuClassNames = clsx(
     styles.mobileMenu,
@@ -42,9 +40,11 @@ const Header: FC = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 767px)');
 
-    const handleMediaChange = (evt: MediaQueryListEvent) => {
-      setIsMobile(evt.matches);
+    const handleMediaChange = () => {
+      setIsMobile(mediaQuery.matches);
     };
+
+    handleMediaChange();
 
     mediaQuery.addEventListener('change', handleMediaChange);
 
@@ -75,6 +75,9 @@ const Header: FC = () => {
                   onClick={() => {
                     console.log('popup callback');
                   }}
+                  href={Config.Telegram}
+                  target="_blank"
+                  asLink={true}
                 >
                   Свзяаться
                 </Button>

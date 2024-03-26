@@ -5,16 +5,29 @@
 .logo svg {
   width: 113px;
   height: 40px;
-}
-
-.logo:hover svg path {
   transition: all 0.2s;
 }
 
-.logo:hover svg path:first-child {
+.logo svg path {
+  transition: all 0.2s;
+}
+
+.logo:active svg path:first-child {
   stroke: var(--primary);
 }
 
-.logo:hover svg path:not(:first-child) {
+.logo:active svg path:not(:first-child) {
   fill: var(--primary);
+}
+
+@media (hover: hover) {
+  .logo:hover svg path:first-child,
+  .logo:focus svg path:first-child {
+    stroke: var(--primary);
+  }
+
+  .logo:hover svg path:not(:first-child),
+  .logo:focus svg path:not(:first-child) {
+    fill: var(--primary);
+  }
 }

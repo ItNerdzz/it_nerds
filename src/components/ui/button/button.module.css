@@ -1,9 +1,13 @@
 .button {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--basic);
   font-size: 14px;
   font-weight: 600;
   line-height: 140%;
+  text-decoration: none;
   padding: 10px 16px;
   background-color: var(--primary);
   border: none;

@@ -6,6 +6,8 @@ import Title, { TitleSizes } from '@/components/ui/Title';
 import Subtitle from '@/components/ui/Subtitle';
 import Button, { ButtonSizes } from '@/components/ui/Button';
 
+import Config from '@/config.json';
+
 import styles from './CallToAction.module.css';
 
 const Trunk = dynamic(
@@ -28,7 +30,14 @@ const CallToAction: FC = () => {
               Поделитесь своей идей, а мы предложим оптимальное решение
             </Subtitle>
           </div>
-          <Button size={ButtonSizes.BIG}>Связаться</Button>
+          <Button
+            size={ButtonSizes.BIG}
+            href={Config.Telegram}
+            target="_blank"
+            asLink={true}
+          >
+            Связаться
+          </Button>
         </div>
       </Wrapper>
       <div className={styles.animationWrapper}>

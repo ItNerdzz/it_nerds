@@ -6,16 +6,18 @@ import { Ul } from '@/components/elements';
 import WhatsappIcon from '/public/assets/images/icons/whatsapp.svg';
 import TelegramIcon from '/public/assets/images/icons/telegram.svg';
 
+import Config from '@/config.json';
+
 import styles from './Socials.module.css';
 
 const socialItems = [
   {
     icon: <WhatsappIcon />,
-    link: '#',
+    link: Config.Whatsapp,
   },
   {
     icon: <TelegramIcon />,
-    link: 'https://t.me/kirillbshrn',
+    link: Config.Telegram,
   },
 ];
 

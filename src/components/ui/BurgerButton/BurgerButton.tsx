@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
-import Lottie, { LottieRefCurrentProps } from 'lottie-react';
+import { LottieRefCurrentProps } from 'lottie-react';
+import dynamic from 'next/dynamic';
 import clsx from 'clsx';
 
 import Button, { ButtonSizes } from '../Button';
@@ -10,6 +11,8 @@ interface IBurgerButtonProps {
   onClick: () => void;
   className?: string;
 }
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 const BurgerButton: React.FC<IBurgerButtonProps> = ({ onClick, className }) => {
   const [isPlaying, setIsPlaying] = useState(false);

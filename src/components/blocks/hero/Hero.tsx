@@ -5,6 +5,8 @@ import Wrapper from '@/components/layout/Wrapper';
 import Title, { TitleSizes } from '@/components/ui/Title';
 import Subtitle from '@/components/ui/Subtitle';
 import Button, { ButtonSizes } from '@/components/ui/Button';
+
+import Config from '@/config.json';
 // import SphereCanvas from '@/components/ui/AnimatedSphere';
 
 import Halo from '@/components/ui/Halo';
@@ -24,7 +26,14 @@ const Hero: FC = () => {
             <Subtitle className={styles.subtitle}>
               Исследуем рынок, дизайним, разрабатываем продукт
             </Subtitle>
-            <Button size={ButtonSizes.BIG}>Получить консультацию</Button>
+            <Button
+              size={ButtonSizes.BIG}
+              href={Config.Telegram}
+              target="_blank"
+              asLink={true}
+            >
+              Получить консультацию
+            </Button>
           </div>
         </div>
       </Wrapper>
