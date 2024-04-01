@@ -31,11 +31,19 @@ const menuItems = [
 const Header: FC = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrollTop, setIsScrollTop] = useState(false);
 
   const mobileMenuClassNames = clsx(
     styles.mobileMenu,
     isMenuOpened && styles.mobileMenuOpened
   );
+
+  const rootClassNames = clsx([
+    styles.root,
+    isScrolled && styles.scrolled,
+    isScrolled && isScrollTop && styles.show,
+  ]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 767px)');
@@ -46,15 +54,37 @@ const Header: FC = () => {
 
     handleMediaChange();
 
+    let prevScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+
+      if (currentScrollY > 0 && currentScrollY < prevScrollY) {
+        setIsScrollTop(true);
+      } else {
+        setIsScrollTop(false);
+      }
+
+      prevScrollY = currentScrollY;
+    };
+
     mediaQuery.addEventListener('change', handleMediaChange);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       mediaQuery.removeEventListener('change', handleMediaChange);
+      window.addEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={rootClassNames}>
       <Wrapper>
         <div className={styles.inner}>
           <Logo />

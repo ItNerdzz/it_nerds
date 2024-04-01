@@ -1,8 +1,20 @@
-.header {
+.root {
   z-index: 2;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   background-color: var(--background-light);
+  transition: top 0.3s ease-in-out;
+}
+
+.root.scrolled {
+  top: -100px;
+}
+
+.root.show {
+  top: 0;
 }
 
 .inner {
