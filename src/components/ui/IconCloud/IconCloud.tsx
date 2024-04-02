@@ -41,7 +41,11 @@ const iconsList = [
   siNodedotjs,
 ];
 
-const IconCloud: FC = () => {
+interface IIconCloudProps {
+  className: string;
+}
+
+const IconCloud: FC<IIconCloudProps> = ({ className }) => {
   const icons = iconsList.map((icon) => {
     return renderSimpleIcon({
       icon,
@@ -59,13 +63,14 @@ const IconCloud: FC = () => {
     outlineColour: 'transparent',
     imageScale: 2,
     dragControl: false,
-    // dragThreshold: number,
   };
 
   return (
-    <Cloud id={'iconCloud'} options={cloudOptions}>
-      {icons}
-    </Cloud>
+    <div className={className}>
+      <Cloud id={'iconCloud'} options={cloudOptions}>
+        {icons}
+      </Cloud>
+    </div>
   );
 };
 

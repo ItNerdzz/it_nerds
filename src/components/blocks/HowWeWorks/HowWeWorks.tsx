@@ -56,7 +56,7 @@ const HowWeWorks: FC = () => {
                 ))}
             </Ul>
             <div className={styles.technologies}>
-              <IconCloud />
+              <IconCloud className={styles.cloud} />
             </div>
           </div>
         </div>

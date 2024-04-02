@@ -31,7 +31,7 @@
 }
 
 .technologies::before {
-  z-index: -1;
+  z-index: 0;
   content: '';
   position: absolute;
   top: 0;
@@ -41,6 +41,11 @@
   width: 100%;
   height: 100%;
   filter: blur(110px);
+}
+
+.cloud {
+  z-index: 1;
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
