@@ -8,6 +8,7 @@
 }
 
 .steps {
+  z-index: 1;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -58,12 +59,6 @@
     margin-bottom: 50px;
   }
 
-  .content {
-    display: grid;
-    grid-template-columns: 347px 1fr;
-    justify-items: end;
-  }
-
   .steps {
     padding-left: 40px;
   }
@@ -74,10 +69,20 @@
 
   .technologies {
     pointer-events: auto;
-    position: sticky;
-    top: 0;
-    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 614px;
     height: 614px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
+    display: grid;
+    grid-template-columns: 347px 1fr;
+    align-items: center;
+    justify-items: end;
   }
 }
