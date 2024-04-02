@@ -85,4 +85,14 @@
     align-items: center;
     justify-items: end;
   }
+
+  .technologies {
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 614px;
+    height: 614px;
+    margin: 0;
+  }
 }
