@@ -13,10 +13,12 @@
 }
 
 .text {
-  transition: all 0.2s;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .moreButton {
+  cursor: pointer;
   color: var(--primary);
   font-size: 16px;
   font-weight: 600;

@@ -1,5 +1,6 @@
 'use client';
 import { FC, useState } from 'react';
+import clsx from 'clsx';
 
 import { Ul } from '@/components/elements';
 import Button, { ButtonSizes } from '@/components/ui/Button';
@@ -19,7 +20,10 @@ const Tabs: FC<ITabsProps> = ({ tabItems }) => {
             <li className={styles.buttonsItem} key={tabItem.tabTitle}>
               <Button
                 isAlt={activeTabIndex === index ? false : true}
-                className={styles.tabsButton}
+                className={clsx([
+                  activeTabIndex === index && styles.buttonActive,
+                  styles.tabsButton,
+                ])}
                 size={ButtonSizes.SMALL}
                 onClick={() => setActiveTabIndex(index)}
               >

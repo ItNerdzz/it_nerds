@@ -17,6 +17,15 @@
   border-radius: 0;
 }
 
+.buttonActive:active {
+  opacity: 1;
+}
+
+.buttonActive:hover {
+  background: var(--primary);
+  color: var(--basic);
+}
+
 .buttonsItem:first-child .tabsButton {
   border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
 }

@@ -4,6 +4,7 @@ export interface IServicesDataItem {
   description: string;
   price: number;
 }
+
 export interface IServicesData {
   category: string;
   items: IServicesDataItem[];
