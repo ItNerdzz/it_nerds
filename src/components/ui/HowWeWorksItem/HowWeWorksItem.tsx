@@ -1,4 +1,6 @@
+'use client';
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 
 import Title, { TitleSizes } from '@/components/ui/Title';
 import Text from '@/components/ui/Text';
@@ -19,12 +21,26 @@ const HowItWorksStepsItem: FC<IHowItWorksStepsItemProps> = ({
 }) => {
   return (
     <li>
-      <div className={styles.header}>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.8,
+          delay: 1,
+          ease: 'easeInOut',
+        }}
+        variants={{
+          hidden: { color: 'var(--basic)' },
+          visible: { color: 'var(--primary)' },
+        }}
+        className={styles.header}
+      >
         <span className={styles.number}>{number}</span>
         <Title size={TitleSizes.SMALL} as={'h3'}>
           {item.title}
         </Title>
-      </div>
+      </motion.div>
       <Text>{item.text}</Text>
     </li>
   );
