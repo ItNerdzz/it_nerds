@@ -17,6 +17,7 @@
     "@types/simple-icons": "^5.21.1",
     "@types/three": "^0.159.0",
     "clsx": "^2.1.0",
+    "framer-motion": "^11.0.25",
     "lottie-react": "^2.4.0",
     "next": "14.0.4",
     "p5": "^1.1.9",
