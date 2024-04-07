@@ -13,35 +13,55 @@ interface IHowItWorksStepsItemProps {
     title: string;
     text: string;
   };
+  animationDelay: number;
 }
 
 const HowItWorksStepsItem: FC<IHowItWorksStepsItemProps> = ({
   number,
+  animationDelay,
   item,
 }) => {
+  console.log(animationDelay);
   return (
-    <li>
+    <li className={styles.root}>
       <motion.div
+        className={styles.header}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{
-          duration: 0.8,
-          delay: 1,
+          duration: 1,
+          delay: animationDelay,
           ease: 'easeInOut',
         }}
         variants={{
           hidden: { color: 'var(--basic)' },
           visible: { color: 'var(--primary)' },
         }}
-        className={styles.header}
       >
         <span className={styles.number}>{number}</span>
         <Title size={TitleSizes.SMALL} as={'h3'}>
           {item.title}
         </Title>
       </motion.div>
-      <Text>{item.text}</Text>
+      <div className={styles.progress}>
+        <motion.div
+          className={styles.bar}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{
+            duration: 1,
+            delay: animationDelay,
+            ease: 'easeInOut',
+          }}
+          variants={{
+            hidden: { height: '0' },
+            visible: { height: '100%' },
+          }}
+        ></motion.div>
+      </div>
+      <Text className={styles.text}>{item.text}</Text>
     </li>
   );
 };

@@ -2,9 +2,9 @@ import { FC } from 'react';
 
 import Wrapper from '@/components/layout/Wrapper';
 import Title, { TitleSizes } from '@/components/ui/Title';
-import { Ul } from '@/components/elements';
 import HowItWorksStepsItem from '@/components/ui/HowWeWorksItem';
 import IconCloud from '@/components/ui/IconCloud';
+import { Ul } from '@/components/elements';
 
 import styles from './HowWeWorks.module.css';
 
@@ -49,6 +49,7 @@ const HowWeWorks: FC = () => {
                 steps.length &&
                 steps.map((stepItem, index) => (
                   <HowItWorksStepsItem
+                    animationDelay={0.5 + index / 2}
                     key={index}
                     number={index + 1}
                     item={stepItem}

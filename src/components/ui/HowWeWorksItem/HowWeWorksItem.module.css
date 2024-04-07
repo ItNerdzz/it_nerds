@@ -1,3 +1,22 @@
+.root {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 15px;
+}
+
+.progress {
+  position: absolute;
+  top: 24px;
+  left: 7px;
+  width: 1px;
+  background-color: var(--basic);
+  height: 100%;
+}
+
+.bar {
+  background-color: var(--primary);
+}
+
 .header {
   position: relative;
   display: flex;
@@ -7,13 +26,14 @@
 
 .header::before {
   content: '';
+  z-index: 1;
   position: absolute;
   top: 50%;
-  left: -22px;
+  left: -20px;
   width: 11px;
   height: 11px;
   background-color: currentColor;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--basic);
   border-radius: 50%;
   transform: translateY(-50%);
 }
@@ -25,9 +45,17 @@
   line-height: 150%;
 }
 
+.text {
+  color: var(--basic);
+}
+
 @media screen and (min-width: 768px) {
+  .root {
+    padding-left: 40px;
+  }
+
   .header::before {
-    left: -42px;
+    left: -40px;
   }
 
   .number {

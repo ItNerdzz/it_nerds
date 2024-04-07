@@ -8,22 +8,10 @@
 }
 
 .steps {
-  z-index: 1;
-  position: relative;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding-left: 20px;
-}
-
-.steps::before {
-  content: '';
-  position: absolute;
-  top: 22px;
-  bottom: 0;
-  left: 5px;
-  width: 1px;
-  background-color: var(--basic);
+  margin: 0;
 }
 
 .technologies {
@@ -57,14 +45,6 @@
 
   .title {
     margin-bottom: 50px;
-  }
-
-  .steps {
-    padding-left: 40px;
-  }
-
-  .steps::before {
-    top: 29px;
   }
 
   .technologies {
