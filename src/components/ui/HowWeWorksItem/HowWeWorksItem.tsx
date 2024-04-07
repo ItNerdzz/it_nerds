@@ -21,7 +21,6 @@ const HowItWorksStepsItem: FC<IHowItWorksStepsItemProps> = ({
   animationDelay,
   item,
 }) => {
-  console.log(animationDelay);
   return (
     <li className={styles.root}>
       <motion.div

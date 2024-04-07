@@ -97,20 +97,23 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .hero {
-    padding: 314px 0 187px;
-    overflow-x: visible;
-  }
-
+@media screen and (min-width: 1024px) {
   .textContainer {
     align-items: flex-start;
+    gap: 32px;
     max-width: 800px;
     margin: 0;
   }
 
   .title {
     text-align: start;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    padding: 314px 0 187px;
+    overflow-x: visible;
   }
 
   .animationContainer {

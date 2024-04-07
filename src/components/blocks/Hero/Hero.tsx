@@ -24,7 +24,7 @@ const Hero: FC = () => {
               любого уровня сложности
             </Title>
             <Subtitle className={styles.subtitle}>
-              Исследуем рынок, дизайним, разрабатываем продукт
+              Исследуем рынок, готовим дизайн, разрабатываем продукт
             </Subtitle>
             <Button
               size={ButtonSizes.BIG}
