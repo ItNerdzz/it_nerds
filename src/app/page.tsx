@@ -5,6 +5,7 @@ import HowWeWorks from '@/components/blocks/HowWeWorks';
 import Services from '@/components/blocks/Services';
 import Cases from '@/components/blocks/Cases';
 import CallToAction from '@/components/blocks/CallToAction';
+import Flame from "@/components/blocks/Flame";
 
 const servicesData = [
   {

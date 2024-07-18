@@ -8,9 +8,9 @@ import Button, { ButtonSizes } from '@/components/ui/Button';
 
 import Config from '@/config.json';
 // import SphereCanvas from '@/components/ui/AnimatedSphere';
-
-import Halo from '@/components/ui/Halo';
+// import Halo from '@/components/ui/Halo';
 import styles from './Hero.module.css';
+import Flame from "@/components/blocks/Flame";
 
 const Hero: FC = () => {
   return (
@@ -27,6 +27,7 @@ const Hero: FC = () => {
               Исследуем рынок, готовим дизайн, разрабатываем продукт
             </Subtitle>
             <Button
+              className={styles.button}
               size={ButtonSizes.BIG}
               href={Config.Telegram}
               target="_blank"
@@ -39,7 +40,8 @@ const Hero: FC = () => {
       </Wrapper>
       <div className={styles.animationContainer}>
         {/* <SphereCanvas className={styles.canvas} /> */}
-        <Halo />
+        {/*<Halo />*/}
+        <Flame />
       </div>
     </section>
   );
