@@ -7,8 +7,6 @@ import Subtitle from '@/components/ui/Subtitle';
 import Button, { ButtonSizes } from '@/components/ui/Button';
 
 import Config from '@/config.json';
-// import SphereCanvas from '@/components/ui/AnimatedSphere';
-// import Halo from '@/components/ui/Halo';
 import styles from './Hero.module.css';
 import Flame from "@/components/blocks/Flame";
 
@@ -39,8 +37,6 @@ const Hero: FC = () => {
         </div>
       </Wrapper>
       <div className={styles.animationContainer}>
-        {/* <SphereCanvas className={styles.canvas} /> */}
-        {/*<Halo />*/}
         <Flame />
       </div>
     </section>

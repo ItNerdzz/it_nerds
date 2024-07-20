@@ -12,10 +12,6 @@ import styles from './Socials.module.css';
 
 const socialItems = [
   {
-    icon: <WhatsappIcon />,
-    link: Config.Whatsapp,
-  },
-  {
     icon: <TelegramIcon />,
     link: Config.Telegram,
   },
