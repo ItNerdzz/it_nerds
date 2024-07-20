@@ -4,6 +4,7 @@
   --primary: #7c3aed;
   --background: #171717;
   --background-light: #282828;
+  --background-transparent: rgba(40, 40, 40, 0.5);
   --default-font-size: 16px;
   --default-line-height: 150%;
   --indent-horizontal-mobile: 15px;

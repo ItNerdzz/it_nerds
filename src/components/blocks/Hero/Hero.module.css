@@ -2,45 +2,32 @@
   position: relative;
 }
 
-.root::after {
-  position: absolute;
-  content: '';
-  display: block;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to bottom, transparent, var(--background));
-}
-
-@media screen and (min-width: 1024px) {
-  .root::after {
-    display: none;
-  }
-}
-
 .inner {
   pointer-events: none;
   z-index: 1;
   position: relative;
   height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   box-sizing: border-box;
   padding: 80px 0 80px;
 
   @media screen and (min-width: 1024px) {
-    align-items: center;
     justify-content: flex-start;
   }
 }
 
 .textContainer {
+  pointer-events: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    pointer-events: none;
+  }
 }
 
 .title {
@@ -60,8 +47,6 @@
 }
 
 .animationContainer {
-  /* position: relative;
-  aspect-ratio: 1 / 1.1; */
   z-index: 0;
   position: absolute;
   top: 0;
@@ -70,26 +55,6 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-}
-
-.Hero_AnimationContainer:before {
-  /* aspect-ratio: 1 / 1;
-  top: 15px;
-  left: calc(var(--indent-horizontal-mobile) * -1);
-  right: calc(var(--indent-horizontal-mobile) * -1);
-  background-color: #c4b5fd;
-  border-radius: 50%;
-  filter: blur(100px); */
-}
-
-.canvas {
-  position: absolute !important;
-  width: auto !important;
-  height: auto !important;
-  top: -15px;
-  left: calc(var(--indent-horizontal-mobile) * -1);
-  right: calc(var(--indent-horizontal-mobile) * -1);
-  bottom: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -119,28 +84,5 @@
   .hero {
     padding: 314px 0 187px;
     overflow-x: visible;
-  }
-
-  .animationContainer {
-    /* top: -177px;
-    left: 770px;
-    width: 858px;
-    height: 858px; */
-  }
-
-  .animationContainer:before {
-    left: 0;
-    right: 0;
-    top: -100px;
-    aspect-ratio: 1 / 1;
-  }
-
-  .canvas {
-    width: 800px !important;
-    height: 800px !important;
-    top: -90px;
-    left: -90px;
-    bottom: auto;
-    right: auto;
   }
 }
