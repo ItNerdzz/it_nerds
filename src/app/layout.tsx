@@ -23,9 +23,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={roboto.className}>
-        <StrictMode>
-          <Suspense fallback={'loading..'}>{children}</Suspense>
-        </StrictMode>
+      <StrictMode>
+        <Suspense fallback={'loading..'}>{children}</Suspense>
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/145084163.js"></script>
+      </StrictMode>
       </body>
     </html>
   );

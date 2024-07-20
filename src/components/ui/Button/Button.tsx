@@ -1,4 +1,4 @@
-import { FC, ButtonHTMLAttributes } from 'react';
+import {FC, ButtonHTMLAttributes} from 'react';
 import clsx from 'clsx';
 
 import styles from './Button.module.css';
@@ -12,24 +12,27 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size: string;
   isAlt?: boolean;
   asLink?: boolean;
+  disabled?: boolean;
 }
 
 const ButtonSizes = {
+  LARGE: 'large',
   BIG: 'big',
   SMALL: 'small',
 };
 
 const Button: FC<IButtonProps> = ({
-  className,
-  href,
-  onClick,
-  type,
-  children,
-  target,
-  size,
-  isAlt,
-  asLink,
-}) => {
+                                    className,
+                                    href,
+                                    onClick,
+                                    type,
+                                    children,
+                                    target,
+                                    size,
+                                    isAlt,
+                                    asLink,
+                                    disabled
+                                  }) => {
   const buttonClassNames = clsx(
     styles.button,
     className,
@@ -43,14 +46,15 @@ const Button: FC<IButtonProps> = ({
     <Tag
       className={buttonClassNames}
       onClick={onClick}
-      {...(href && { href })}
-      {...(target && { target })}
-      {...(type && { type })}
+      {...(href && {href})}
+      {...(target && {target})}
+      {...(type && {type})}
+      {...(disabled && {disabled})}
     >
       {children}
     </Tag>
   );
 };
 
-export { ButtonSizes };
+export {ButtonSizes};
 export default Button;

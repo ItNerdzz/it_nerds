@@ -25,7 +25,8 @@
     "react-dom": "^18",
     "react-icon-cloud": "^4.1.4",
     "simple-icons": "^11.3.0",
-    "three": "^0.162.0"
+    "three": "^0.162.0",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -26,6 +26,13 @@
   opacity: 0.8;
 }
 
+.large {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 143%;
+  padding: 20px;
+}
+
 .big {
   font-size: 14px;
   font-weight: 600;
