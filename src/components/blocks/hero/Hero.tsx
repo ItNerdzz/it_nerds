@@ -1,6 +1,7 @@
 'use client';
 import { FC } from 'react';
 
+import useCallbackModalStore from "@/store/useCallbackModalStore";
 import Wrapper from '@/components/layout/Wrapper';
 import Title, { TitleSizes } from '@/components/ui/Title';
 import Subtitle from '@/components/ui/Subtitle';
@@ -11,6 +12,8 @@ import styles from './Hero.module.css';
 import Flame from "@/components/blocks/Flame";
 
 const Hero: FC = () => {
+  const openModal = useCallbackModalStore(state => state.openModal);
+
   return (
     <section className={styles.root}>
       <Wrapper>
@@ -27,9 +30,7 @@ const Hero: FC = () => {
             <Button
               className={styles.button}
               size={ButtonSizes.BIG}
-              href={Config.Telegram}
-              target="_blank"
-              asLink={true}
+              onClick={openModal}
             >
               Получить консультацию
             </Button>
