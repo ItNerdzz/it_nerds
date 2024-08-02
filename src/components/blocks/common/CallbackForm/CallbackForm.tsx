@@ -54,7 +54,8 @@ const CallbackForm: FC = () => {
            placeholder='Ваш телефон/telegram' type={'phone'} name='phone'/>
     <Input className={styles.input} value={messageValue} onChange={handlerMessageInput} placeholder='Комментарий'
            type={'message'} name='message'/>
-    <Button className={styles.submit} size={ButtonSizes.LARGE} disabled={isSubmitted}>
+    <Input className={styles.hidden} value={'test@test.ru'} />
+    <Button className={styles.submit} size={ButtonSizes.LARGE} type={'submit'} disabled={isSubmitted}>
       {isLoading && 'Отправляем..'}
       {isPhoneInvalid && 'Неверно заполнено поле'}
       {isSubmitted && 'Скоро мы свяжемся с Вами'}
