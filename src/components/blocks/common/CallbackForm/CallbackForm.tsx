@@ -54,7 +54,8 @@ const CallbackForm: FC = () => {
            placeholder='Ваш телефон/telegram' type={'phone'} name='phone'/>
     <Input className={styles.input} value={messageValue} onChange={handlerMessageInput} placeholder='Комментарий'
            type={'message'} name='message'/>
-    <Input className={styles.hidden} value={'test@test.ru'} />
+    <Input className={styles.hidden} type={'email'} name={'email'}
+           value={`${phoneValue.replace(/[^a-zA-Z0-9]/g, '')}@lead.com`}/>
     <Button className={styles.submit} size={ButtonSizes.LARGE} type={'submit'} disabled={isSubmitted}>
       {isLoading && 'Отправляем..'}
       {isPhoneInvalid && 'Неверно заполнено поле'}

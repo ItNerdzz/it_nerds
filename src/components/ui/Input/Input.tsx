@@ -15,6 +15,7 @@ const Input: FC<InputProps> = ({
                                    onInput,
                                    onChange,
                                    ariaInvalid,
+                                   value
                                }) => {
     return (
         <input
@@ -25,6 +26,7 @@ const Input: FC<InputProps> = ({
             onChange={onChange}
             onInput={onInput}
             aria-invalid={ariaInvalid}
+            value={value}
         />
     );
 };
