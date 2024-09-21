@@ -1,9 +1,9 @@
-import BurgerButton from './BurgerButton/BurgerButton';
-import CallbackForm from './CallbackForm/CallbackForm';
-import CallBackModal from "./CallbackModal/CallBackModal";
-import MainNav from './MainNav/MainNav';
-import Socials from './Socials/Socials';
-import Tabs from './Tabs/Tabs';
+import BurgerButton from '@/components/common/burgerButton/BurgerButton';
+import CallbackForm from '@/components/common/callbackForm/CallbackForm';
+import CallBackModal from "@/components/common/callbackModal/CallBackModal";
+import MainNav from '@/components/common/mainNav/MainNav';
+import Socials from '@/components/common/socials/Socials';
+import Tabs from '@/components/common/tabs/Tabs';
 
 export {
   BurgerButton,

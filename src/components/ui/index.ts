@@ -1,9 +1,9 @@
-import Button from './Button/Button';
-import Input from './Input/Input';
-import Logo from './Logo/Logo';
-import Subtitle from './Subtitle/Subtitle';
-import Text from './Text/Text';
-import Title from './Title/Title';
+import Button from '@/components/ui/button/Button';
+import Input from '@/components/ui/input/Input';
+import Logo from '@/components/ui/logo/Logo';
+import Subtitle from '@/components/ui/subtitle/Subtitle';
+import Text from '@/components/ui/text/Text';
+import Title from '@/components/ui/title/Title';
 
 export {
   Button,

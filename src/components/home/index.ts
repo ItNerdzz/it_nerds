@@ -1,13 +1,13 @@
-import AboutUs from './AboutUs/AboutUs';
-import CallToAction from './CallToAction/CallToAction';
-import Cases from './Cases/Cases';
-import Flame from './Flame/Flame';
-import Hero from './Hero/Hero';
-import HowWeWorks from "./HowWeWorks/HowWeWorks";
-import HowWeWorksItem from "./HowWeWorksItem/HowWeWorksItem";
-import IconCloud from "./IconCloud/IconCloud";
-import ServiceItem from './ServiceItem/ServiceItem';
-import Services from './Services/Services';
+import AboutUs from '@/components/home/aboutUs/AboutUs';
+import CallToAction from '@/components/home/callToAction/CallToAction';
+import Cases from '@/components/home/cases/Cases';
+import Flame from '@/components/home/flame/Flame';
+import Hero from '@/components/home/hero/Hero';
+import HowWeWorks from "@/components/home/howWeWorks/HowWeWorks";
+import HowWeWorksItem from "@/components/home/howWeWorksItem/HowWeWorksItem";
+import IconCloud from "@/components/home/iconCloud/IconCloud";
+import ServiceItem from '@/components/home/serviceItem/ServiceItem';
+import Services from '@/components/home/services/Services';
 
 export {
   AboutUs,

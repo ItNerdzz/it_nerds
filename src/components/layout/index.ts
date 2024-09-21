@@ -1,7 +1,7 @@
-import Header from './Header/Header';
-import Wrapper from './Wrapper/Wrapper';
-import Footer from './Footer/Footer';
-import PageLayout from './PageLayout/PageLayout';
+import Header from '@/components/layout/header/Header';
+import Wrapper from '@/components/layout/wrapper/Wrapper';
+import Footer from '@/components/layout/footer/Footer';
+import PageLayout from '@/components/layout/pageLayout/PageLayout';
 
 export {
   Header,
