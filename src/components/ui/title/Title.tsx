@@ -12,7 +12,7 @@ interface ITitleProps {
 
 const Title: FC<ITitleProps> = ({
   children,
-  size,
+  size = 'medium',
   className,
   as: Tag = 'h1',
 }) => {
