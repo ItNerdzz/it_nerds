@@ -17,11 +17,11 @@ const menuItems = [
   },
   {
     text: 'Услуги',
-    link: '/#services',
+    link: '/#Services',
   },
   {
     text: 'Проекты',
-    link: '/#cases',
+    link: '/#Cases',
   },
 ];
 

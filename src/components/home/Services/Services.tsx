@@ -36,7 +36,7 @@ const generateTabItems = (data: IServicesData[]) => {
 
 const Services: FC<IServicesProps> = ({ servicesData }) => {
   return (
-    <section id={'services'}>
+    <section id={'Services'}>
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title} size={'medium'} as={'h2'}>

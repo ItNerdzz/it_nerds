@@ -7,7 +7,7 @@ import styles from './Cases.module.css';
 
 const Cases: FC = () => {
   return (
-    <section id={'cases'}>
+    <section id={'Cases'}>
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title} size={'medium'} as={'h2'}>

@@ -67,7 +67,7 @@ const IconCloud: FC<IIconCloudProps> = ({ className }) => {
 
   return (
     <div className={className}>
-      <Cloud id={'iconCloud'} options={cloudOptions}>
+      <Cloud id={'IconCloud'} options={cloudOptions}>
         {icons}
       </Cloud>
     </div>
