@@ -3,7 +3,6 @@ import { FC } from 'react';
 import Wrapper from '@/components/layout/Wrapper';
 import Title, { TitleSizes } from '@/components/ui/Title';
 import Subtitle from '@/components/ui/Subtitle';
-import { Ul } from '@/components/elements';
 import Text from '@/components/ui/Text';
 
 import styles from './AboutUs.module.css';
@@ -51,7 +50,7 @@ const AboutUs: FC = () => {
             структурой и использованием новейших технологий.
           </Subtitle>
         </div>
-        <Ul className={styles.features}>
+        <ul className={styles.features}>
           {aboutUsFeatures &&
             aboutUsFeatures.length &&
             aboutUsFeatures.map((feature, index) => (
@@ -63,7 +62,7 @@ const AboutUs: FC = () => {
                 <Text className={styles.featuresText}>{feature.text}</Text>
               </li>
             ))}
-        </Ul>
+        </ul>
       </Wrapper>
     </section>
   );

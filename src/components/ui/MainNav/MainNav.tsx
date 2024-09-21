@@ -2,8 +2,6 @@ import { FC } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
 
-import { Ul } from '@/components/elements';
-
 import styles from './MainNav.module.css';
 
 interface IMainNavItem {
@@ -19,7 +17,7 @@ interface IMainNavProps {
 const MainNav: FC<IMainNavProps> = ({ menuItems, className }) => {
   const mainNavClassName = clsx(className, styles.mainNav);
   return (
-    <Ul className={mainNavClassName}>
+    <ul className={mainNavClassName}>
       {menuItems &&
         menuItems.length &&
         menuItems.map((item, index) => (
@@ -29,7 +27,7 @@ const MainNav: FC<IMainNavProps> = ({ menuItems, className }) => {
             </Link>
           </li>
         ))}
-    </Ul>
+    </ul>
   );
 };
 

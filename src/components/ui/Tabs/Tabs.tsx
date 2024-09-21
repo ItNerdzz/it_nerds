@@ -2,7 +2,6 @@
 import { FC, useState } from 'react';
 import clsx from 'clsx';
 
-import { Ul } from '@/components/elements';
 import Button, { ButtonSizes } from '@/components/ui/Button';
 
 import { ITabsProps } from './interface';
@@ -13,7 +12,7 @@ const Tabs: FC<ITabsProps> = ({ tabItems }) => {
 
   return (
     <div>
-      <Ul className={styles.buttonsList}>
+      <ul className={styles.buttonsList}>
         {tabItems &&
           tabItems.length &&
           tabItems.map((tabItem, index) => (
@@ -31,7 +30,7 @@ const Tabs: FC<ITabsProps> = ({ tabItems }) => {
               </Button>
             </li>
           ))}
-      </Ul>
+      </ul>
       {tabItems[activeTabIndex].content && tabItems[activeTabIndex].content}
     </div>
   );

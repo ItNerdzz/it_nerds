@@ -4,7 +4,6 @@ import Wrapper from '@/components/layout/Wrapper';
 import Title, { TitleSizes } from '@/components/ui/Title';
 import HowItWorksStepsItem from '@/components/ui/HowWeWorksItem';
 import IconCloud from '@/components/ui/IconCloud';
-import { Ul } from '@/components/elements';
 
 import styles from './HowWeWorks.module.css';
 
@@ -44,7 +43,7 @@ const HowWeWorks: FC = () => {
             Как мы работаем
           </Title>
           <div className={styles.content}>
-            <Ul className={styles.steps}>
+            <ul className={styles.steps}>
               {steps &&
                 steps.length &&
                 steps.map((stepItem, index) => (
@@ -55,7 +54,7 @@ const HowWeWorks: FC = () => {
                     item={stepItem}
                   />
                 ))}
-            </Ul>
+            </ul>
             <div className={styles.technologies}>
               <IconCloud className={styles.cloud} />
             </div>

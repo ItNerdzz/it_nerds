@@ -1,8 +1,6 @@
 import { FC } from 'react';
 import clsx from 'clsx';
 
-import { P } from '@/components/elements';
-
 import styles from './Subtitle.module.css';
 
 interface ISubtitleProps {
@@ -13,7 +11,7 @@ interface ISubtitleProps {
 const Subtitle: FC<ISubtitleProps> = ({ children, className }) => {
   const subtitleClassNames = clsx(styles.subtitle, className);
 
-  return <P className={subtitleClassNames}>{children}</P>;
+  return <p className={subtitleClassNames}>{children}</p>;
 };
 
 export default Subtitle;

@@ -4,7 +4,6 @@ import Wrapper from '@/components/layout/Wrapper';
 import Title, { TitleSizes } from '@/components/ui/Title';
 import Tabs from '@/components/ui/Tabs';
 import ServiceItem from '@/components/ui/ServiceItem';
-import { Ul } from '@/components/elements';
 
 import { IServicesData, IServicesProps, IGeneratedTabItems } from './interface';
 import styles from './Services.module.css';
@@ -16,7 +15,7 @@ const generateTabItems = (data: IServicesData[]) => {
     newData.push({
       tabTitle: item.category,
       content: (
-        <Ul className={styles.list}>
+        <ul className={styles.list}>
           {item.items.map((item) => (
             <ServiceItem
               key={item.id}
@@ -27,7 +26,7 @@ const generateTabItems = (data: IServicesData[]) => {
               }}
             />
           ))}
-        </Ul>
+        </ul>
       ),
     });
   });
