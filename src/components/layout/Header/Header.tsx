@@ -2,12 +2,9 @@
 import { FC, useState, useEffect } from 'react';
 import clsx from 'clsx';
 
-import Wrapper from '@/components/layout/Wrapper';
-import Logo from '@/components/ui/Logo';
-import BurgerButton from '@/components/ui/BurgerButton';
-import Button, { ButtonSizes } from '@/components/ui/Button';
-import MainNav from '@/components/ui/MainNav';
-import Socials from '@/components/ui/Socials';
+import {Wrapper} from '@/components/layout';
+import {BurgerButton, MainNav, Socials} from '@/components/common';
+import {Button, Logo} from '@/components/ui';
 
 import Config from '@/config.json';
 
@@ -101,7 +98,7 @@ const Header: FC = () => {
                 <Socials className={styles.socials} />
                 <Button
                   className={styles.callbackButton}
-                  size={ButtonSizes.SMALL}
+                  size={'small'}
                   onClick={() => {
                     console.log('popup callback');
                   }}
@@ -121,7 +118,7 @@ const Header: FC = () => {
             <div className={styles.mobileMenuBottomContainer}>
               <Socials />
               <Button
-                size={ButtonSizes.SMALL}
+                size={'small'}
                 onClick={() => {
                   console.log('popup callback');
                 }}

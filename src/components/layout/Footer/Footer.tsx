@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import Wrapper from '@/components/layout/Wrapper';
-import Logo from '@/components/ui/Logo';
-import Socials from '@/components/ui/Socials';
+import {Wrapper} from '@/components/layout';
+import {Logo} from '@/components/ui/';
+import {Socials} from '@/components/common';
 
 import styles from './Footer.module.css';
 

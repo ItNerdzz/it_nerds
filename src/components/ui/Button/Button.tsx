@@ -9,17 +9,11 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
   children?: React.ReactNode;
   target?: string;
-  size: string;
+  size: 'large' | 'big' | 'small';
   isAlt?: boolean;
   asLink?: boolean;
   disabled?: boolean;
 }
-
-const ButtonSizes = {
-  LARGE: 'large',
-  BIG: 'big',
-  SMALL: 'small',
-};
 
 const Button: FC<IButtonProps> = ({
                                     className,
@@ -56,5 +50,4 @@ const Button: FC<IButtonProps> = ({
   );
 };
 
-export {ButtonSizes};
 export default Button;

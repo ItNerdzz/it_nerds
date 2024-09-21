@@ -5,16 +5,10 @@ import styles from './Title.module.css';
 
 interface ITitleProps {
   children: React.ReactNode;
-  size: string;
+  size: 'big' | 'medium' | 'small';
   className?: string;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
-
-const TitleSizes = {
-  BIG: 'big',
-  MEDIUM: 'medium',
-  SMALL: 'small',
-};
 
 const Title: FC<ITitleProps> = ({
   children,
@@ -27,5 +21,4 @@ const Title: FC<ITitleProps> = ({
   return <Tag className={titleClassNames}>{children}</Tag>;
 };
 
-export { TitleSizes };
 export default Title;

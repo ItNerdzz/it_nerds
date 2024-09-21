@@ -1,10 +1,5 @@
-import PageLayout from '@/components/layout/PageLayout/PageLayout';
-import Hero from '@/components/blocks/Hero';
-import AboutUs from '@/components/blocks/AboutUs';
-import HowWeWorks from '@/components/blocks/HowWeWorks';
-import Services from '@/components/blocks/Services';
-import Cases from '@/components/blocks/Cases';
-import CallToAction from '@/components/blocks/CallToAction';
+import {PageLayout} from '@/components/layout';
+import {Hero, AboutUs, HowWeWorks, Services, Cases, CallToAction} from '@/components/home';
 
 const servicesData = [
   {
