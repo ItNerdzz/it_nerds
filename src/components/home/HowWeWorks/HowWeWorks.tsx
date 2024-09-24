@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import {Wrapper} from '@/components/layout';
-import {Title} from '@/components/ui';
-import {HowWeWorksItem, IconCloud} from '@/components/home';
+import { Wrapper } from '@/components/layout';
+import { Title } from '@/components/ui';
+import { HowWeWorksItem, IconCloud } from '@/components/home';
 
 import styles from './HowWeWorks.module.css';
 
@@ -46,12 +46,7 @@ const HowWeWorks: FC = () => {
               {steps &&
                 steps.length &&
                 steps.map((stepItem, index) => (
-                  <HowWeWorksItem
-                    animationDelay={0.5 + index / 2}
-                    key={index}
-                    number={index + 1}
-                    item={stepItem}
-                  />
+                  <HowWeWorksItem animationDelay={0.5 + index / 2} key={index} number={index + 1} item={stepItem} />
                 ))}
             </ul>
             <div className={styles.technologies}>

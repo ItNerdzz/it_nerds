@@ -1,5 +1,5 @@
-import {PageLayout} from '@/components/layout';
-import {Hero, AboutUs, HowWeWorks, Services, Cases, CallToAction} from '@/components/home';
+import { PageLayout } from '@/components/layout';
+import { Hero, AboutUs, HowWeWorks, Services, Cases, CallToAction } from '@/components/home';
 
 const servicesData = [
   {
@@ -48,8 +48,7 @@ const servicesData = [
       {
         id: 5,
         title: 'Таргет',
-        description:
-          'Бесплатная настройка рекламы. Оплата только за ведение рекламной кампании',
+        description: 'Бесплатная настройка рекламы. Оплата только за ведение рекламной кампании',
         price: 15000,
       },
     ],

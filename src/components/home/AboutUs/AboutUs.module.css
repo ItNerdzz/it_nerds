@@ -1,6 +1,5 @@
 .aboutUs {
-  padding: var(--indent-vertical-top-mobile) 0
-    var(--indent-vertical-bottom-mobile);
+  padding: var(--indent-vertical-top-mobile) 0 var(--indent-vertical-bottom-mobile);
 }
 
 .textContainer {
@@ -35,8 +34,7 @@
 
 @media screen and (min-width: 768px) {
   .aboutUs {
-    padding: var(--indent-vertical-top-desktop) 0
-      var(--indent-vertical-bottom-desktop);
+    padding: var(--indent-vertical-top-desktop) 0 var(--indent-vertical-bottom-desktop);
   }
 
   .textContainer {

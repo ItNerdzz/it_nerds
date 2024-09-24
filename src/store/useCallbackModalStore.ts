@@ -1,5 +1,5 @@
-import create from 'zustand'
-import { devtools } from 'zustand/middleware'
+import create from 'zustand';
+import { devtools } from 'zustand/middleware';
 
 interface CallbackModalState {
   isOpen: boolean;
@@ -8,11 +8,11 @@ interface CallbackModalState {
 }
 
 const useCallbackModalStore = create<CallbackModalState>()(
-  devtools((set) => ({
+  devtools(set => ({
     isOpen: false,
     openModal: () => set({ isOpen: true }),
     closeModal: () => set({ isOpen: false }),
   }))
-)
+);
 
-export default useCallbackModalStore
+export default useCallbackModalStore;

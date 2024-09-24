@@ -5,7 +5,7 @@ import { LottieRefCurrentProps } from 'lottie-react';
 import dynamic from 'next/dynamic';
 import clsx from 'clsx';
 
-import {Button} from '@/components/ui';
+import { Button } from '@/components/ui';
 
 import BurgerData from './burger.json';
 import styles from './BurgerButton.module.css';

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import {Wrapper} from '@/components/layout';
-import {Title, Subtitle, Text} from '@/components/ui';
+import { Wrapper } from '@/components/layout';
+import { Title, Subtitle, Text } from '@/components/ui';
 
 import styles from './AboutUs.module.css';
 
@@ -34,18 +34,16 @@ const aboutUsFeatures: IAboutUsFeaturesItem[] = [
 
 const AboutUs: FC = () => {
   return (
-    <section className={styles.aboutUs} id="about-us">
+    <section className={styles.aboutUs} id='about-us'>
       <Wrapper>
         <div className={styles.textContainer}>
           <Title size={'medium'} as={'h2'}>
             Коротко о нас
           </Title>
           <Subtitle className={styles.subtitle}>
-            IT Nerds — команда веб-разработки. Создаем эффективные цифровые
-            решения для оффлайн и онлайн бизнеса. Помогаем нашим клиентам
-            повысить известность компании и привлечь новых клиентов из
-            интернета. Создаем сайты с современным дизайном, продуманной
-            структурой и использованием новейших технологий.
+            IT Nerds — команда веб-разработки. Создаем эффективные цифровые решения для оффлайн и онлайн бизнеса.
+            Помогаем нашим клиентам повысить известность компании и привлечь новых клиентов из интернета. Создаем сайты
+            с современным дизайном, продуманной структурой и использованием новейших технологий.
           </Subtitle>
         </div>
         <ul className={styles.features}>

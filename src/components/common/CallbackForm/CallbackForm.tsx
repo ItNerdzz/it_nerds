@@ -1,15 +1,15 @@
 'use client';
 
-import React, {FC, useState} from 'react';
+import React, { FC, useState } from 'react';
 
-import {Button, Input} from "@/components/ui/";
+import { Button, Input } from '@/components/ui/';
 
 import styles from './CallbackForm.module.css';
 
 const CallbackForm: FC = () => {
-  const [nameValue, setNameValue] = useState<string>("");
-  const [phoneValue, setPhoneValue] = useState<string>("");
-  const [messageValue, setMessageValue] = useState<string>("");
+  const [nameValue, setNameValue] = useState<string>('');
+  const [phoneValue, setPhoneValue] = useState<string>('');
+  const [messageValue, setMessageValue] = useState<string>('');
 
   const [isPhoneInvalid, setIsPhoneInvalid] = useState(false);
 
@@ -48,22 +48,47 @@ const CallbackForm: FC = () => {
     }
   };
 
-  return <form onSubmit={handlerSubmit} id={'contact-form'}>
-    <Input className={styles.input} value={nameValue} onChange={handlerNameInput}
-           placeholder='Ваше имя' type={'name'} name='name'/>
-    <Input className={styles.input} value={phoneValue} onChange={handlerPhoneInput} ariaInvalid={isPhoneInvalid}
-           placeholder='Ваш телефон/telegram' type={'phone'} name='phone'/>
-    <Input className={styles.input} value={messageValue} onChange={handlerMessageInput} placeholder='Комментарий'
-           type={'message'} name='message'/>
-    <Input className={styles.hidden} type={'email'} name={'email'}
-           value={`${phoneValue.replace(/[^a-zA-Z0-9]/g, '')}@lead.com`}/>
-    <Button className={styles.submit} size={'large'} type={'submit'} disabled={isSubmitted}>
-      {isLoading && 'Отправляем..'}
-      {isPhoneInvalid && 'Неверно заполнено поле'}
-      {isSubmitted && 'Скоро мы свяжемся с Вами'}
-      {!isLoading && !isSubmitted && !isPhoneInvalid && 'Отправить'}
-    </Button>
-  </form>
+  return (
+    <form onSubmit={handlerSubmit} id={'contact-form'}>
+      <Input
+        className={styles.input}
+        value={nameValue}
+        onChange={handlerNameInput}
+        placeholder='Ваше имя'
+        type={'name'}
+        name='name'
+      />
+      <Input
+        className={styles.input}
+        value={phoneValue}
+        onChange={handlerPhoneInput}
+        ariaInvalid={isPhoneInvalid}
+        placeholder='Ваш телефон/telegram'
+        type={'phone'}
+        name='phone'
+      />
+      <Input
+        className={styles.input}
+        value={messageValue}
+        onChange={handlerMessageInput}
+        placeholder='Комментарий'
+        type={'message'}
+        name='message'
+      />
+      <Input
+        className={styles.hidden}
+        type={'email'}
+        name={'email'}
+        value={`${phoneValue.replace(/[^a-zA-Z0-9]/g, '')}@lead.com`}
+      />
+      <Button className={styles.submit} size={'large'} type={'submit'} disabled={isSubmitted}>
+        {isLoading && 'Отправляем..'}
+        {isPhoneInvalid && 'Неверно заполнено поле'}
+        {isSubmitted && 'Скоро мы свяжемся с Вами'}
+        {!isLoading && !isSubmitted && !isPhoneInvalid && 'Отправить'}
+      </Button>
+    </form>
+  );
 };
 
 export default CallbackForm;

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import {Header, Footer} from '@/components/layout';
-import {CallBackModal} from "@/components/common";
+import { Header, Footer } from '@/components/layout';
+import { CallBackModal } from '@/components/common';
 
 import styles from './PageLayout.module.css';
 

@@ -2,7 +2,7 @@
 import { FC, useState } from 'react';
 import clsx from 'clsx';
 
-import {Button} from '@/components/ui';
+import { Button } from '@/components/ui';
 
 import { ITabsProps } from './interface';
 import styles from './Tabs.module.css';
@@ -19,10 +19,7 @@ const Tabs: FC<ITabsProps> = ({ tabItems }) => {
             <li className={styles.buttonsItem} key={tabItem.tabTitle}>
               <Button
                 isAlt={activeTabIndex === index ? false : true}
-                className={clsx([
-                  activeTabIndex === index && styles.buttonActive,
-                  styles.tabsButton,
-                ])}
+                className={clsx([activeTabIndex === index && styles.buttonActive, styles.tabsButton])}
                 size={'small'}
                 onClick={() => setActiveTabIndex(index)}
               >

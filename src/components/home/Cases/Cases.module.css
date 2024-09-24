@@ -1,6 +1,5 @@
 .inner {
-  padding: var(--indent-vertical-top-mobile) 0
-    var(--indent-vertical-bottom-mobile);
+  padding: var(--indent-vertical-top-mobile) 0 var(--indent-vertical-bottom-mobile);
 }
 
 .title {
@@ -9,8 +8,7 @@
 
 @media screen and (min-width: 768px) {
   .inner {
-    padding: var(--indent-vertical-top-desktop) 0
-      var(--indent-vertical-bottom-desktop);
+    padding: var(--indent-vertical-top-desktop) 0 var(--indent-vertical-bottom-desktop);
   }
 
   .title {

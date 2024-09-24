@@ -2,8 +2,7 @@
 
 import { FC, useState, useRef, useEffect } from 'react';
 
-import {Title, Button, Text} from '@/components/ui';
-
+import { Title, Button, Text } from '@/components/ui';
 import Config from '@/config.json';
 
 import styles from './ServiceItem.module.css';
@@ -20,7 +19,7 @@ interface IFormatePrice {
   (price: number): string;
 }
 
-const formatePrice: IFormatePrice = (price) => {
+const formatePrice: IFormatePrice = price => {
   return price.toLocaleString('ru-RU');
 };
 
@@ -28,7 +27,7 @@ interface IMinifyText {
   (text: string): string;
 }
 
-const minifyText: IMinifyText = (text) => {
+const minifyText: IMinifyText = text => {
   return text.slice(0, 112);
 };
 
@@ -74,10 +73,7 @@ const ServiceItem: FC<IServiceItemProps> = ({ serviceItem }) => {
             <Text>
               {shortText && !isShowFullText ? shortText : fullText}
               {shortText ? (
-                <span
-                  className={styles.moreButton}
-                  onClick={() => setIsShowFullText(!isShowFullText)}
-                >
+                <span className={styles.moreButton} onClick={() => setIsShowFullText(!isShowFullText)}>
                   {isShowFullText ? ' Свернуть' : ' Подробнее'}
                 </span>
               ) : null}
@@ -86,15 +82,8 @@ const ServiceItem: FC<IServiceItemProps> = ({ serviceItem }) => {
         </div>
       </div>
       <div className={styles.orderContainer}>
-        <span className={styles.price}>
-          от {formatePrice(serviceItem.price)} ₽
-        </span>
-        <Button
-          size={'small'}
-          asLink={true}
-          href={Config.Telegram}
-          target="_blank"
-        >
+        <span className={styles.price}>от {formatePrice(serviceItem.price)} ₽</span>
+        <Button size={'small'} asLink={true} href={Config.Telegram} target='_blank'>
           Заказать
         </Button>
       </div>

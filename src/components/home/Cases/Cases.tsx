@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import {Wrapper} from '@/components/layout';
-import {Title, Text} from '@/components/ui';
+import { Wrapper } from '@/components/layout';
+import { Title, Text } from '@/components/ui';
 
 import styles from './Cases.module.css';
 

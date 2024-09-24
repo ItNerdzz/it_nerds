@@ -46,7 +46,7 @@ interface IIconCloudProps {
 }
 
 const IconCloud: FC<IIconCloudProps> = ({ className }) => {
-  const icons = iconsList.map((icon) => {
+  const icons = iconsList.map(icon => {
     return renderSimpleIcon({
       icon,
       size: 42,

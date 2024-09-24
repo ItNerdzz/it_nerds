@@ -2,10 +2,10 @@
 
 import { FC } from 'react';
 
-import useCallbackModalStore from "@/store/useCallbackModalStore";
-import {Wrapper} from '@/components/layout';
-import {Title, Subtitle, Button} from '@/components/ui';
-import {Flame} from "@/components/home";
+import useCallbackModalStore from '@/store/useCallbackModalStore';
+import { Wrapper } from '@/components/layout';
+import { Title, Subtitle, Button } from '@/components/ui';
+import { Flame } from '@/components/home';
 
 import styles from './Hero.module.css';
 
@@ -22,14 +22,8 @@ const Hero: FC = () => {
               <br />
               любого уровня сложности
             </Title>
-            <Subtitle className={styles.subtitle}>
-              Исследуем рынок, готовим дизайн, разрабатываем продукт
-            </Subtitle>
-            <Button
-              className={styles.button}
-              size={'big'}
-              onClick={openModal}
-            >
+            <Subtitle className={styles.subtitle}>Исследуем рынок, готовим дизайн, разрабатываем продукт</Subtitle>
+            <Button className={styles.button} size={'big'} onClick={openModal}>
               Получить консультацию
             </Button>
           </div>

@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import {Wrapper} from '@/components/layout';
-import {Title} from '@/components/ui';
-import {Tabs} from '@/components/common';
-import {ServiceItem} from '@/components/home';
+import { Wrapper } from '@/components/layout';
+import { Title } from '@/components/ui';
+import { Tabs } from '@/components/common';
+import { ServiceItem } from '@/components/home';
 
 import { IServicesData, IServicesProps, IGeneratedTabItems } from './interface';
 import styles from './Services.module.css';
@@ -11,12 +11,12 @@ import styles from './Services.module.css';
 const generateTabItems = (data: IServicesData[]) => {
   const newData: IGeneratedTabItems[] = [];
 
-  data.forEach((item) => {
+  data.forEach(item => {
     newData.push({
       tabTitle: item.category,
       content: (
         <ul className={styles.list}>
-          {item.items.map((item) => (
+          {item.items.map(item => (
             <ServiceItem
               key={item.id}
               serviceItem={{

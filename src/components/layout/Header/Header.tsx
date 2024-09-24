@@ -1,11 +1,11 @@
 'use client';
+
 import { FC, useState, useEffect } from 'react';
 import clsx from 'clsx';
 
-import {Wrapper} from '@/components/layout';
-import {BurgerButton, MainNav, Socials} from '@/components/common';
-import {Button, Logo} from '@/components/ui';
-
+import { Wrapper } from '@/components/layout';
+import { BurgerButton, MainNav, Socials } from '@/components/common';
+import { Button, Logo } from '@/components/ui';
 import Config from '@/config.json';
 
 import styles from './Header.module.css';
@@ -31,16 +31,9 @@ const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrollTop, setIsScrollTop] = useState(false);
 
-  const mobileMenuClassNames = clsx(
-    styles.mobileMenu,
-    isMenuOpened && styles.mobileMenuOpened
-  );
+  const mobileMenuClassNames = clsx(styles.mobileMenu, isMenuOpened && styles.mobileMenuOpened);
 
-  const rootClassNames = clsx([
-    styles.root,
-    isScrolled && styles.scrolled,
-    isScrolled && isScrollTop && styles.show,
-  ]);
+  const rootClassNames = clsx([styles.root, isScrolled && styles.scrolled, isScrolled && isScrollTop && styles.show]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 767px)');
@@ -103,7 +96,7 @@ const Header: FC = () => {
                     console.log('popup callback');
                   }}
                   href={Config.Telegram}
-                  target="_blank"
+                  target='_blank'
                   asLink={true}
                 >
                   Свзяаться

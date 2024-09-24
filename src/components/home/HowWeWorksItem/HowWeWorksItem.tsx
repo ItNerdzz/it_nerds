@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 
-import {Title, Text} from '@/components/ui';
+import { Title, Text } from '@/components/ui';
 
 import styles from './HowWeWorksItem.module.css';
 
@@ -15,17 +15,13 @@ interface IHowItWorksStepsItemProps {
   animationDelay: number;
 }
 
-const HowWeWorksItem: FC<IHowItWorksStepsItemProps> = ({
-  number,
-  animationDelay,
-  item,
-}) => {
+const HowWeWorksItem: FC<IHowItWorksStepsItemProps> = ({ number, animationDelay, item }) => {
   return (
     <li className={styles.root}>
       <motion.div
         className={styles.header}
-        initial="hidden"
-        whileInView="visible"
+        initial='hidden'
+        whileInView='visible'
         viewport={{ once: true, amount: 0.5 }}
         transition={{
           duration: 1,
@@ -45,8 +41,8 @@ const HowWeWorksItem: FC<IHowItWorksStepsItemProps> = ({
       <div className={styles.progress}>
         <motion.div
           className={styles.bar}
-          initial="hidden"
-          whileInView="visible"
+          initial='hidden'
+          whileInView='visible'
           viewport={{ once: true, amount: 0.5 }}
           transition={{
             duration: 1,
