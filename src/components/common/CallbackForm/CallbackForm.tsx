@@ -39,12 +39,33 @@ const CallbackForm: FC = () => {
 
     try {
       setIsLoading(true);
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setIsLoading(false);
-      setIsSubmitted(true);
-      setPhoneValue('');
+
+      const response = await fetch('/api/sendForm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: nameValue,
+          phone: phoneValue,
+          comment: messageValue,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitted(true);
+        setPhoneValue('');
+        setNameValue('');
+        setMessageValue('');
+      } else {
+        console.error(data.message);
+      }
     } catch (error) {
-      console.error(error);
+      console.error('Ошибка:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -75,16 +96,10 @@ const CallbackForm: FC = () => {
         type={'message'}
         name='message'
       />
-      <Input
-        className={styles.hidden}
-        type={'email'}
-        name={'email'}
-        value={`${phoneValue.replace(/[^a-zA-Z0-9]/g, '')}@lead.com`}
-      />
       <Button className={styles.submit} size={'large'} type={'submit'} disabled={isSubmitted}>
         {isLoading && 'Отправляем..'}
         {isPhoneInvalid && 'Неверно заполнено поле'}
-        {isSubmitted && 'Скоро мы свяжемся с Вами'}
+        {isSubmitted && 'Спсибо! Уже связываемся с Вами'}
         {!isLoading && !isSubmitted && !isPhoneInvalid && 'Отправить'}
       </Button>
     </form>

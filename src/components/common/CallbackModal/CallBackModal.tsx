@@ -23,7 +23,7 @@ const CallBackModal: FC = () => {
       <div className={styles.inner}>
         <div className={styles.heading}>
           <Title className={styles.title} size={'small'}>
-            Обратный звонок
+            Оставьте свои контактные данные
           </Title>
           <button className={styles.close} onClick={closeModal}>
             <CloseIcon className={styles.closeIcon} />
