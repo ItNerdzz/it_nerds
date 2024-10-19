@@ -30,9 +30,7 @@ jobs:
 
     steps:
       - name: Deploy to VPS
-        run: |
-          chmod 600 private_key
-          
+        run: |          
           ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
             cd ${{ secrets.DEPLOY_PATH }}
             git pull
