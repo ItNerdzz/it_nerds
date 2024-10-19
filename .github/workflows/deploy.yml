@@ -44,5 +44,5 @@ jobs:
             git pull
             npm install
             npm run build
-            npm run start -p ${{ secrets.PORT }}
+            pm2 restart ${{ secrets.APP_NAME }}
           EOF
