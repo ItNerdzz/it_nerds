@@ -23,13 +23,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StrictMode>
           <Suspense fallback={'loading..'}>{children}</Suspense>
         </StrictMode>
-        <script
-          type='text/javascript'
-          id='hs-script-loader'
-          async
-          defer
-          src='//js-eu1.hs-scripts.com/145084163.js'
-        ></script>
       </body>
     </html>
   );
