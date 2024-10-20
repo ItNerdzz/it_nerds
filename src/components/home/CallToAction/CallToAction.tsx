@@ -6,11 +6,13 @@ import { Wrapper } from '@/components/layout';
 import { Title, Subtitle, Button } from '@/components/ui';
 import startParticlesAnimation from '@/utils/particles';
 import Config from '@/config.json';
+import useCallbackModalStore from '@/store/useCallbackModalStore';
 
 import styles from './CallToAction.module.css';
 
 const CallToAction: FC = () => {
   const canvasRef = useRef(null);
+  const openModal = useCallbackModalStore(state => state.openModal);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -28,7 +30,7 @@ const CallToAction: FC = () => {
             </Title>
             <Subtitle className={styles.subtitle}>Поделитесь своей идей, а мы предложим оптимальное решение</Subtitle>
           </div>
-          <Button size={'big'} href={Config.Telegram} target='_blank' asLink={true}>
+          <Button size={'big'} onClick={openModal}>
             Связаться
           </Button>
         </div>

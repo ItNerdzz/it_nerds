@@ -7,6 +7,7 @@ import { Wrapper } from '@/components/layout';
 import { BurgerButton, MainNav, Socials } from '@/components/common';
 import { Button, Logo } from '@/components/ui';
 import Config from '@/config.json';
+import useCallbackModalStore from '@/store/useCallbackModalStore';
 
 import styles from './Header.module.css';
 
@@ -31,6 +32,7 @@ const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrollTop, setIsScrollTop] = useState(false);
 
+  const openModal = useCallbackModalStore(state => state.openModal);
   const mobileMenuClassNames = clsx(styles.mobileMenu, isMenuOpened && styles.mobileMenuOpened);
 
   const rootClassNames = clsx([styles.root, isScrolled && styles.scrolled, isScrolled && isScrollTop && styles.show]);
@@ -89,16 +91,7 @@ const Header: FC = () => {
               <MainNav className={styles.nav} menuItems={menuItems} />
               <div className={styles.buttonsContainer}>
                 <Socials className={styles.socials} />
-                <Button
-                  className={styles.callbackButton}
-                  size={'small'}
-                  onClick={() => {
-                    console.log('popup callback');
-                  }}
-                  href={Config.Telegram}
-                  target='_blank'
-                  asLink={true}
-                >
+                <Button className={styles.callbackButton} size={'small'} onClick={openModal}>
                   Свзяаться
                 </Button>
               </div>
