@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
 import clsx from 'clsx';
 
 import useCallbackModalStore from '@/store/useCallbackModalStore';
@@ -15,11 +15,18 @@ import styles from './CallbackModal.module.css';
 const CallBackModal: FC = () => {
   const isOpen = useCallbackModalStore(state => state.isOpen);
   const closeModal = useCallbackModalStore(state => state.closeModal);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  const handleOutsideClick = (evt: React.MouseEvent<HTMLElement>) => {
+    if (evt.target !== modalRef.current) return;
+
+    closeModal();
+  };
 
   const classNames = clsx(styles.root, isOpen && styles.opened);
 
   return (
-    <section className={classNames}>
+    <section className={classNames} onClick={handleOutsideClick} ref={modalRef}>
       <div className={styles.inner}>
         <div className={styles.heading}>
           <Title className={styles.title} size={'small'}>
