@@ -10,8 +10,14 @@ interface CallbackModalState {
 const useCallbackModalStore = create<CallbackModalState>()(
   devtools(set => ({
     isOpen: false,
-    openModal: () => set({ isOpen: true }),
-    closeModal: () => set({ isOpen: false }),
+    openModal: () => {
+      document.body.classList.add('locked');
+      set({ isOpen: true });
+    },
+    closeModal: () => {
+      document.body.classList.remove('locked');
+      set({ isOpen: false });
+    },
   }))
 );
 

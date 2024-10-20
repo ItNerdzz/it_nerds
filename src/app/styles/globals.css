@@ -2,11 +2,13 @@
 
 html {
   scroll-behavior: smooth !important;
+  background-color: var(--background);
 }
 
 html,
 body {
   margin: 0;
+  scrollbar-gutter: stable;
 }
 
 ul,
@@ -18,6 +20,10 @@ ol {
 
 p {
   margin: 0;
+}
+
+.locked {
+  overflow: hidden;
 }
 
 ::selection {
