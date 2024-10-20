@@ -12,7 +12,7 @@ const Footer: FC = () => {
       <Wrapper>
         <div className={styles.inner}>
           <Logo />
-          <span>2023 ©</span>
+          <span>2024 ©</span>
           <Socials />
         </div>
       </Wrapper>

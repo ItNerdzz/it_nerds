@@ -1,4 +1,4 @@
-.serviceItem {
+.root {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -6,14 +6,36 @@
   border-bottom: 1px solid var(--basic);
 }
 
-.textContainer {
+.root.opened .text {
+  display: block;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.text {
+.textContainer {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.textAccordion {
+  display: grid;
+  overflow: hidden;
+}
+
+.content {
+  overflow: hidden;
   transition: height 0.3s ease-in-out;
+}
+
+.text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 
@@ -40,7 +62,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .serviceItem {
+  .root {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -48,7 +70,7 @@
     padding: 12px 20px 37px;
   }
 
-  .textContainer {
+  .text {
     max-width: 558px;
     gap: 15px;
   }

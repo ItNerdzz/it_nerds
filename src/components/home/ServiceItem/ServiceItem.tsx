@@ -1,6 +1,7 @@
 'use client';
 
 import { FC, useState, useRef, useEffect } from 'react';
+import clsx from 'clsx';
 
 import { Title, Button, Text } from '@/components/ui';
 import Config from '@/config.json';
@@ -15,76 +16,53 @@ interface IServiceItemProps {
   };
 }
 
-interface IFormatePrice {
-  (price: number): string;
-}
-
-const formatePrice: IFormatePrice = price => {
-  return price.toLocaleString('ru-RU');
-};
-
-interface IMinifyText {
-  (text: string): string;
-}
-
-const minifyText: IMinifyText = text => {
-  return text.slice(0, 112);
-};
-
 const ServiceItem: FC<IServiceItemProps> = ({ serviceItem }) => {
-  const [isShowFullText, setIsShowFullText] = useState(false);
-  const [shortText, setShortText] = useState('');
-  const [itemHeight, setItemHeight] = useState(0);
+  const [isOpened, setIsOpened] = useState(false);
+  const [isLongText, setIsLongText] = useState(false);
   const textRef = useRef<HTMLParagraphElement>(null);
-
-  const fullText = serviceItem.description;
-
-  const resizeItem = () => {
-    const height = textRef.current?.offsetHeight;
-
-    if (height) {
-      setItemHeight(height);
-    }
-  };
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    resizeItem();
-  }, [isShowFullText, shortText]);
+    if (textRef.current === null) return;
+
+    const offsetHeight = textRef.current.offsetHeight;
+    const scrollHeight = textRef.current.scrollHeight;
+
+    setIsLongText(offsetHeight < scrollHeight);
+  }, [textRef]);
 
   useEffect(() => {
-    if (fullText.length > 123) {
-      setShortText(`${minifyText(serviceItem.description)}..`);
-      setIsShowFullText(false);
-    }
+    if (contentRef.current === null || textRef.current === null) return;
 
-    window.addEventListener('resize', resizeItem);
-
-    return () => {
-      window.removeEventListener('resize', resizeItem);
-    };
-  }, []);
+    contentRef.current.style.height = textRef.current.offsetHeight + 'px';
+  }, [isOpened]);
 
   return (
-    <li className={styles.serviceItem}>
-      <div className={styles.textContainer}>
-        <Title size={'small'}>{serviceItem.title}</Title>
-        <div className={styles.text} style={{ height: `${itemHeight}px` }}>
-          <div ref={textRef}>
-            <Text>
-              {shortText && !isShowFullText ? shortText : fullText}
-              {shortText ? (
-                <span className={styles.moreButton} onClick={() => setIsShowFullText(!isShowFullText)}>
-                  {isShowFullText ? ' Свернуть' : ' Подробнее'}
-                </span>
-              ) : null}
-            </Text>
+    <li className={clsx(styles.root, isOpened && styles.opened)}>
+      <div className={styles.conteiner}>
+        <Title size={'small'} as={'h3'}>
+          {serviceItem.title}
+        </Title>
+        <div className={styles.textContainer}>
+          <div className={styles.textAccordion}>
+            <div className={styles.content} ref={contentRef}>
+              <Text className={styles.text} ref={textRef}>
+                {serviceItem.description}
+              </Text>
+            </div>
           </div>
+          {isLongText && (
+            <span className={styles.moreButton} onClick={() => setIsOpened(!isOpened)}>
+              {isOpened ? ' Свернуть' : ' Подробнее'}
+            </span>
+          )}
         </div>
       </div>
+
       <div className={styles.orderContainer}>
-        <span className={styles.price}>от {formatePrice(serviceItem.price)} ₽</span>
+        <span className={styles.price}>от {serviceItem.price.toLocaleString('ru-RU')} ₽</span>
         <Button size={'small'} asLink={true} href={Config.Telegram} target='_blank'>
-          Заказать
+          Связаться
         </Button>
       </div>
     </li>
