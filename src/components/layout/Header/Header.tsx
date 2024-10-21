@@ -29,10 +29,12 @@ const Header: FC = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrollTop, setIsScrollTop] = useState(false);
+  const [isWide, setIsWide] = useState(false);
 
   const openModal = useCallbackModalStore(state => state.openModal);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
     let prevScrollY = window.scrollY;
 
     const handleScroll = () => {
@@ -53,9 +55,19 @@ const Header: FC = () => {
       prevScrollY = currentScrollY;
     };
 
+    const handleChange = () => {
+      if (typeof window === 'undefined') return;
+
+      setIsWide(mediaQuery.matches);
+    };
+
+    handleChange();
+
+    mediaQuery.addEventListener('change', handleChange);
     window.addEventListener('scroll', handleScroll);
 
     return () => {
+      mediaQuery.addEventListener('change', handleChange);
       window.addEventListener('scroll', handleScroll);
     };
   }, []);
@@ -81,12 +93,17 @@ const Header: FC = () => {
             <MainNav
               className={styles.nav}
               menuItems={menuItems}
-              isTabPossible={isMenuOpened}
+              isTabPossible={isMenuOpened || isWide}
               onLinkClick={() => setIsMenuOpened(false)}
             />
             <div className={styles.buttonsContainer}>
               <Socials className={styles.socials} />
-              <Button className={styles.callbackButton} size={'small'} onClick={openModal}>
+              <Button
+                className={styles.callbackButton}
+                size={'small'}
+                onClick={openModal}
+                tabIndex={isMenuOpened || isWide ? 0 : -1}
+              >
                 Свзяаться
               </Button>
             </div>

@@ -60,7 +60,6 @@
     background-color: var(--background);
     border-radius: var(--border-radius-medium);
     box-sizing: border-box;
-    pointer-events: none;
     transition: all 0.4s ease-in-out;
 
     & .nav {
