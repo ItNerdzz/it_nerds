@@ -6,7 +6,6 @@ import clsx from 'clsx';
 import { Wrapper } from '@/components/layout';
 import { BurgerButton, MainNav, Socials } from '@/components/common';
 import { Button, Logo } from '@/components/ui';
-import Config from '@/config.json';
 import useCallbackModalStore from '@/store/useCallbackModalStore';
 
 import styles from './Header.module.css';
@@ -28,24 +27,12 @@ const menuItems = [
 
 const Header: FC = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrollTop, setIsScrollTop] = useState(false);
 
   const openModal = useCallbackModalStore(state => state.openModal);
-  const mobileMenuClassNames = clsx(styles.mobileMenu, isMenuOpened && styles.mobileMenuOpened);
-
-  const rootClassNames = clsx([styles.root, isScrolled && styles.scrolled, isScrolled && isScrollTop && styles.show]);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 767px)');
-
-    const handleMediaChange = () => {
-      setIsMobile(mediaQuery.matches);
-    };
-
-    handleMediaChange();
-
     let prevScrollY = window.scrollY;
 
     const handleScroll = () => {
@@ -66,54 +53,45 @@ const Header: FC = () => {
       prevScrollY = currentScrollY;
     };
 
-    mediaQuery.addEventListener('change', handleMediaChange);
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaChange);
       window.addEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <header className={rootClassNames}>
+    <header
+      className={clsx([
+        styles.root,
+        isScrolled && !isMenuOpened && styles.scrolled,
+        isScrolled && isScrollTop && styles.show,
+      ])}
+    >
       <Wrapper>
         <div className={styles.inner}>
           <Logo />
-          {isMobile ? (
-            <BurgerButton
-              onClick={() => {
-                setIsMenuOpened(!isMenuOpened);
-              }}
+          <BurgerButton
+            className={styles.burger}
+            onClick={() => {
+              setIsMenuOpened(!isMenuOpened);
+            }}
+          />
+          <div className={clsx(styles.menu, isMenuOpened && styles.menuOpened)}>
+            <MainNav
+              className={styles.nav}
+              menuItems={menuItems}
+              isTabPossible={isMenuOpened}
+              onLinkClick={() => setIsMenuOpened(false)}
             />
-          ) : (
-            <>
-              <MainNav className={styles.nav} menuItems={menuItems} />
-              <div className={styles.buttonsContainer}>
-                <Socials className={styles.socials} />
-                <Button className={styles.callbackButton} size={'small'} onClick={openModal}>
-                  Свзяаться
-                </Button>
-              </div>
-            </>
-          )}
-        </div>
-        {isMobile ? (
-          <div className={mobileMenuClassNames}>
-            <MainNav className={styles.nav} menuItems={menuItems} />
-            <div className={styles.mobileMenuBottomContainer}>
-              <Socials />
-              <Button
-                size={'small'}
-                onClick={() => {
-                  console.log('popup callback');
-                }}
-              >
+            <div className={styles.buttonsContainer}>
+              <Socials className={styles.socials} />
+              <Button className={styles.callbackButton} size={'small'} onClick={openModal}>
                 Свзяаться
               </Button>
             </div>
           </div>
-        ) : null}
+        </div>
       </Wrapper>
     </header>
   );

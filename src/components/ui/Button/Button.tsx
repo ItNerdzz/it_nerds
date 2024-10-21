@@ -1,4 +1,4 @@
-import { FC, ButtonHTMLAttributes } from 'react';
+import React, { FC, ButtonHTMLAttributes } from 'react';
 import clsx from 'clsx';
 
 import styles from './Button.module.css';
@@ -26,6 +26,7 @@ const Button: FC<IButtonProps> = ({
   isAlt,
   asLink,
   disabled,
+  tabIndex,
 }) => {
   const buttonClassNames = clsx(styles.button, className, styles[size], isAlt && styles.alt);
 
@@ -39,6 +40,7 @@ const Button: FC<IButtonProps> = ({
       {...(target && { target })}
       {...(type && { type })}
       {...(disabled && { disabled })}
+      tabIndex={tabIndex}
     >
       {children}
     </Tag>
