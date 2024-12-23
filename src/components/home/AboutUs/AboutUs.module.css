@@ -21,15 +21,26 @@
   align-items: center;
 }
 
-.featuresNumber {
+.featuresNumber,
+.featuresSymbol {
   color: var(--primary);
   font-size: 30px;
   font-weight: 700;
   line-height: 45px;
 }
 
+.featuresTitle,
 .featuresText {
   text-align: center;
+  white-space: pre-wrap;
+}
+
+.featuresTitle {
+  color: var(--white);
+}
+
+.featuresText {
+  color: var(--basic);
 }
 
 @media screen and (min-width: 768px) {

@@ -18,6 +18,10 @@
   font-size: 22px;
 }
 
+.extra-small {
+  font-size: 20px;
+}
+
 @media screen and (min-width: 768px) {
   .big {
     font-size: 60px;
@@ -29,5 +33,9 @@
 
   .small {
     font-size: 24px;
+  }
+
+  .extra-small {
+    font-size: 20px;
   }
 }

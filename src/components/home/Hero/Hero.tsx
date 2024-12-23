@@ -19,7 +19,7 @@ const Hero: FC = () => {
           <div className={styles.textContainer}>
             <Title className={styles.title} size={'big'}>
               Разработка <span className={styles.coloredText}>сайта </span>
-              для вашего <span className={styles.coloredText}>бизнеса</span>
+              для&nbsp;<span className={styles.coloredText}>вашего бизнеса</span>
             </Title>
             <Subtitle className={styles.subtitle}>
               Создаем дизайн, опираясь на анализ рынка. Сочетая логику и визуал, выделим ваш&nbsp;бизнес среди

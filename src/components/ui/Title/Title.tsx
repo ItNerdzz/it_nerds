@@ -5,7 +5,7 @@ import styles from './Title.module.css';
 
 interface ITitleProps {
   children: React.ReactNode;
-  size: 'big' | 'medium' | 'small';
+  size: 'big' | 'medium' | 'small' | 'extra-small';
   className?: string;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
