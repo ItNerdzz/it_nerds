@@ -16,7 +16,7 @@ const setupAnimation = canvas => {
     SHADING: true,
     COLORFUL: true,
     PAUSED: false,
-    BACK_COLOR: { r: 12, g: 12, b: 12 },
+    BACK_COLOR: { r: 17, g: 17, b: 17 },
     TRANSPARENT: false,
     BLOOM: true,
     BLOOM_ITERATIONS: 8,
@@ -871,7 +871,7 @@ const setupAnimation = canvas => {
   }
 
   initFramebuffers();
-  multipleSplats(parseInt(Math.random() * 20) + 5);
+  // multipleSplats(parseInt(Math.random() * 20) + 5);
 
   let lastColorChangeTime = Date.now();
 

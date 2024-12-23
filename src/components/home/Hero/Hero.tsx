@@ -18,11 +18,13 @@ const Hero: FC = () => {
         <div className={styles.inner}>
           <div className={styles.textContainer}>
             <Title className={styles.title} size={'big'}>
-              Разработка <span className={styles.coloredText}>сайтов</span>
-              <br />
-              любого уровня сложности
+              Разработка <span className={styles.coloredText}>сайта </span>
+              для вашего <span className={styles.coloredText}>бизнеса</span>
             </Title>
-            <Subtitle className={styles.subtitle}>Исследуем рынок, готовим дизайн, разрабатываем продукт</Subtitle>
+            <Subtitle className={styles.subtitle}>
+              Создаем дизайн, опираясь на анализ рынка. Сочетая логику и визуал, выделим ваш&nbsp;бизнес среди
+              конкурентов и улучшим пользовательский опыт
+            </Subtitle>
             <Button className={styles.button} size={'big'} onClick={openModal}>
               Получить консультацию
             </Button>
@@ -31,6 +33,7 @@ const Hero: FC = () => {
       </Wrapper>
       <div className={styles.animationContainer}>
         <Flame />
+        <div className={styles.logo}>IT Nerds</div>
       </div>
     </section>
   );

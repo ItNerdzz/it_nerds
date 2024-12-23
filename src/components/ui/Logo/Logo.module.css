@@ -1,4 +1,5 @@
 .logo {
+  color: var(--primary);
   display: flex;
 }
 
@@ -12,22 +13,22 @@
   transition: all 0.2s;
 }
 
-.logo:active svg path:first-child {
-  stroke: var(--primary);
+.logo:active svg path[stroke] {
+  stroke: currentColor;
 }
 
-.logo:active svg path:not(:first-child) {
-  fill: var(--primary);
+.logo:active svg path[fill] {
+  fill: currentColor;
 }
 
 @media (hover: hover) {
-  .logo:hover svg path:first-child,
-  .logo:focus svg path:first-child {
+  .logo:hover svg path[stroke],
+  .logo:focus svg path[stroke] {
     stroke: var(--primary);
   }
 
-  .logo:hover svg path:not(:first-child),
-  .logo:focus svg path:not(:first-child) {
+  .logo:hover svg path[fill],
+  .logo:focus svg path[fill] {
     fill: var(--primary);
   }
 }

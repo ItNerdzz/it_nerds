@@ -3,11 +3,13 @@ import Link from 'next/link';
 
 import LogoSVG from '/public/assets/images/logo.svg';
 
+import clsx from 'clsx';
+
 import styles from './Logo.module.css';
 
-const Logo: FC = () => {
+const Logo: FC<{ className: string }> = ({ className }) => {
   return (
-    <Link className={styles.logo} href={'/'}>
+    <Link className={clsx(styles.logo, className)} href={'/'}>
       <LogoSVG />
     </Link>
   );
