@@ -1,7 +1,7 @@
 .root {
     position: relative;
     overflow: hidden;
-    background-color: #151515;
+    background-color: var(--background);
 }
 
 .inner {
@@ -65,7 +65,7 @@
 
 .logo {
     pointer-events: none;
-    color: #151515;
+    color: var(--background);
     font-size: 20vw;
     line-height: 13.5vw;
     position: absolute;

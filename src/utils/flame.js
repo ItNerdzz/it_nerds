@@ -16,7 +16,7 @@ const setupAnimation = canvas => {
     SHADING: true,
     COLORFUL: true,
     PAUSED: false,
-    BACK_COLOR: { r: 17, g: 17, b: 17 },
+    BACK_COLOR: { r: 12, g: 12, b: 12 },
     TRANSPARENT: false,
     BLOOM: true,
     BLOOM_ITERATIONS: 8,
