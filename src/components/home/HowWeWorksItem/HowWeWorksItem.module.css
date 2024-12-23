@@ -47,6 +47,7 @@
 
 .text {
   color: var(--basic);
+  white-space: pre-wrap;
 }
 
 @media screen and (min-width: 768px) {
