@@ -11,6 +11,24 @@ body {
   scrollbar-gutter: stable;
 }
 
+body:after {
+  pointer-events: none;
+  z-index: 3;
+  content: "";
+  position: fixed;
+  left: -50%;
+  top: -50%;
+  right: 0;
+  bottom: 0;
+  will-change: auto;
+  background-image: url(/assets/images/noise.png);
+  background-size: 100px;
+  width: 200%;
+  height: 200%;
+  animation: noise 1.2s steps(3) both infinite;
+  opacity: .3
+}
+
 ul,
 ol {
   list-style: none;
@@ -29,4 +47,50 @@ p {
 ::selection {
   background-color: rgb(188, 240, 133);
   color: rgb(22, 22, 22);
+}
+
+@keyframes noise {
+  0% {
+    transform: translate3d(1%,-1%,0)
+  }
+
+  10% {
+    transform: translate3d(-5%,-2%,0)
+  }
+
+  20% {
+    transform: translate3d(10%,5%,0)
+  }
+
+  30% {
+    transform: translate3d(5%,-11%,0)
+  }
+
+  40% {
+    transform: translate3d(-12%,-5%,0)
+  }
+
+  50% {
+    transform: translate3d(10%,9%,0)
+  }
+
+  60% {
+    transform: translate3d(15%,0,0)
+  }
+
+  70% {
+    transform: translate3d(-10%,8%,0)
+  }
+
+  80% {
+    transform: translate3d(10%,2%,0)
+  }
+
+  90% {
+    transform: translate3d(1%,5%,0)
+  }
+
+  to {
+    transform: translate3d(0,8%,0)
+  }
 }
