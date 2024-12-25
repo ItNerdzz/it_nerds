@@ -12,14 +12,21 @@ interface IFlameProps {
 }
 
 const Flame: FC<IFlameProps> = ({ className }) => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    setupAnimation(canvas);
-  }, []);
+    if (!canvasRef.current) return;
 
-  return <canvas className={clsx(className, styles.root)} ref={canvasRef} width={800} height={600} />;
+    setupAnimation(canvasRef.current);
+
+    setTimeout(() => {
+      if (canvasRef.current) canvasRef.current.style.opacity = '1';
+    }, 500);
+  }, [canvasRef.current]);
+
+  return (
+    <canvas className={clsx(className, styles.root)} ref={canvasRef} width={800} height={600} style={{ opacity: 0 }} />
+  );
 };
 
 export default Flame;
