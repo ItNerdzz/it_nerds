@@ -1,0 +1,29 @@
+.root {
+    .inner {
+        padding: var(--indent-y);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .posts {
+        display: grid;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .root {
+        .title {
+            margin-bottom: 50px;
+        }
+
+        .posts {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

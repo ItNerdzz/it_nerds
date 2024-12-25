@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 
 import { casesData } from '@/data';
+import { CaseIntro, CasesNavigation } from '@/components/cases';
+import { PostContent } from '@/components/common';
 
 import type { Metadata } from 'next';
 
@@ -20,6 +22,7 @@ export const generateMetadata = ({ params }: CasesPostProps): Metadata => {
     };
 
   return {
+    metadataBase: new URL('https:/itnerds.ru'),
     title: post.title,
     description: post.description,
     openGraph: {
@@ -45,7 +48,27 @@ const CasesPost: FC<CasesPostProps> = ({ params }) => {
     return <div>Упс! Кейс не найден</div>;
   }
 
-  return <>{post.content}</>;
+  const prevPostIndex = post && casesData.indexOf(post) - 1;
+  const nextPostIndex = post && casesData.indexOf(post) + 1;
+  const navigationPosts = [];
+
+  if (casesData.length > 2) {
+    casesData[prevPostIndex]
+      ? navigationPosts.push(casesData[prevPostIndex])
+      : navigationPosts.push(casesData[casesData.length - 1]);
+  }
+
+  if (casesData.length > 1) {
+    casesData[nextPostIndex] ? navigationPosts.push(casesData[nextPostIndex]) : navigationPosts.push(casesData[0]);
+  }
+
+  return (
+    <>
+      <CaseIntro title={post.title} preview={post.preview} text={post.description} tags={post.tags} link={post.link} />
+      <PostContent>{post.content}</PostContent>
+      <CasesNavigation posts={navigationPosts} />
+    </>
+  );
 };
 
 export async function generateStaticParams() {

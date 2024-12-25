@@ -15,11 +15,7 @@ import { casesData } from '@/data';
 
 import styles from './CasesSwiper.module.css';
 
-interface CasesSwiperProps {
-  title?: string;
-}
-
-const CasesSwiper: FC<CasesSwiperProps> = ({ title }) => {
+const CasesSwiper: FC = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   if (!casesData || !casesData.length) return null;
@@ -30,7 +26,7 @@ const CasesSwiper: FC<CasesSwiperProps> = ({ title }) => {
         <div className={styles.inner}>
           <div className={styles.heading}>
             <Title size={'medium'} as={'h2'}>
-              {title ? title : 'Проекты с нашим участием'}
+              Проекты в которых мы участвовали
             </Title>
             <div className={styles.swiperNav}>
               <Button
@@ -69,7 +65,7 @@ const CasesSwiper: FC<CasesSwiperProps> = ({ title }) => {
           >
             {casesData.map(casesItem => (
               <SwiperSlide key={casesItem.id}>
-                <CasePreview casesPost={casesItem} />
+                <CasePreview className={styles.preview} casesPost={casesItem} />
               </SwiperSlide>
             ))}
           </Swiper>
