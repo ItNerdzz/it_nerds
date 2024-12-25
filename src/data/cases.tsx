@@ -1,8 +1,8 @@
-// import Link from 'next/link';
-// import Image from 'next/image';
-//
-// import { CasesPost } from '@/components/cases/interfaces';
-//
+import Link from 'next/link';
+import Image from 'next/image';
+
+import { CasesPost } from '@/components/cases/interfaces';
+
 // const casesData: CasesPost[] = [
 //   {
 //     id: 'polyinvest',
@@ -419,5 +419,7 @@
 //     ),
 //   },
 // ];
-//
-// export default casesData;
+
+const casesData: CasesPost[] = [];
+
+export default casesData;

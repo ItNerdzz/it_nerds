@@ -61,7 +61,7 @@ const ServiceItem: FC<IServiceItemProps> = ({ serviceItem }) => {
 
       <div className={styles.orderContainer}>
         <span className={styles.price}>от {serviceItem.price.toLocaleString('ru-RU')} ₽</span>
-        <Button size={'small'} asLink={true} href={Config.Telegram} target='_blank'>
+        <Button size={'small'} href={Config.Telegram} target='_blank'>
           Связаться
         </Button>
       </div>

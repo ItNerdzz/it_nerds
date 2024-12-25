@@ -1,11 +1,11 @@
 import React, { Suspense, StrictMode } from 'react';
 import { Roboto } from 'next/font/google';
 
-import type { Metadata } from 'next';
-
 import './styles/globals.css';
 import { Footer, Header } from '../components/layout';
 import { CallBackModal } from '../components/common';
+
+import type { Metadata } from 'next';
 
 const roboto = Roboto({
   weight: ['400', '500', '700'],
