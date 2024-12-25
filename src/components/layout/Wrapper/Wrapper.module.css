@@ -3,11 +3,5 @@
   min-width: 320px;
   max-width: 1440px;
   box-sizing: border-box;
-  padding: 0 var(--indent-horizontal-mobile);
-}
-
-@media screen and (min-width: 768px) {
-  .wrapper {
-    padding: 0 var(--indent-horizontal-desktop);
-  }
+  padding: 0 var(--indent-x);
 }

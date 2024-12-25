@@ -7,12 +7,12 @@
   --background-transparent: rgba(40, 40, 40, 0.5);
   --default-font-size: 16px;
   --default-line-height: 150%;
-  --indent-horizontal-mobile: 15px;
-  --indent-horizontal-desktop: 60px;
-  --indent-vertical-top-mobile: 40px;
-  --indent-vertical-bottom-mobile: 40px;
-  --indent-vertical-top-desktop: 80px;
-  --indent-vertical-bottom-desktop: 80px;
+  --indent-x: 15px;
+  --indent-y: 40px;
   --border-radius-small: 8px;
   --border-radius-medium: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  --indent-y: 80px;
 }

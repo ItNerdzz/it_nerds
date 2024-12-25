@@ -11,7 +11,6 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   target?: string;
   size: 'large' | 'big' | 'small';
   isAlt?: boolean;
-  asLink?: boolean;
   disabled?: boolean;
 }
 
@@ -24,13 +23,12 @@ const Button: FC<IButtonProps> = ({
   target,
   size,
   isAlt,
-  asLink,
   disabled,
   tabIndex,
 }) => {
   const buttonClassNames = clsx(styles.button, className, styles[size], isAlt && styles.alt);
 
-  const Tag = asLink ? 'a' : 'button';
+  const Tag = href ? 'a' : 'button';
 
   return (
     <Tag

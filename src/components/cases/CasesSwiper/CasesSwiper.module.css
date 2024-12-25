@@ -1,0 +1,63 @@
+.root {
+    .inner {
+        padding: var(--indent-y) 0;
+    }
+
+    .heading {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .swiper {
+        cursor: grab;
+        margin: 0 calc(var(--indent-x) * -1);
+        padding-left: var(--indent-x);
+    }
+
+    .swiper :global(.swiper-slide) {
+        width: auto;
+    }
+
+    .swiperNav {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+    }
+
+    .swiperNavButton {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+
+    .swiperNavButton svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .swiperNavButtonPrev svg {
+        transform: rotate(180deg);
+    }
+
+    @media screen and (min-width: 768px) {
+        .heading {
+            margin-bottom: 50px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .swiperNav {
+            display: flex;
+        }
+
+        .swiper {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+

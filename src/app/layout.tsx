@@ -1,9 +1,11 @@
-import { Suspense, StrictMode } from 'react';
+import React, { Suspense, StrictMode } from 'react';
 import { Roboto } from 'next/font/google';
 
 import type { Metadata } from 'next';
 
 import './styles/globals.css';
+import { Footer, Header } from '../components/layout';
+import { CallBackModal } from '../components/common';
 
 const roboto = Roboto({
   weight: ['400', '500', '700'],
@@ -21,7 +23,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='ru'>
       <body className={roboto.className}>
         <StrictMode>
-          <Suspense fallback={'loading..'}>{children}</Suspense>
+          <Suspense fallback={'loading..'}>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <CallBackModal />
+          </Suspense>
         </StrictMode>
       </body>
     </html>
