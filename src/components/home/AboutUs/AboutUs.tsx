@@ -51,8 +51,6 @@ const AnimatedNumber: FC<{ target: number }> = ({ target }) => {
     } else {
       animate(count, from, { duration: 0 });
     }
-
-    console.log(value);
   }, [count, isInView, from, to]);
 
   return <motion.span ref={ref}>{value}</motion.span>;
