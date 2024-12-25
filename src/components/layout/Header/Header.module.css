@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    background-color: var(--background-transparent);
+    background-color: var(--bg-transparent);
     transition: all 0.3s ease-in-out;
 }
 
@@ -15,10 +15,10 @@
 
 .root.show {
     top: 0;
-    background-color: var(--background-light);
+    background-color: var(--bg-light);
 
     .inner {
-        background-color: var(--background-light);
+        background-color: var(--bg-light);
     }
 }
 
@@ -50,15 +50,15 @@
     z-index: 0;
     position: absolute;
     top: calc(100% + 16px);
-    right: var(--indent-horizontal-mobile);
+    right: var(--indent-x);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
     padding: 16px;
     opacity: 0;
-    background-color: var(--background);
-    border-radius: var(--border-radius-medium);
+    background-color: var(--bg);
+    border-radius: var(--br-m);
     box-sizing: border-box;
     transition: all 0.4s ease-in-out;
 

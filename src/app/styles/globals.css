@@ -5,8 +5,8 @@
 }
 
 html {
-  scroll-behavior: smooth !important;
-  background-color: var(--background);
+  scroll-behavior: smooth;
+  background-color: var(--bg);
 }
 
 html,
@@ -20,10 +20,10 @@ body {
   display: flex;
   flex-direction: column;
   font-weight: 400;
-  background-color: var(--background);
+  background-color: var(--bg);
   color: var(--basic);
-  font-size: var(--default-font-size);
-  line-height: var(--default-line-height);
+  font-size: var(--font-base);
+  line-height: var(--leading-base);
   overflow-x: hidden;
 }
 

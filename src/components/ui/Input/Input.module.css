@@ -1,6 +1,6 @@
 .root {
   width: 100%;
-  border-radius: var(--border-radius-small);
+  border-radius: var(--br-s);
   color: var(--white);
   font-size: 16px;
   font-weight: 400;

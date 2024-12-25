@@ -8,14 +8,14 @@
     left: 0;
     align-items: center;
     justify-content: center;
-    background-color: var(--background-transparent);
+    background-color: var(--bg-transparent);
     backdrop-filter: blur(8px);
     padding: 20px;
 }
 
 .root .inner {
-    background: var(--background-light);
-    border-radius: var(--border-radius-small);
+    background: var(--bg-light);
+    border-radius: var(--br-s);
     padding: 20px;
     width: 100%;
     max-width: 600px;

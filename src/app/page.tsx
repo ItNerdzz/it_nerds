@@ -4,12 +4,12 @@ import { CasesSwiper } from '@/components/cases';
 export default function Home() {
   return (
     <>
-      {/*<Hero />*/}
-      {/*<AboutUs />*/}
-      {/*<HowWeWorks />*/}
-      {/*<Services />*/}
+      <Hero />
+      <AboutUs />
+      <HowWeWorks />
+      <Services />
       <CasesSwiper />
-      {/*<CallToAction />*/}
+      <CallToAction />
     </>
   );
 }

@@ -1,5 +1,5 @@
 .aboutUs {
-  padding: var(--indent-vertical-top-mobile) 0 var(--indent-vertical-bottom-mobile);
+  padding: var(--indent-y) 0 var(--indent-y);
 }
 
 .textContainer {
@@ -44,10 +44,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .aboutUs {
-    padding: var(--indent-vertical-top-desktop) 0 var(--indent-vertical-bottom-desktop);
-  }
-
   .textContainer {
     gap: 50px;
     margin-bottom: 50px;

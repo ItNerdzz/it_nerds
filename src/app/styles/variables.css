@@ -2,15 +2,15 @@
   --white: #fff;
   --basic: #ede9fe;
   --primary: #7c3aed;
-  --background: #171717;
-  --background-light: #282828;
-  --background-transparent: rgba(40, 40, 40, 0.5);
-  --default-font-size: 16px;
-  --default-line-height: 150%;
+  --bg: #171717;
+  --bg-light: #282828;
+  --bg-transparent: rgba(40, 40, 40, 0.5);
+  --font-base: 16px;
+  --leading-base: 150%;
   --indent-x: 15px;
   --indent-y: 40px;
-  --border-radius-small: 8px;
-  --border-radius-medium: 16px;
+  --br-s: 8px;
+  --br-m: 16px;
 }
 
 @media screen and (min-width: 768px) {

@@ -3,7 +3,7 @@
   width: 100%;
   margin-bottom: 35px;
   border: 1px solid var(--primary);
-  border-radius: var(--border-radius-small);
+  border-radius: var(--br-s);
 }
 
 .buttonsItem {
@@ -30,11 +30,11 @@
 }
 
 .buttonsItem:first-child .tabsButton {
-  border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+  border-radius: var(--br-s) 0 0 var(--br-s);
 }
 
 .buttonsItem:last-child .tabsButton {
-  border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
+  border-radius: 0 var(--br-s) var(--br-s) 0;
 }
 
 @media screen and (min-width: 768px) {
