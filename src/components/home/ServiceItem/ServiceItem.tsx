@@ -5,6 +5,7 @@ import clsx from 'clsx';
 
 import { Title, Button, Text } from '@/components/ui';
 import Config from '@/config.json';
+import useCallbackModalStore from '@/store/useCallbackModalStore';
 
 import styles from './ServiceItem.module.css';
 
@@ -21,6 +22,7 @@ const ServiceItem: FC<IServiceItemProps> = ({ serviceItem }) => {
   const [isLongText, setIsLongText] = useState(false);
   const textRef = useRef<HTMLParagraphElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const openModal = useCallbackModalStore(state => state.openModal);
 
   useEffect(() => {
     if (textRef.current === null) return;
@@ -61,7 +63,7 @@ const ServiceItem: FC<IServiceItemProps> = ({ serviceItem }) => {
 
       <div className={styles.orderContainer}>
         <span className={styles.price}>от {serviceItem.price.toLocaleString('ru-RU')} ₽</span>
-        <Button size={'small'} href={Config.Telegram} target='_blank'>
+        <Button size={'small'} onClick={openModal}>
           Связаться
         </Button>
       </div>
