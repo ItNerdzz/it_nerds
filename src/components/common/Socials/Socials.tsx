@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import clsx from 'clsx';
 
-import WhatsappIcon from '/public/assets/images/icons/whatsapp.svg';
 import TelegramIcon from '/public/assets/images/icons/telegram.svg';
+import WhatsappIcon from '/public/assets/images/icons/whatsapp.svg';
+import EmailIcon from '/public/assets/images/icons/email.svg';
 
 import Config from '@/config.json';
 
@@ -12,6 +13,14 @@ const socialItems = [
   {
     icon: <TelegramIcon />,
     link: Config.Telegram,
+  },
+  {
+    icon: <WhatsappIcon />,
+    link: Config.WhatsApp,
+  },
+  {
+    icon: <EmailIcon />,
+    link: Config.Email,
   },
 ];
 

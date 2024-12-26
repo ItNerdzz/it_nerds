@@ -13,33 +13,17 @@
   border-radius: 50%;
   background-color: var(--basic);
   transition: all 0.2s;
+  color: var(--bg);
 }
 
 .link:active {
-  background-color: var(--primary);
-}
-
-.link:active svg path[fill] {
-  fill: var(--basic);
-}
-
-.link:active svg path[stroke] {
-  stroke: var(--basic);
+  opacity: 0.8;
 }
 
 @media (hover: hover) {
   .link:hover,
   .link:focus {
+    color: var(--basic);
     background-color: var(--primary);
-  }
-
-  .link:hover svg path[fill],
-  .link:focus svg path[fill] {
-    fill: var(--basic);
-  }
-
-  .link:hover svg path[stroke],
-  .link:focus svg path[stroke] {
-    stroke: var(--basic);
   }
 }
