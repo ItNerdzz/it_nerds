@@ -60,6 +60,15 @@
     .inner ol {
         list-style: decimal;
     }
+
+    .inner table {
+        border-collapse: collapse;
+    }
+
+    .inner table td {
+        border: 1px solid var(--basic);
+        padding: 10px;
+    }
 }
 
 @media screen and (min-width: 768px) {

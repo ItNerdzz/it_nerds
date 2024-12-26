@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Link from 'next/link';
 
 import { Wrapper } from '@/components/layout';
 import { Logo } from '@/components/ui/';
@@ -12,7 +13,12 @@ const Footer: FC = () => {
       <Wrapper>
         <div className={styles.inner}>
           <Logo />
-          <span>2024 ©</span>
+          <div className={styles.info}>
+            <Link className={styles.privacy} href={'/privacy/'}>
+              Политика конфиденциальности
+            </Link>
+            <span>{new Date().getFullYear()} ©</span>
+          </div>
           <Socials />
         </div>
       </Wrapper>
