@@ -62,7 +62,7 @@ const AboutUs: FC = () => {
       <Wrapper>
         <div className={styles.textContainer}>
           <Title size={'medium'} as={'h2'}>
-            Почему выбирают IT Nerds?
+            Почему выбирают IT&nbsp;Nerds?
           </Title>
           <Subtitle className={styles.subtitle}>
             IT Nerds: команда, которая сделает ваш бизнес заметным. Мы помогаем компаниям укреплять свою репутацию,
