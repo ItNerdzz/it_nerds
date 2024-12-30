@@ -57,7 +57,7 @@
     gap: 20px;
     padding: 16px;
     opacity: 0;
-    background-color: var(--bg);
+    background-color: var(--bg-light);
     border-radius: var(--br-m);
     box-sizing: border-box;
     transition: all 0.4s ease-in-out;
