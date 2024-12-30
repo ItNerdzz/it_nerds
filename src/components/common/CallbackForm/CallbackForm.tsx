@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FC, useState } from 'react';
+import { getCookie } from 'cookies-next';
 
 import { Button, Input } from '@/components/ui/';
 
@@ -10,11 +11,10 @@ const CallbackForm: FC = () => {
   const [nameValue, setNameValue] = useState<string>('');
   const [phoneValue, setPhoneValue] = useState<string>('');
   const [messageValue, setMessageValue] = useState<string>('');
-
   const [isPhoneInvalid, setIsPhoneInvalid] = useState(false);
-
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const referrer = getCookie('referrer');
 
   const handlerPhoneInput = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setPhoneValue(evt.target.value);
@@ -49,6 +49,7 @@ const CallbackForm: FC = () => {
           name: nameValue,
           phone: phoneValue,
           comment: messageValue,
+          referrer: referrer,
         }),
       });
 

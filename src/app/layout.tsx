@@ -1,6 +1,8 @@
 import React, { Suspense, StrictMode } from 'react';
 import { Roboto } from 'next/font/google';
 
+import ReferralProvider from '@/providers/ReferralProvider';
+
 import './styles/globals.css';
 import { Footer, Header } from '../components/layout';
 import { CallBackModal } from '../components/common';
@@ -24,10 +26,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={roboto.className}>
         <StrictMode>
           <Suspense fallback={'loading..'}>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-            <CallBackModal />
+            <ReferralProvider>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+              <CallBackModal />
+            </ReferralProvider>
           </Suspense>
         </StrictMode>
       </body>

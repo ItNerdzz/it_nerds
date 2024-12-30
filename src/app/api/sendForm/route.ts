@@ -2,11 +2,12 @@ interface SendFormRequest {
   name: string;
   phone: string;
   comment: string;
+  referrer: string | undefined;
 }
 
 export async function POST(request: Request) {
   try {
-    const { name, phone, comment }: SendFormRequest = await request.json();
+    const { name, phone, comment, referrer }: SendFormRequest = await request.json();
 
     if (!phone) {
       return new Response(JSON.stringify({ success: false, message: 'phone is required' }), { status: 400 });
@@ -23,6 +24,8 @@ export async function POST(request: Request) {
     if (name) text += `*Name*: ${name}\n`;
 
     if (comment) text += `*Comment*: ${comment}\n`;
+
+    if (referrer) text += `*Referrer*: ${referrer}\n`;
 
     const options = {
       method: 'POST',
