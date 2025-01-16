@@ -100,7 +100,7 @@ const CallbackForm: FC = () => {
       <Button className={styles.submit} size={'large'} type={'submit'} disabled={isSubmitted}>
         {isLoading && 'Отправляем..'}
         {isPhoneInvalid && 'Неверно заполнено поле'}
-        {isSubmitted && 'Спсибо! Уже связываемся с Вами'}
+        {isSubmitted && 'Спасибо! Уже связываемся с Вами'}
         {!isLoading && !isSubmitted && !isPhoneInvalid && 'Отправить'}
       </Button>
     </form>
