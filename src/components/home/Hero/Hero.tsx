@@ -23,7 +23,7 @@ const Hero: FC = () => {
             </Title>
             <Subtitle className={styles.subtitle}>
               Создаем дизайн, опираясь на анализ рынка. Сочетая логику и визуал, выделим ваш&nbsp;бизнес среди
-              конкурентов и улучшим пользовательский опыт
+              конкурентов и улучшим пользовательский&nbsp;опыт
             </Subtitle>
             <Button className={styles.button} size={'big'} onClick={openModal}>
               Получить консультацию
