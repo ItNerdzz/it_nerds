@@ -91,7 +91,7 @@ const Services: FC = () => {
   ];
 
   return (
-    <section id={'Services'}>
+    <section className={styles.root} id={'services'}>
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title} size={'medium'} as={'h2'}>

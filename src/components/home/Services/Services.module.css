@@ -2,7 +2,7 @@
   padding: var(--indent-y) 0 var(--indent-y);
 }
 
-.title {
+.root .title {
   margin-bottom: 20px;
 }
 
@@ -17,7 +17,7 @@
     padding: var(--indent-y) 0 var(--indent-y);
   }
 
-  .title {
+  .root .title {
     margin: 0 0 50px;
   }
 

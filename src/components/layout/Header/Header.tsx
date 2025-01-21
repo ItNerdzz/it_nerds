@@ -17,7 +17,7 @@ const menuItems = [
   },
   {
     text: 'Услуги',
-    link: '/#Services',
+    link: '/#services',
   },
   {
     text: 'Проекты',
