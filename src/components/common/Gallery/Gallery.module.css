@@ -1,0 +1,16 @@
+.root {
+}
+
+.root .swiper .galleryImage {
+    margin: 0;
+}
+
+.root :global(.swiper-pagination-bullet) {
+    width: 10px;
+    height: 10px;
+    background-color: var(--bg-light);
+}
+
+.root :global(.swiper-pagination-bullet-active) {
+    background-color: var(--primary);
+}
