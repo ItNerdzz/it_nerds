@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FC } from 'react';
+import clsx from 'clsx';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -11,12 +12,13 @@ import 'swiper/css/pagination';
 import styles from './Gallery.module.css';
 
 interface GalleryProps {
+  isMargin?: boolean;
   images: string[];
 }
 
-const Gallery: FC<GalleryProps> = ({ images }) => {
+const Gallery: FC<GalleryProps> = ({ isMargin = true, images }) => {
   return (
-    <div className={styles.root}>
+    <div className={clsx(isMargin && styles.margin, styles.root)}>
       <Swiper
         className={styles.swiper}
         modules={[Autoplay, Pagination]}

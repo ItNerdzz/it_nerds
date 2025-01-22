@@ -11,7 +11,9 @@
     .inner h4,
     .inner h5,
     .inner h6 {
-        margin-top: 50px;
+        font-size: 30px;
+        line-height: 1.5;
+        margin-top: 60px;
         margin-bottom: 20px;
     }
 
@@ -24,11 +26,14 @@
         margin-top: 0;
     }
 
-    .inner img {
+    .inner > img {
         width: 100%;
-        height: auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        height: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        object-position: top center;
+        margin-top: 30px;
+        margin-bottom: 20px;
         border-radius: var(--br-m);
     }
 
@@ -69,6 +74,10 @@
         border: 1px solid var(--basic);
         padding: 10px;
     }
+
+    .inner li {
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -77,6 +86,15 @@
         .inner ul,
         .inner ol {
             font-size: 20px;
+        }
+
+        .inner h1,
+        .inner h2,
+        .inner h3,
+        .inner h4,
+        .inner h5,
+        .inner h6 {
+            font-size: 40px;
         }
     }
 }

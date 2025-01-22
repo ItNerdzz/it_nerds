@@ -18,8 +18,8 @@ const CasePreview: FC<CasePreviewProps> = ({ className, casesPost }) => {
       <Image
         className={styles.image}
         src={casesPost.preview}
-        width={300}
-        height={169}
+        width={1320}
+        height={742}
         alt={casesPost.title + ' IT Nerds'}
       />
       <Title className={styles.title} size={'small'} as={'h3'}>

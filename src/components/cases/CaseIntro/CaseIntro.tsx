@@ -26,7 +26,7 @@ const CaseIntro: FC<CaseIntroProps> = ({ title, text, preview, tags, link }) => 
           <Title className={styles.title} size={'big'} as={'h1'}>
             {title}
           </Title>
-          <Image className={styles.preview} src={preview} width={'300'} height={'150'} alt={title + ' IT Nerds'} />
+          <Image className={styles.preview} src={preview} width={1320} height={742} alt={title + ' IT Nerds'} />
           <Text className={styles.text}>{text}</Text>
           <ul className={styles.tags}>{tags && tags.length > 0 && tags.map(tag => <li key={tag}>#{tag}</li>)}</ul>
           <Link className={styles.link} href={link.url}>
