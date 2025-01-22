@@ -1,13 +1,14 @@
 import React, { Suspense, StrictMode } from 'react';
 import { Roboto } from 'next/font/google';
 
+import { CallToAction } from '@/components/common';
+import { Footer, Header } from '@/components/layout';
+import { CallBackModal } from '@/components/common';
 import ReferralProvider from '@/providers/ReferralProvider';
 
-import './styles/globals.css';
-import { Footer, Header } from '../components/layout';
-import { CallBackModal } from '../components/common';
-
 import type { Metadata } from 'next';
+
+import './styles/globals.css';
 
 const roboto = Roboto({
   weight: ['400', '500', '700'],
@@ -28,7 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Suspense fallback={'loading..'}>
             <ReferralProvider>
               <Header />
-              <main>{children}</main>
+              <main>
+                {children}
+                <CallToAction />
+              </main>
               <Footer />
               <CallBackModal />
             </ReferralProvider>

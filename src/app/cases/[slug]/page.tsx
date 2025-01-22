@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { casesData } from '@/data';
 import { CaseIntro, CasesNavigation } from '@/components/cases';
-import { CallToAction, PostContent } from '@/components/common';
+import { PostContent } from '@/components/common';
 
 import type { Metadata } from 'next';
 
@@ -67,7 +67,6 @@ const CasesPost: FC<CasesPostProps> = ({ params }) => {
       <CaseIntro title={post.title} preview={post.preview} text={post.description} tags={post.tags} link={post.link} />
       <PostContent>{post.content}</PostContent>
       <CasesNavigation posts={navigationPosts} />
-      <CallToAction />
     </>
   );
 };
