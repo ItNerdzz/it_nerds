@@ -1,5 +1,4 @@
 import AboutUs from '@/components/home/AboutUs/AboutUs';
-import CallToAction from '@/components/home/CallToAction/CallToAction';
 import Cases from '@/components/home/Cases/Cases';
 import Flame from '@/components/home/Flame/Flame';
 import Hero from '@/components/home/Hero/Hero';
