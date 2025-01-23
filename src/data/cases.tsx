@@ -105,6 +105,6 @@ const polyinvest: CasesPost = {
   ),
 };
 
-const casesData: CasesPost[] = [polyinvest];
+const casesData: CasesPost[] = [];
 
 export default casesData;
