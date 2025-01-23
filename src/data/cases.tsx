@@ -15,6 +15,7 @@ const polyinvest: CasesPost = {
     url: 'https://antonpolyakov.ru ',
     text: 'antonpolyakov.ru',
   },
+  date: '19.01.2024',
   content: (
     <>
       <h2>Задача</h2>
@@ -104,6 +105,6 @@ const polyinvest: CasesPost = {
   ),
 };
 
-const casesData: CasesPost[] = [];
+const casesData: CasesPost[] = [polyinvest];
 
 export default casesData;

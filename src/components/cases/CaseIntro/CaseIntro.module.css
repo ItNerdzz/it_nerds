@@ -44,8 +44,22 @@
         font-size: 16px;
     }
 
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        gap: 10px;
+    }
+
     .link {
-        color: var(--base);
+        color: var(--basic);
+        margin-bottom: 10px;
+    }
+
+    .date {
+        font-size: 14px;
+        color: var(--basic);
     }
 
     @media screen and (min-width: 768px) {

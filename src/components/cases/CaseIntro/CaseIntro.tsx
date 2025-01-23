@@ -16,9 +16,10 @@ interface CaseIntroProps {
     url: string;
     text: string;
   };
+  date: string;
 }
 
-const CaseIntro: FC<CaseIntroProps> = ({ title, text, preview, tags, link }) => {
+const CaseIntro: FC<CaseIntroProps> = ({ title, text, preview, tags, link, date }) => {
   return (
     <section className={styles.root}>
       <Wrapper>
@@ -29,9 +30,12 @@ const CaseIntro: FC<CaseIntroProps> = ({ title, text, preview, tags, link }) => 
           <Image className={styles.preview} src={preview} width={1320} height={742} alt={title + ' IT Nerds'} />
           <Text className={styles.text}>{text}</Text>
           <ul className={styles.tags}>{tags && tags.length > 0 && tags.map(tag => <li key={tag}>#{tag}</li>)}</ul>
-          <Link className={styles.link} href={link.url}>
-            {link.text}
-          </Link>
+          <div className={styles.row}>
+            <Link className={styles.link} href={link.url}>
+              {link.text}
+            </Link>
+            <span className={styles.date}>{date}</span>
+          </div>
         </div>
       </Wrapper>
     </section>

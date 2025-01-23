@@ -64,7 +64,14 @@ const CasesPost: FC<CasesPostProps> = ({ params }) => {
 
   return (
     <>
-      <CaseIntro title={post.title} preview={post.preview} text={post.description} tags={post.tags} link={post.link} />
+      <CaseIntro
+        title={post.title}
+        preview={post.preview}
+        text={post.description}
+        tags={post.tags}
+        link={post.link}
+        date={post.date}
+      />
       <PostContent>{post.content}</PostContent>
       <CasesNavigation posts={navigationPosts} />
     </>

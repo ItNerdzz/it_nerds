@@ -12,5 +12,6 @@ export type CasesPost = {
     url: string;
     text: string;
   };
+  date: string;
   content: React.ReactNode;
 };
