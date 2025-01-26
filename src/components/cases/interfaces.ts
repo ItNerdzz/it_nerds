@@ -6,6 +6,7 @@ type CasesPostTags =
   | 'каталог'
   | 'дизайн'
   | 'разработка'
+  | 'nextjs'
   | 'поддомены'
   | 'wordpress'
   | 'woocommerce'

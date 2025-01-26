@@ -111,6 +111,26 @@ const polyinvest: CasesPost = {
   ),
 };
 
+const uddug: CasesPost = {
+  id: 'uddug',
+  title: 'Редизайн лендинга для\u00a0IT\u00a0компании',
+  tags: ['лендинг', 'дизайн', 'разработка', 'nextjs', 'api интеграция'],
+  description:
+    'Разработка ленинга для IT компании под ключ. Обновление фирменного стиля и структуры. Api интеграция для отправки заявок',
+  preview: '/assets/images/cases/uddug/preview.jpg',
+  link: {
+    url: 'https://antonpolyakov.ru',
+    text: 'antonpolyakov.ru',
+  },
+  date: '27.01.2023',
+  content: (
+    <>
+      <h2>Страница обновляется</h2>
+      <p>Скоро тут появится описание</p>
+    </>
+  ),
+};
+
 const rigida: CasesPost = {
   id: 'rigida',
   title: 'Информационный сайт для производителя\u00a0мебели',
@@ -290,7 +310,7 @@ const rigida: CasesPost = {
       </p>
       <ul>
         <li>Удобно просматривать и отслеживать все новости компании.</li>
-        <li>Легко обновлять контент, добавляя новые материалы. </li>
+        <li>Легко обновлять контент, добавляя новые материалы.</li>
       </ul>
       <p>
         Каждая новость теперь имеет отдельную страницу с возможностью быстрого редактирования, что упрощает управление
@@ -581,6 +601,6 @@ const avd: CasesPost = {
   ),
 };
 
-const casesData: CasesPost[] = [rigida];
+const casesData: CasesPost[] = [polyinvest, uddug, avd, rigida];
 
 export default casesData;
