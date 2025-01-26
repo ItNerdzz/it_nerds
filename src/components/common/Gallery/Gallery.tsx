@@ -27,7 +27,7 @@ const Gallery: FC<GalleryProps> = ({ isMargin = true, images }) => {
         autoplay={{ delay: 5000, disableOnInteraction: true }}
         loop={true}
         grabCursor={true}
-        pagination={{ type: 'bullets' }}
+        pagination={{ type: 'bullets', clickable: true }}
       >
         {images.map(item => (
           <SwiperSlide key={item}>
