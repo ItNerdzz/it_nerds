@@ -1,6 +1,6 @@
 import React from 'react';
 
-type CasesPostTags = 'лендинг' | 'дизайн' | 'разработка' | 'wordpress' | 'бот';
+type CasesPostTags = 'лендинг' | 'инфорамционный сайт' | 'дизайн' | 'разработка' | 'wordpress' | 'бот' | 'чат';
 
 export type CasesPost = {
   id: string;
