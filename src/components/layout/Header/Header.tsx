@@ -21,7 +21,7 @@ const menuItems = [
   },
   {
     text: 'Проекты',
-    link: '/#Cases',
+    link: '/#cases',
   },
 ];
 
