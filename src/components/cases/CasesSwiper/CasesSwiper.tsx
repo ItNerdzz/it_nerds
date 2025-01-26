@@ -63,11 +63,14 @@ const CasesSwiper: FC = () => {
               swiperRef.current = swiper;
             }}
           >
-            {casesData.map(casesItem => (
-              <SwiperSlide key={casesItem.id}>
-                <CasePreview className={styles.preview} casesPost={casesItem} />
-              </SwiperSlide>
-            ))}
+            {casesData
+              .slice()
+              .reverse()
+              .map(casesItem => (
+                <SwiperSlide key={casesItem.id}>
+                  <CasePreview className={styles.preview} casesPost={casesItem} />
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </Wrapper>
