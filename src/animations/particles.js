@@ -1,4 +1,3 @@
-// modified version of random-normal
 function normalPool(o) {
   var r = 0;
   do {

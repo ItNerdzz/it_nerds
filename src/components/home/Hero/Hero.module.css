@@ -43,7 +43,7 @@
 .subtitle {
     text-align: center;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
         text-align: start;
     }
 }
@@ -66,7 +66,7 @@
 .logo {
     pointer-events: none;
     color: var(--bg);
-    font-size: 20vw;
+    font-size: 22vw;
     line-height: 13.5vw;
     position: absolute;
     font-weight: 700;
@@ -94,6 +94,11 @@
 
     .title {
         text-align: start;
+    }
+
+    .logo {
+        font-size: 16vw;
+        line-height: 11vw;
     }
 }
 

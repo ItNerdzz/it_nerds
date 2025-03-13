@@ -4,8 +4,7 @@ import { FC, useRef, useEffect } from 'react';
 
 import { Wrapper } from '@/components/layout';
 import { Title, Subtitle, Button } from '@/components/ui';
-import startParticlesAnimation from '@/utils/particles';
-import Config from '@/config.json';
+import startParticlesAnimation from '@/animations/particles';
 import useCallbackModalStore from '@/store/useCallbackModalStore';
 
 import styles from './CallToAction.module.css';

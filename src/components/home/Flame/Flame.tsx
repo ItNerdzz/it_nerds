@@ -3,7 +3,7 @@
 import React, { FC, useRef, useEffect } from 'react';
 import clsx from 'clsx';
 
-import setupAnimation from '@/utils/flame';
+import setupAnimation from '@/animations/flame';
 
 import styles from './Flame.module.css';
 
