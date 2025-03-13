@@ -7,5 +7,17 @@ import Tabs from './Tabs/Tabs';
 import PostContent from './PostContent/PostContent';
 import Gallery from './Gallery/Gallery';
 import CallToAction from './CallToAction/CallToAction';
+import YandexMetrika from './YandexMetrika/YandexMetrika';
 
-export { BurgerButton, CallbackForm, CallBackModal, MainNav, Socials, Tabs, PostContent, Gallery, CallToAction };
+export {
+  BurgerButton,
+  CallbackForm,
+  CallBackModal,
+  MainNav,
+  Socials,
+  Tabs,
+  PostContent,
+  Gallery,
+  CallToAction,
+  YandexMetrika,
+};
