@@ -1,6 +1,7 @@
 import React from 'react';
 
 type CasesPostTags =
+  | 'анимация'
   | 'лендинг'
   | 'инфорамционный сайт'
   | 'каталог'
