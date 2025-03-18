@@ -16,12 +16,6 @@
   gap: 10px;
 }
 
-.textContainer {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
 .textAccordion {
   display: grid;
   overflow: hidden;
