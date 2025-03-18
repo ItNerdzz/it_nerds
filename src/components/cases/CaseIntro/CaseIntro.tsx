@@ -38,7 +38,7 @@ const CaseIntro: FC<CaseIntroProps> = ({ title, text, preview, tags, link, date 
           <Text className={styles.text}>{text}</Text>
           <ul className={styles.tags}>{tags && tags.length > 0 && tags.map(tag => <li key={tag}>#{tag}</li>)}</ul>
           <div className={styles.row}>
-            <Link className={styles.link} href={link.url}>
+            <Link className={styles.link} href={link.url} target={'_blank'}>
               {link.text}
             </Link>
             <span className={styles.date}>{date}</span>
