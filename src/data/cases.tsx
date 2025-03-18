@@ -731,7 +731,7 @@ const genskorosti: CasesPost = {
   tags: ['интернет-магазин', 'дизайн', 'разработка', 'woocommerce', 'api интеграция'],
   description:
     'Разработка интернет магазина для российского бренда одежды «Генскорости». Интеграция платежной системы и модуля доставки CDEK, настройка внутренней CRM системы.',
-  preview: '/assets/images/cases/genskorosti/preview.png',
+  preview: '/assets/images/cases/genskorosti/preview.jpg',
   link: {
     url: 'https://genskorosti.ru/',
     text: 'genskorosti.ru',
