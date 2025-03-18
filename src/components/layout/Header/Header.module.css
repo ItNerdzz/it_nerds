@@ -48,6 +48,8 @@
 
 .menu {
     z-index: 0;
+    visibility: hidden;
+    pointer-events: none;
     position: absolute;
     top: calc(100% + 16px);
     right: var(--indent-x);
@@ -67,6 +69,8 @@
     }
 
     @media screen and (min-width: 1024px) {
+        visibility: visible;
+        pointer-events: auto;
         flex-grow: 1;
         flex-direction: row;
         align-items: center;
@@ -82,8 +86,9 @@
 }
 
 .menuOpened {
-    opacity: 1;;
-    pointer-events: all;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .socials {
