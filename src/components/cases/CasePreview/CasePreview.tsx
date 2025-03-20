@@ -15,13 +15,15 @@ interface CasePreviewProps {
 const CasePreview: FC<CasePreviewProps> = ({ className, casesPost }) => {
   return (
     <div className={clsx(styles.root, className)}>
-      <Image
-        className={styles.image}
-        src={casesPost.preview}
-        width={1320}
-        height={742}
-        alt={casesPost.title + ' IT Nerds'}
-      />
+      <a href={`/cases/${casesPost.id}`}>
+        <Image
+          className={styles.image}
+          src={casesPost.preview}
+          width={1320}
+          height={742}
+          alt={casesPost.title + ' IT Nerds'}
+        />
+      </a>
       <Title className={styles.title} size={'small'} as={'h3'}>
         {casesPost.title}
       </Title>
