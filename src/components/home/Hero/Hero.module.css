@@ -8,7 +8,7 @@
     pointer-events: none;
     z-index: 1;
     position: relative;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
