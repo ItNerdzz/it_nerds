@@ -85,7 +85,7 @@ const CallbackForm: FC = () => {
         value={phoneValue}
         onChange={handlerPhoneInput}
         ariaInvalid={isPhoneInvalid}
-        placeholder='Ваш телефон/telegram'
+        placeholder='Ваш телефон / telegram *'
         type={'phone'}
         name='phone'
       />

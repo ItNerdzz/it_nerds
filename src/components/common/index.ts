@@ -8,6 +8,7 @@ import PostContent from './PostContent/PostContent';
 import Gallery from './Gallery/Gallery';
 import CallToAction from './CallToAction/CallToAction';
 import YandexMetrika from './YandexMetrika/YandexMetrika';
+import DelayedCTA from './DelayedCTA/DelayedCTA';
 
 export {
   BurgerButton,
@@ -20,4 +21,5 @@ export {
   Gallery,
   CallToAction,
   YandexMetrika,
+  DelayedCTA,
 };
