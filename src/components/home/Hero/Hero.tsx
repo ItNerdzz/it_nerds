@@ -37,11 +37,11 @@ const Hero: FC = () => {
               для&nbsp;<span className={styles.coloredText}>вашего&nbsp;бизнеса</span>
             </Title>
             <Subtitle className={styles.subtitle}>
-              Создаем дизайн, опираясь на анализ рынка. Сочетая логику и визуал, выделим ваш&nbsp;бизнес среди
-              конкурентов и улучшим пользовательский&nbsp;опыт
+              Анализируем рынок, создаем продуманный дизайн и&nbsp;увеличиваем конверсию.
+              Ваш&nbsp;сайт&nbsp;—&nbsp;не&nbsp;просто&nbsp;картинка, а&nbsp;инструмент для&nbsp;роста&nbsp;продаж
             </Subtitle>
             <Button className={styles.button} size={'big'} onClick={openModal}>
-              Получить консультацию
+              Получить беспланый аудит
             </Button>
           </div>
         </div>

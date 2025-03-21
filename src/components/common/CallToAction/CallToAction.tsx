@@ -27,10 +27,12 @@ const CallToAction: FC = () => {
             <Title className={styles.title} size={'medium'} as={'h2'}>
               Обсудим ваш проект?
             </Title>
-            <Subtitle className={styles.subtitle}>Поделитесь своей идей, а мы предложим оптимальное решение</Subtitle>
+            <Subtitle className={styles.subtitle}>
+              Расскажите нам о своей идее, а мы поможем найти лучшее решение для вашего бизнеса.
+            </Subtitle>
           </div>
           <Button size={'big'} onClick={openModal}>
-            Связаться
+            Получить бесплатную консультацию
           </Button>
         </div>
       </Wrapper>

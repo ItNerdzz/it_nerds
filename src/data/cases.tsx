@@ -201,7 +201,7 @@ const uranus: CasesPost = {
   title: 'Промо лендинг для\u00a0Web3\u00a0игры Uranus',
   tags: ['лендинг', 'дизайн', 'анимация', 'разработка', 'nextjs'],
   description:
-    'Создание дизайна и разработка лендинга для карточной Web3 игры Uranus с интеграцией motion- и parallax\u2011анимации',
+    'Создание дизайна и разработка лендинга для карточной Web3 игры Uranus с интеграцией motion- и parallax\u2011анимации с динамичным пользовтельским взаимодействием',
   preview: '/assets/images/cases/uranus/preview.png',
   link: {
     url: 'https://uranus.games/',

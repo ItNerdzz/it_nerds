@@ -1,75 +1,41 @@
 .root {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 15px 0;
-  border-bottom: 1px solid var(--basic);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--basic);
 }
 
-.root.opened .text {
-  display: block;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.textAccordion {
-  display: grid;
-  overflow: hidden;
-}
-
-.content {
-  overflow: hidden;
-  transition: height 0.3s ease-in-out;
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .text {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
+    max-width: 600px;
 }
 
-.moreButton {
-  cursor: pointer;
-  color: var(--primary);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.orderContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.price {
-  cursor: pointer;
-  color: var(--basic);
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 150%;
+.button {
+    flex: 1;
 }
 
 @media screen and (min-width: 768px) {
-  .root {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 0;
-    padding: 12px 20px 37px;
-  }
+    .root {
+        justify-content: space-between;
+        padding: 12px 20px 37px;
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        align-items: flex-end;
+    }
 
-  .text {
-    max-width: 558px;
-    gap: 15px;
-  }
-
-  .orderContainer {
-    gap: 15px;
-  }
+    .button {
+        flex: auto;
+    }
 }
