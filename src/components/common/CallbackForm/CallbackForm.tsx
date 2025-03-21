@@ -60,6 +60,8 @@ const CallbackForm: FC = () => {
         setPhoneValue('');
         setNameValue('');
         setMessageValue('');
+        // @ts-ignore
+        window.ym('96660916', 'reachGoal', 'form_submit');
       } else {
         console.error(data.message);
       }
