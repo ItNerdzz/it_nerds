@@ -2,6 +2,13 @@ import React, { FC } from 'react';
 
 import { PostContent } from '@/components/common';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'IT Nerds | Политика конфиденциальности',
+  description: 'Политика конфиденциальности.',
+};
+
 const Privacy: FC = () => {
   return (
     <>
