@@ -7,8 +7,6 @@ import { Footer, Header } from '@/components/layout';
 import { CallBackModal } from '@/components/common';
 import ReferralProvider from '@/providers/ReferralProvider';
 
-import type { Metadata } from 'next';
-
 import './styles/globals.css';
 
 const roboto = Roboto({
@@ -16,11 +14,6 @@ const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
 });
-
-export const metadata: Metadata = {
-  title: 'IT Nerds',
-  description: 'Команда веб разработки',
-};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
