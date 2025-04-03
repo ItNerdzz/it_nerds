@@ -16,10 +16,10 @@ const BlogNavigation: FC<BlogOtherProps> = ({ posts }) => {
       <Wrapper>
         <div className={styles.inner}>
           <div className={styles.posts}>
-            <Link className={styles.postPreview} href={`/blog/${posts[0].id}`}>
-              <span className={styles.navName}>Предыдущая запись</span>
-              <p className={styles.postTitle}>{posts[0].title}</p>
-            </Link>
+            {/*<Link className={styles.postPreview} href={`/blog/${posts[0].id}`}>*/}
+            {/*  <span className={styles.navName}>Предыдущая запись</span>*/}
+            {/*  <p className={styles.postTitle}>{posts[0].title}</p>*/}
+            {/*</Link>*/}
             <Link className={styles.postPreview} href={`/blog/${posts[0].id}`}>
               <span className={styles.navName}>Следующая запись</span>
               <p className={styles.postTitle}>{posts[1].title}</p>
