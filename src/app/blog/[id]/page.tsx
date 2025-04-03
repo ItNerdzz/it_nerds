@@ -22,17 +22,17 @@ export const generateMetadata = async ({ params }: BlogPostProps): Promise<Metad
   }
 
   return {
-    title: post.title,
+    title: post.meta.title,
     description: post.meta.description,
     openGraph: {
-      title: post.title,
+      title: post.meta.title,
       description: post.meta.description,
       images: [
         {
           url: 'https://itnerds.ru/' + post.preview,
           width: 700,
           height: 360,
-          alt: post.title,
+          alt: post.meta.title,
         },
       ],
       url: `https://itnerds.ru/blog/${post.id}`,

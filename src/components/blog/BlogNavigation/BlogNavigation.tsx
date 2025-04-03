@@ -22,7 +22,7 @@ const BlogNavigation: FC<BlogOtherProps> = ({ posts }) => {
             </Link>
             <Link className={styles.postPreview} href={`/blog/${posts[0].id}`}>
               <span className={styles.navName}>Следующая запись</span>
-              <p className={styles.postTitle}>{posts[0].title}</p>
+              <p className={styles.postTitle}>{posts[1].title}</p>
             </Link>
           </div>
         </div>
