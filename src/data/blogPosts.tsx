@@ -133,7 +133,7 @@ const siteForSmallCompany: BlogPost = {
   ),
 };
 
-const platformForOnlineStore = {
+const platformForOnlineStore: BlogPost = {
   id: 'platforma-dlya-sozdaniya-internet-magazina-udobnye-i-moschnye-resheniya',
   title: 'Как выбрать платформу для создания интернет-магазина: Лучшие решения для вашего бизнеса',
   preview: '/assets/images/blog/platform-for-online-store.png',
@@ -244,6 +244,6 @@ const platformForOnlineStore = {
 //     </>,
 // };
 
-const blogPostsData = [siteForSmallCompany, platformForOnlineStore];
+const blogPostsData: BlogPost[] = [siteForSmallCompany, platformForOnlineStore];
 
 export default blogPostsData;

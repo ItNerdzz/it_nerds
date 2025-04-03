@@ -25,9 +25,11 @@ const BlogArchive: FC = () => {
             Блог команды IT Nerds
           </Title>
           <div className={styles.posts}>
-            {Array.from(blogPostsData).map(blogPost => (
-              <BlogPreview blogPost={blogPost} key={blogPost.id} />
-            ))}
+            {Array.from(blogPostsData)
+              .reverse()
+              .map(blogPost => (
+                <BlogPreview blogPost={blogPost} key={blogPost.id} />
+              ))}
           </div>
         </div>
       </Wrapper>

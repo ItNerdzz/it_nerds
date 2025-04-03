@@ -45,8 +45,8 @@ const BlogPost: FC<BlogPostProps> = async ({ params }) => {
   const post = blogPostsData.find(post => post.id === id);
   if (!post) return <div>Post not found</div>;
   const currentIndex = blogPostsData.findIndex(item => item.id === post.id);
-  const previousPost = currentIndex > 0 ? blogPostsData[currentIndex - 1] : blogPostsData[blogPostsData.length - 1];
-  const nextPost = currentIndex < blogPostsData.length - 1 ? blogPostsData[currentIndex + 1] : blogPostsData[0];
+  const previousPost = currentIndex === 0 ? blogPostsData[blogPostsData.length - 1] : blogPostsData[currentIndex - 1];
+  const nextPost = currentIndex === blogPostsData.length - 1 ? blogPostsData[0] : blogPostsData[currentIndex + 1];
 
   return (
     <>
