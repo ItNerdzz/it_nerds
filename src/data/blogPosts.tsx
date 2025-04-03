@@ -138,6 +138,7 @@ const platformForOnlineStore = {
   title: 'Как выбрать платформу для создания интернет-магазина: Лучшие решения для вашего бизнеса',
   preview: '/assets/images/blog/platform-for-online-store.png',
   date: '01.04.2025',
+  readingTime: 2,
   meta: {
     title: 'Платформа для создания интернет-магазина: Удобные и мощные решения',
     description:
@@ -234,6 +235,7 @@ const platformForOnlineStore = {
 //     title: '',
 //     preview: '',
 //     date: 'dd.mm.yyyy',
+//     readingTime: 3,
 //     meta: {
 //         title: '',
 //         description: '',
