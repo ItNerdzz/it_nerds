@@ -1,0 +1,25 @@
+.root {
+    border-radius: var(--br-m);
+    background-color: var(--bg-light);
+    padding: 10px;
+
+    .preview {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.9;
+        border-radius: var(--br-s);
+    }
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    .readingTime,
+    .date {
+     color: var(--basic);
+    }
+
+    .readingTime {
+        margin-bottom: 5px;
+    }
+}

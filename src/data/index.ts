@@ -1,3 +1,4 @@
 import casesData from './cases';
+import blogPostsData from './blogPosts';
 
-export { casesData };
+export { casesData, blogPostsData };

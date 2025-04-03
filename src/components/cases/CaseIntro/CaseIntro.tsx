@@ -24,7 +24,7 @@ const CaseIntro: FC<CaseIntroProps> = ({ title, text, preview, tags, link, date 
     <section className={styles.root}>
       <Wrapper>
         <div className={styles.inner}>
-          <Title className={styles.title} size={'big'} as={'h1'}>
+          <Title className={styles.title} size={'extra-large'} as={'h1'}>
             {title}
           </Title>
           <Image

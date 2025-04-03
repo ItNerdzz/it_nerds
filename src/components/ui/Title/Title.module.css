@@ -5,8 +5,13 @@
   margin: 0;
 }
 
-.big {
+.extra-large {
   font-size: 36px;
+  line-height: 130%;
+}
+
+.large {
+  font-size: 30px;
   line-height: 130%;
 }
 
@@ -23,8 +28,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  .big {
+  .extra-large {
     font-size: 60px;
+  }
+
+  .large {
+    font-size: 45px;
   }
 
   .medium {

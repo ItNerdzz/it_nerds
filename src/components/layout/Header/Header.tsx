@@ -23,6 +23,10 @@ const menuItems = [
     text: 'Проекты',
     link: '/#cases',
   },
+  {
+    text: 'Блог',
+    link: '/blog',
+  },
 ];
 
 const Header: FC = () => {

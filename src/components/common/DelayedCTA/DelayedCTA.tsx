@@ -7,12 +7,16 @@ import useCallbackModalStore from '@/store/useCallbackModalStore';
 
 import styles from './DelayedCTA.module.css';
 
-const DelayedCTA: FC = () => {
+interface DelayedCTAProps {
+  delay: number;
+}
+
+const DelayedCTA: FC<DelayedCTAProps> = ({ delay }) => {
   const [isOpened, setIsOpened] = useState(false);
   const openModal = useCallbackModalStore(state => state.openModal);
 
   useEffect(() => {
-    setTimeout(() => setIsOpened(true), 10000);
+    setTimeout(() => setIsOpened(true), delay);
   }, []);
 
   if (!isOpened) return null;

@@ -32,7 +32,7 @@ const Hero: FC = () => {
       <Wrapper>
         <div className={styles.inner}>
           <div className={styles.textContainer}>
-            <Title className={styles.title} size={'big'}>
+            <Title className={styles.title} size={'extra-large'}>
               Разработка <span className={styles.coloredText}>сайта </span>
               для&nbsp;<span className={styles.coloredText}>вашего&nbsp;бизнеса</span>
             </Title>

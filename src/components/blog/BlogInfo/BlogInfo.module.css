@@ -1,0 +1,29 @@
+.root {
+    .inner {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: var(--indent-y) 0;
+    }
+
+    .title {
+        margin-bottom: 20px;
+    }
+
+    .preview {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.9;
+        border-radius: var(--br-m);
+        margin-bottom: 20px;
+    }
+
+    .readingTime {
+        margin-bottom: 5px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .title {
+            margin-bottom: 50px;
+        }
+    }
+}

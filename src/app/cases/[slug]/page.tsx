@@ -74,7 +74,7 @@ const CasesPost: FC<CasesPostProps> = ({ params }) => {
       />
       <PostContent>{post.content}</PostContent>
       <CasesNavigation posts={navigationPosts} />
-      <DelayedCTA />
+      <DelayedCTA delay={15000} />
     </>
   );
 };
