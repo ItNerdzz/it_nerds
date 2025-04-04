@@ -14,8 +14,8 @@ export default function Home() {
     <>
       <Hero />
       <AboutUs />
-      <HowWeWorks />
       <Services />
+      <HowWeWorks />
       <CasesSwiper />
     </>
   );

@@ -39,7 +39,7 @@ const HowWeWorks: FC = () => {
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title} size={'medium'} as={'h2'}>
-            Как мы работаем
+            Основные этапы работы
           </Title>
           <div className={styles.content}>
             <ul className={styles.steps}>
