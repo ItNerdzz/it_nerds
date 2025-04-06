@@ -13,6 +13,20 @@
   align-items: center;
 }
 
+
+.buttonsItem:not(:first-of-type):not(:last-of-type) {
+  border-left: 1px solid var(--basic);
+  border-right: 1px solid var(--basic);
+}
+
+.buttonsItem:first-of-type {
+  border-right: 1px solid var(--basic);
+}
+
+.buttonsItem:last-of-type {
+  border-left: 1px solid var(--basic);
+}
+
 .tabsButton {
   flex-grow: 1;
   padding: 12px 5px;
@@ -20,13 +34,14 @@
   margin: 0;
 }
 
-.buttonActive:active {
-  opacity: 1;
+@media (hover: hover) {
+  .tabsButton:not(:disabled):hover {
+    opacity: 0.9;
+  }
 }
 
-.buttonActive:hover {
-  background: var(--primary);
-  color: var(--basic);
+.tabsButton:focus {
+    opacity: 0.9;
 }
 
 .buttonsItem:first-child .tabsButton {

@@ -20,9 +20,10 @@ const Tabs: FC<ITabsProps> = ({ tabItems }) => {
             <li className={styles.buttonsItem} key={tabItem.tabTitle}>
               <Button
                 isAlt={activeTabIndex === index}
-                className={clsx([activeTabIndex === index && styles.buttonActive, styles.tabsButton])}
+                className={styles.tabsButton}
                 size={'small'}
                 onClick={() => setActiveTabIndex(index)}
+                disabled={activeTabIndex === index}
               >
                 {tabItem.tabTitle}
               </Button>
