@@ -1,5 +1,6 @@
 'use client';
-import { FC, useState } from 'react';
+
+import React, { FC, useState } from 'react';
 import clsx from 'clsx';
 
 import { Button } from '@/components/ui';
@@ -18,7 +19,7 @@ const Tabs: FC<ITabsProps> = ({ tabItems }) => {
           tabItems.map((tabItem, index) => (
             <li className={styles.buttonsItem} key={tabItem.tabTitle}>
               <Button
-                isAlt={activeTabIndex === index ? false : true}
+                isAlt={activeTabIndex === index}
                 className={clsx([activeTabIndex === index && styles.buttonActive, styles.tabsButton])}
                 size={'small'}
                 onClick={() => setActiveTabIndex(index)}
@@ -28,7 +29,14 @@ const Tabs: FC<ITabsProps> = ({ tabItems }) => {
             </li>
           ))}
       </ul>
-      {tabItems[activeTabIndex].content && tabItems[activeTabIndex].content}
+      {tabItems.map((tabItem, index) => (
+        <div
+          className={clsx(styles.tabContent, index === activeTabIndex && styles.tabContentActive)}
+          key={tabItem.tabTitle}
+        >
+          {tabItem.content}
+        </div>
+      ))}
     </div>
   );
 };

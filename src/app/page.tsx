@@ -1,5 +1,6 @@
-import { Hero, AboutUs, HowWeWorks, Services } from '@/components/home';
+import { Hero, AboutUs, HowWeWorks } from '@/components/home';
 import { CasesSwiper } from '@/components/cases';
+import { ServicesTabs } from '@/components/services';
 
 import type { Metadata } from 'next';
 
@@ -14,7 +15,7 @@ export default function Home() {
     <>
       <Hero />
       <AboutUs />
-      <Services />
+      <ServicesTabs />
       <HowWeWorks />
       <CasesSwiper />
     </>

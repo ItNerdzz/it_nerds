@@ -37,6 +37,14 @@
   border-radius: 0 var(--br-s) var(--br-s) 0;
 }
 
+.tabContent {
+  display: none;
+
+  &.tabContentActive {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .buttonsList {
     margin-bottom: 50px;

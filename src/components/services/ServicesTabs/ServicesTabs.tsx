@@ -3,11 +3,15 @@ import { FC } from 'react';
 import { Wrapper } from '@/components/layout';
 import { Title } from '@/components/ui';
 import { Tabs } from '@/components/common';
-import { ServiceItem } from '@/components/home';
+import ServiceItem from '@/components/services/ServiceItem/ServiceItem';
 
-import styles from './Services.module.css';
+import styles from './ServicesTabs.module.css';
 
-const Services: FC = () => {
+interface ServicesProps {
+  title?: string;
+}
+
+const ServicesTabs: FC<ServicesProps> = ({ title }) => {
   const servicesData = [
     {
       tabTitle: 'Разработка',
@@ -104,7 +108,7 @@ const Services: FC = () => {
       <Wrapper>
         <div className={styles.inner}>
           <Title className={styles.title} size={'medium'} as={'h2'}>
-            Наши услуги
+            {title ? title : 'Наши услуги'}
           </Title>
           <Tabs tabItems={servicesData} />
         </div>
@@ -113,4 +117,4 @@ const Services: FC = () => {
   );
 };
 
-export default Services;
+export default ServicesTabs;
