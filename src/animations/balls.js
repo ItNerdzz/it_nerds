@@ -2,6 +2,8 @@ import * as THREE from 'three';
 import { TimelineMax, Linear, SlowMo } from 'gsap';
 
 const setupBallsAnimation = container => {
+  container.innerHTML = '';
+
   if (typeof window === 'undefined' || typeof document === 'undefined') return;
 
   class App {

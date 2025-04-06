@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useRef, useEffect } from 'react';
+import React, { FC, useRef, useEffect } from 'react';
 
 import { Wrapper } from '@/components/layout';
 import { Title, Subtitle, Button } from '@/components/ui';
