@@ -9,6 +9,7 @@ import Gallery from './Gallery/Gallery';
 import CallToAction from './CallToAction/CallToAction';
 import YandexMetrika from './YandexMetrika/YandexMetrika';
 import DelayedCTA from './DelayedCTA/DelayedCTA';
+import CallbackSpan from './CallbackSpan/CallbackSpan';
 
 export {
   BurgerButton,
@@ -22,4 +23,5 @@ export {
   CallToAction,
   YandexMetrika,
   DelayedCTA,
+  CallbackSpan,
 };
