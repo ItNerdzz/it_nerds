@@ -1,8 +1,7 @@
 .root {
     .inner {
         padding: var(--indent-y) 0;
-        /*max-width: 1100px;*/
-        max-width: 600px;
+        max-width: 1100px;
         margin: 0 auto;
     }
 
@@ -68,7 +67,7 @@
 
         .posts {
             display: grid;
-            /*grid-template-columns: repeat(2, 1fr);*/
+            grid-template-columns: repeat(2, 1fr);
             gap: 40px;
         }
     }
